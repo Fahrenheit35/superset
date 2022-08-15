@@ -24,13 +24,17 @@ import { configure, makeApi, supersetTheme } from '@superset-ui/core';
 import { merge } from 'lodash';
 import setupClient from './setup/setupClient';
 import setupColors from './setup/setupColors';
-import setupFormatters from './setup/setupFormatters';
+import setupExtensions from './setup/setupExtensions';
+import { setupFormatters, setupTimeFormatters } from './setup/setupFormatters';
 import setupDashboardComponents from './setup/setupDasboardComponents';
 import { BootstrapUser, User } from './types/bootstrapTypes';
+import { initFeatureFlags } from './featureFlags';
 
 if (process.env.WEBPACK_MODE === 'development') {
   setHotLoaderConfig({ logLevel: 'debug', trackTailUpdates: false });
 }
+
+setupExtensions();
 
 // eslint-disable-next-line import/no-mutable-exports
 export let bootstrapData: {
@@ -41,6 +45,7 @@ export let bootstrapData: {
     dashboard_id: string;
   };
 } = {};
+
 // Configure translation
 if (typeof window !== 'undefined') {
   const root = document.getElementById('app');
@@ -51,12 +56,16 @@ if (typeof window !== 'undefined') {
     const languagePack = bootstrapData.common.language_pack;
     configure({ languagePack });
     moment.locale(bootstrapData.common.locale);
+    setupTimeFormatters(bootstrapData.common.time_locale);
   } else {
     configure();
   }
 } else {
   configure();
 }
+
+// Configure feature flags
+initFeatureFlags(bootstrapData?.common?.feature_flags);
 
 // Setup SupersetClient
 setupClient();

@@ -142,7 +142,7 @@ VERSION_SHA = _try_json_readsha(VERSION_INFO_FILE, VERSION_SHA_LENGTH)
 # can be replaced at build time to expose build information.
 BUILD_NUMBER = None
 
-# default viz used in chart explorer
+# default viz used in chart explorer & SQL Lab explore
 DEFAULT_VIZ_TYPE = "table"
 
 # default row limit when requesting chart data
@@ -237,6 +237,9 @@ SHOW_STACKTRACE = True
 ENABLE_PROXY_FIX = False
 PROXY_FIX_CONFIG = {"x_for": 1, "x_proto": 1, "x_host": 1, "x_port": 1, "x_prefix": 1}
 
+# Configuration for scheduling queries from SQL Lab.
+SCHEDULED_QUERIES: Dict[str, Any] = {}
+
 # ------------------------------
 # GLOBALS FOR APP Builder
 # ------------------------------
@@ -318,24 +321,31 @@ BABEL_DEFAULT_LOCALE = "en"
 BABEL_DEFAULT_FOLDER = "superset/translations"
 # The allowed translation for you app
 LANGUAGES = {
-    "en": {"flag": "us", "name": "English"},
-    "es": {"flag": "es", "name": "Spanish"},
-    "it": {"flag": "it", "name": "Italian"},
-    "fr": {"flag": "fr", "name": "French"},
-    "zh": {"flag": "cn", "name": "Chinese"},
-    "ja": {"flag": "jp", "name": "Japanese"},
-    "de": {"flag": "de", "name": "German"},
-    "pt": {"flag": "pt", "name": "Portuguese"},
-    "pt_BR": {"flag": "br", "name": "Brazilian Portuguese"},
-    "ru": {"flag": "ru", "name": "Russian"},
-    "ko": {"flag": "kr", "name": "Korean"},
-    "sk": {"flag": "sk", "name": "Slovak"},
-    "sl": {"flag": "si", "name": "Slovenian"},
-    "nl": {"flag": "nl", "name": "Dutch"},
+    "en": {"flag": "us", "name": "English", "locale": "en", "humanize_locale": "en", "time_locale": "en-US"},
+    "it": {"flag": "it", "name": "Italian", "locale": "it", "humanize_locale": "en", "time_locale": "it-IT"},
+    "fr": {"flag": "fr", "name": "French", "locale": "fr", "humanize_locale": "fr_FR", "time_locale": "fr-FR"},
+    "zh": {"flag": "cn", "name": "Chinese", "locale": "zh-cn", "humanize_locale": "zh_CN", "time_locale": "zh-CN"},
+    "ja": {"flag": "jp", "name": "Japanese", "locale": "ja", "humanize_locale": "en", "time_locale": "ja-JP"},
+    "de": {"flag": "de", "name": "German", "locale": "de", "humanize_locale": "de_DE", "time_locale": "de-DE"},
+    "pt": {"flag": "pt", "name": "Portuguese", "locale": "pt", "humanize_locale": "en", "time_locale": "en-US"},
+    "pt_BR": {"flag": "br", "name": "Brazilian Portuguese", "locale": "pt-br", "humanize_locale": "pt_BR", "time_locale": "pt-BR"},
+    "ru": {"flag": "ru", "name": "Russian", "locale": "ru", "humanize_locale": "ru_RU", "time_locale": "ru-RU"},
+    "ko": {"flag": "kr", "name": "Korean", "locale": "ko", "humanize_locale": "ko_KR", "time_locale": "ko-KR"},
 }
 # Turning off i18n by default as translation in most languages are
 # incomplete and not well maintained.
-LANGUAGES = {}
+LANGUAGES = {
+        "en": {"flag": "us", "name": "English", "locale": "en", "humanize_locale": "en", "time_locale": "en-US"},
+    "it": {"flag": "it", "name": "Italian", "locale": "it", "humanize_locale": "en", "time_locale": "it-IT"},
+    "fr": {"flag": "fr", "name": "French", "locale": "fr", "humanize_locale": "fr_FR", "time_locale": "fr-FR"},
+    "zh": {"flag": "cn", "name": "Chinese", "locale": "zh-cn", "humanize_locale": "zh_CN", "time_locale": "zh-CN"},
+    "ja": {"flag": "jp", "name": "Japanese", "locale": "ja", "humanize_locale": "en", "time_locale": "ja-JP"},
+    "de": {"flag": "de", "name": "German", "locale": "de", "humanize_locale": "de_DE", "time_locale": "de-DE"},
+    "pt": {"flag": "pt", "name": "Portuguese", "locale": "pt", "humanize_locale": "en", "time_locale": "en-US"},
+    "pt_BR": {"flag": "br", "name": "Brazilian Portuguese", "locale": "pt-br", "humanize_locale": "pt_BR", "time_locale": "pt-BR"},
+    "ru": {"flag": "ru", "name": "Russian", "locale": "ru", "humanize_locale": "ru_RU", "time_locale": "ru-RU"},
+    "ko": {"flag": "kr", "name": "Korean", "locale": "ko", "humanize_locale": "ko_KR", "time_locale": "ko-KR"},
+}
 
 # ---------------------------------------------------
 # Feature flags
@@ -349,6 +359,7 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     # allow dashboard to use sub-domains to send chart request
     # you also need ENABLE_CORS and
     # SUPERSET_WEBSERVER_DOMAINS for list of domains
+
     "ALLOW_DASHBOARD_DOMAIN_SHARDING": True,
     # Experimental feature introducing a client (browser) cache
     "CLIENT_CACHE": False,
@@ -426,12 +437,16 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     "GENERIC_CHART_AXES": False,
     "ALLOW_ADHOC_SUBQUERY": False,
     "USE_ANALAGOUS_COLORS": True,
+    "DASHBOARD_EDIT_CHART_IN_NEW_TAB": False,
     # Apply RLS rules to SQL Lab queries. This requires parsing and manipulating the
     # query, and might break queries and/or allow users to bypass RLS. Use with care!
     "RLS_IN_SQLLAB": False,
     # Enable caching per impersonation key (e.g username) in a datasource where user
     # impersonation is enabled
     "CACHE_IMPERSONATION": False,
+    # Enable sharing charts with embedding
+    "EMBEDDABLE_CHARTS": True,
+    "DRILL_TO_DETAIL": False,
 }
 
 # Feature flags may also be set via 'SUPERSET_FEATURE_' prefixed environment vars.
@@ -557,6 +572,7 @@ SCREENSHOT_SELENIUM_HEADSTART = 3
 # Wait for the chart animation, in seconds
 SCREENSHOT_SELENIUM_ANIMATION_WAIT = 5
 
+SUPERSET_LOAD_EXAMPLES=True
 # ---------------------------------------------------
 # Image and file configuration
 # ---------------------------------------------------
@@ -989,7 +1005,13 @@ BLUEPRINTS: List[Blueprint] = []
 # into a proxied one
 
 
-TRACKING_URL_TRANSFORMER = lambda x: x
+# Transform SQL query tracking url for Hive and Presto engines. You may also
+# access information about the query itself by adding a second parameter
+# to your transformer function, e.g.:
+#   TRACKING_URL_TRANSFORMER = (
+#       lambda url, query: url if is_fresh(query) else None
+#   )
+TRACKING_URL_TRANSFORMER = lambda url: url
 
 
 # Interval between consecutive polls when using Hive Engine

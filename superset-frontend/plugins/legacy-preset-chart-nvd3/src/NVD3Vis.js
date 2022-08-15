@@ -29,7 +29,7 @@ import {
   getTimeFormatter,
   isDefined,
   NumberFormats,
-  smartDateVerboseFormatter,
+  getSmartDateVerboseFormatter as smartDateVerboseFormatter,
   t,
 } from '@superset-ui/core';
 
