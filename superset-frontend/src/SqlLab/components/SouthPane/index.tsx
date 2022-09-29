@@ -199,6 +199,7 @@ export default function SouthPane({
           query={query}
           visualize={false}
           csv={false}
+          excel={false}
           actions={actions}
           cache
           user={user}

@@ -637,6 +637,17 @@ class DatasourceFilter(BaseFilter):  # pylint: disable=too-few-public-methods
                 models.SqlaTable.id.in_(owner_ids_query),
             )
         )
+
+
+class ExcelResponse(Response):  # pylint: disable=too-many-ancestors
+    """
+       Override Response to take into account xlsx encoding from config.py
+    """
+
+    # charset = conf["EXCEL_EXPORT"].get("encoding", "utf-8")
+    default_mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+
 def check_ownership(obj: Any, raise_if_false: bool = True) -> bool:
     """Meant to be used in `pre_update` hooks on models to enforce ownership
     Admin have all access, and other users need to be referenced on either

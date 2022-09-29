@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import copy
 import dataclasses
+import io # Export XLSX
 import logging
 import math
 import re
@@ -62,6 +63,7 @@ from superset.errors import ErrorLevel, SupersetError, SupersetErrorType
 from superset.exceptions import (
     CacheLoadError,
     NullValueException,
+    QueryClauseValidationException, # Export XLSX
     QueryObjectValidationError,
     SpatialException,
     SupersetSecurityException,
@@ -664,6 +666,14 @@ class BaseViz:  # pylint: disable=too-many-public-methods
         df = self.get_df_payload()["df"]  # leverage caching logic
         include_index = not isinstance(df.index, pd.RangeIndex)
         return csv.df_to_escaped_csv(df, index=include_index, **config["CSV_EXPORT"])
+
+    def get_excel(self) -> Optional[str]: # Export XLSX
+        data = io.BytesIO()
+        df = self.get_df()
+        include_index = not isinstance(df.index, pd.RangeIndex)
+        df.to_excel(data, index=include_index, **config.get("EXCEL_EXPORT"))
+        data.seek(0)
+        return data  # .read()
 
     def get_data(self, df: pd.DataFrame) -> VizData:  # pylint: disable=no-self-use
         return df.to_dict(orient="records")

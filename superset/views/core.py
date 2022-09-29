@@ -17,6 +17,7 @@
 # pylint: disable=too-many-lines, invalid-name
 from __future__ import annotations
 
+import io
 import logging
 import re
 from contextlib import closing
@@ -139,6 +140,7 @@ from superset.views.base import (
     common_bootstrap_payload,
     create_table_permissions,
     CsvResponse,
+    ExcelResponse,
     data_payload_response,
     generate_download_headers,
     get_error_msg,
@@ -478,6 +480,11 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
         if response_type == ChartDataResultFormat.CSV:
             return CsvResponse(
                 viz_obj.get_csv(), headers=generate_download_headers("csv")
+            )
+
+        if response_type == ChartDataResultFormat.EXCEL:
+            return ExcelResponse(
+                viz_obj.get_excel(), headers=generate_download_headers("xlsx")
             )
 
         if response_type == ChartDataResultType.QUERY:
