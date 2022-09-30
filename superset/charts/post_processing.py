@@ -26,7 +26,7 @@ In order to do that, we reproduce the post-processing in Python
 for these chart types.
 """
 
-from io import StringIO
+from io import StringIO, BytesIO
 from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 import pandas as pd
@@ -328,8 +328,11 @@ def apply_post_process(
             df = pd.DataFrame.from_dict(query["data"])
         elif query["result_format"] == ChartDataResultFormat.CSV:
             df = pd.read_csv(StringIO(query["data"]))
+        elif query["result_format"] == ChartDataResultFormat.EXCEL:
+            #raise Exception(f"Result format {query['result_format']} not supported. The value is {query['data']}")
+            df = pd.DataFrame.from_records(query["data"])
         else:
-            raise Exception(f"Result format {query['result_format']} not supported")
+            raise Exception(f"Result format {query['result_format']} not supported. The value is {query['data']}")
 
         processed_df = post_processor(df, form_data, datasource)
 
@@ -361,5 +364,10 @@ def apply_post_process(
             processed_df.to_csv(buf)
             buf.seek(0)
             query["data"] = buf.getvalue()
+        elif query["result_format"] == ChartDataResultFormat.EXCEL:
+            buf = BytesIO()
+            processed_df.to_excel(buf)
+            buf.seek(0)
+            query["data"] = buf
 
     return result

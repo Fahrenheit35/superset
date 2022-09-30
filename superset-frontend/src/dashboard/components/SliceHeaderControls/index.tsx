@@ -44,6 +44,7 @@ const MENU_KEYS = {
   EXPLORE_CHART: 'explore_chart',
   EXPORT_CSV: 'export_csv',
   EXPORT_EXCEL: 'export_excel',
+  EXPORT_EXCEL_PIVOTED: 'export_excel_pivoted',
   EXPORT_FULL_CSV: 'export_full_csv',
   FORCE_REFRESH: 'force_refresh',
   FULLSCREEN: 'fullscreen',
@@ -114,6 +115,7 @@ export interface SliceHeaderControlsProps {
   toggleExpandSlice?: (sliceId: number) => void;
   exportCSV?: (sliceId: number) => void;
   exportExcel?: (sliceId: number) => void;
+  exportExcelPivoted?: (sliceId: number) => void;
   exportFullCSV?: (sliceId: number) => void;
   handleToggleFullSize: () => void;
 
@@ -205,6 +207,11 @@ class SliceHeaderControls extends React.PureComponent<
           // eslint-disable-next-line no-unused-expressions
           this.props.exportExcel &&
             this.props.exportExcel(this.props.slice.slice_id);
+          break;
+      case MENU_KEYS.EXPORT_EXCEL_PIVOTED:
+          // eslint-disable-next-line no-unused-expressions
+          this.props.exportExcel &&
+            this.props.exportExcelPivoted(this.props.slice.slice_id);
           break;
       case MENU_KEYS.EXPORT_FULL_CSV:
         // eslint-disable-next-line no-unused-expressions
@@ -420,6 +427,18 @@ class SliceHeaderControls extends React.PureComponent<
                     icon={<Icons.FileOutlined css={dropdownIconsStyles} />}
                   >
                     {t('Export to full .CSV')}
+                  </Menu.Item>
+                )}
+              {this.props.slice.viz_type !== 'filter_box' &&
+                this.props.supersetCanExcel && (
+                  <Menu.Item key={MENU_KEYS.EXPORT_EXCEL}>
+                    {t('Export .XLSX')}
+                  </Menu.Item>
+                )}
+              {this.props.slice.viz_type !== 'filter_box' &&
+                this.props.supersetCanExcel && (
+                  <Menu.Item key={MENU_KEYS.EXPORT_EXCEL_PIVOTED}>
+                    {t('Export pivoted .XLSX')}
                   </Menu.Item>
                 )}
               {this.props.slice.viz_type !== 'filter_box' &&

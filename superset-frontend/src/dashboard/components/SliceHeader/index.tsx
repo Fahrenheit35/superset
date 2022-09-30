@@ -63,6 +63,7 @@ const SliceHeader: FC<SliceHeaderProps> = ({
   onExploreChart,
   exportCSV = () => ({}),
   exportExcel = () => ({}),
+  exportExcelPivoted = () => ({}),
   editMode = false,
   annotationQuery = {},
   annotationError = {},
@@ -207,6 +208,7 @@ const SliceHeader: FC<SliceHeaderProps> = ({
                 onExploreChart={onExploreChart}
                 exportCSV={exportCSV}
                 exportExcel={exportExcel}
+                exportExcelPivoted={exportExcelPivoted}
                 exportFullCSV={exportFullCSV}
                 supersetCanExplore={supersetCanExplore}
                 supersetCanShare={supersetCanShare}

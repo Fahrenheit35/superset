@@ -136,6 +136,7 @@ export default class Chart extends React.Component {
     this.handleFilterMenuClose = this.handleFilterMenuClose.bind(this);
     this.exportCSV = this.exportCSV.bind(this);
     this.exportExcel = this.exportExcel.bind(this);
+    this.exportExcelPivoted = this.exportExcelPivoted.bind(this);
     this.exportFullCSV = this.exportFullCSV.bind(this);
     this.forceRefresh = this.forceRefresh.bind(this);
     this.resize = this.resize.bind(this);
@@ -324,6 +325,17 @@ export default class Chart extends React.Component {
       resultFormat: 'excel',
     });
   }
+  exportExcelPivoted() {
+    this.props.logEvent(LOG_ACTIONS_EXPORT_EXCEL_DASHBOARD_CHART, {
+      slice_id: this.props.slice.slice_id,
+      is_cached: this.props.isCached,
+    });
+    exportChart({
+      formData: this.props.formData,
+      resultType: 'post_processed',
+      resultFormat: 'excel',
+    });
+  }
 
   exportFullCSV() {
     this.exportCSV(true);
@@ -426,6 +438,7 @@ export default class Chart extends React.Component {
           onExploreChart={this.onExploreChart}
           exportCSV={this.exportCSV}
           exportExcel={this.exportExcel}
+          exportExcelPivoted={this.exportExcelPivoted}
           exportFullCSV={this.exportFullCSV}
           updateSliceName={updateSliceName}
           sliceName={sliceName}

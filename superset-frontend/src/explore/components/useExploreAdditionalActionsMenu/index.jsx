@@ -36,6 +36,8 @@ const MENU_KEYS = {
   EDIT_PROPERTIES: 'edit_properties',
   DOWNLOAD_SUBMENU: 'download_submenu',
   EXPORT_TO_CSV: 'export_to_csv',
+  EXPORT_TO_EXCEL: 'export_to_excel',
+  EXPORT_TO_EXCEL_PIVOTED: 'export_to_excel_pivoted',
   EXPORT_TO_CSV_PIVOTED: 'export_to_csv_pivoted',
   EXPORT_TO_JSON: 'export_to_json',
   DOWNLOAD_AS_IMAGE: 'download_as_image',
@@ -152,7 +154,28 @@ export const useExploreAdditionalActionsMenu = (
         : null,
     [canDownloadCSV, latestQueryFormData],
   );
-
+  const exportExcel = useCallback(
+    () =>
+    canDownloadCSV
+      ? exportChart({
+          formData: latestQueryFormData,
+          resultType: 'full',
+          resultFormat: 'excel',
+        })
+      : null,
+    [canDownloadCSV, latestQueryFormData],
+  ); 
+  const exportExcelPivoted = useCallback(
+    () =>
+    canDownloadCSV
+      ? exportChart({
+          formData: latestQueryFormData,
+          resultType: 'post_processed',
+          resultFormat: 'excel',
+        })
+      : null,
+    [canDownloadCSV, latestQueryFormData],
+  );
   const exportJson = useCallback(
     () =>
       exportChart({
@@ -192,6 +215,16 @@ export const useExploreAdditionalActionsMenu = (
           setIsDropdownVisible(false);
           setOpenSubmenus([]);
           break;
+        case MENU_KEYS.EXPORT_TO_EXCEL:
+            exportExcel();
+            setIsDropdownVisible(false);
+            setOpenSubmenus([]);
+            break;
+        case MENU_KEYS.EXPORT_TO_EXCEL_PIVOTED:
+            exportExcelPivoted();
+            setIsDropdownVisible(false);
+            setOpenSubmenus([]);
+            break;
         case MENU_KEYS.EXPORT_TO_JSON:
           exportJson();
           setIsDropdownVisible(false);
@@ -237,6 +270,8 @@ export const useExploreAdditionalActionsMenu = (
       copyLink,
       exportCSV,
       exportCSVPivoted,
+      exportExcel,
+      exportExcelPivoted,
       exportJson,
       latestQueryFormData,
       onOpenInEditor,
@@ -278,6 +313,20 @@ export const useExploreAdditionalActionsMenu = (
                 disabled={!canDownloadCSV}
               >
                 {t('Export to pivoted .CSV')}
+              </Menu.Item>
+              <Menu.Item
+                key={MENU_KEYS.EXPORT_TO_EXCEL}
+                icon={<FileOutlined />}
+                disabled={!canDownloadCSV}
+              >
+                {t('Export to .XLSX')}
+              </Menu.Item>
+              <Menu.Item
+                key={MENU_KEYS.EXPORT_TO_EXCEL_PIVOTED}
+                icon={<FileOutlined />}
+                disabled={!canDownloadCSV}
+              >
+                {t('Export to pivoted .XLSX')}
               </Menu.Item>
             </>
           ) : (

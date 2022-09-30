@@ -1496,7 +1496,7 @@ def time_function(
     func: Callable[..., FlaskResponse], *args: Any, **kwargs: Any
 ) -> Tuple[float, Any]:
     """
-    Measures the amount of time a function takes to execute in ms
+    Measures the amount of time a function torakes to execute in ms
 
     :param func: The function execution time to measure
     :param args: args to be passed to the function
