@@ -311,7 +311,7 @@ export default class Chart extends React.Component {
       resultFormat: 'csv',
       force: true,
       ownState: this.props.ownState,
-        });
+    });
   }
 
   exportExcel() {
@@ -325,6 +325,7 @@ export default class Chart extends React.Component {
       resultFormat: 'excel',
     });
   }
+
   exportExcelPivoted() {
     this.props.logEvent(LOG_ACTIONS_EXPORT_EXCEL_DASHBOARD_CHART, {
       slice_id: this.props.slice.slice_id,

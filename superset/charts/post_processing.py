@@ -85,7 +85,8 @@ def pivot_df(  # pylint: disable=too-many-locals, too-many-arguments, too-many-s
     # pivot data; we'll compute totals and subtotals later
     if rows or columns:
         # pivoting with null values will create an empty df
-        df = df.fillna("NULL")
+
+        #df = df.fillna("NULL")
         df = df.pivot_table(
             index=rows,
             columns=columns,
@@ -234,6 +235,8 @@ def pivot_table_v2(
     return pivot_df(
         df,
         rows=get_column_names(form_data.get("groupbyRows"), verbose_map),
+        #rows=form_data.get("groupbyRows"),
+        # fix column name for grouping
         columns=get_column_names(form_data.get("groupbyColumns"), verbose_map),
         metrics=get_metric_names(form_data["metrics"], verbose_map),
         aggfunc=form_data.get("aggregateFunction", "Sum"),
@@ -344,18 +347,24 @@ def apply_post_process(
         # Flatten hierarchical columns/index since they are represented as
         # `Tuple[str]`. Otherwise encoding to JSON later will fail because
         # maps cannot have tuples as their keys in JSON.
-        processed_df.columns = [
-            " ".join(str(name) for name in column).strip()
-            if isinstance(column, tuple)
-            else column
-            for column in processed_df.columns
-        ]
-        processed_df.index = [
-            " ".join(str(name) for name in index).strip()
-            if isinstance(index, tuple)
-            else index
-            for index in processed_df.index
-        ]
+        # it's need for rename grouping columns if the were renemed in dataset
+        if query["result_format"] != ChartDataResultFormat.EXCEL:
+            processed_df.columns = [
+                " ".join(str(name) for name in column).strip()
+                if isinstance(column, tuple)
+                else column
+                for column in processed_df.columns
+            ]
+
+            processed_df.index = [
+                " ".join(str(name) for name in index).strip()
+                if isinstance(index, tuple)
+                else index
+                for index in processed_df.index
+            ]
+        else:
+            processed_df.replace("NULL", None, inplace=True)
+            processed_df.dropna(how='all', inplace=True)
 
         if query["result_format"] == ChartDataResultFormat.JSON:
             query["data"] = processed_df.to_dict()

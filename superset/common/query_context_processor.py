@@ -372,7 +372,12 @@ class QueryContextProcessor:
                 df, index=include_index, **config["CSV_EXPORT"]
             )
             return result or ""
-
+        # add for MS EXCEL
+        if self._query_context.result_format == ChartDataResultFormat.EXCEL:
+            columns = list(df.columns)
+            verbose_map = self._qc_datasource.data.get("verbose_map", {})
+            if verbose_map:
+                df.columns = [verbose_map.get(column, column) for column in columns]
         return df.to_dict(orient="records")
 
     def get_payload(

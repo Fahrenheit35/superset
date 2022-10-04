@@ -156,24 +156,24 @@ export const useExploreAdditionalActionsMenu = (
   );
   const exportExcel = useCallback(
     () =>
-    canDownloadCSV
-      ? exportChart({
-          formData: latestQueryFormData,
-          resultType: 'full',
-          resultFormat: 'excel',
-        })
-      : null,
+      canDownloadCSV
+        ? exportChart({
+            formData: latestQueryFormData,
+            resultType: 'full',
+            resultFormat: 'excel',
+          })
+        : null,
     [canDownloadCSV, latestQueryFormData],
-  ); 
+  );
   const exportExcelPivoted = useCallback(
     () =>
-    canDownloadCSV
-      ? exportChart({
-          formData: latestQueryFormData,
-          resultType: 'post_processed',
-          resultFormat: 'excel',
-        })
-      : null,
+      canDownloadCSV
+        ? exportChart({
+            formData: latestQueryFormData,
+            resultType: 'post_processed',
+            resultFormat: 'excel',
+          })
+        : null,
     [canDownloadCSV, latestQueryFormData],
   );
   const exportJson = useCallback(
@@ -216,15 +216,15 @@ export const useExploreAdditionalActionsMenu = (
           setOpenSubmenus([]);
           break;
         case MENU_KEYS.EXPORT_TO_EXCEL:
-            exportExcel();
-            setIsDropdownVisible(false);
-            setOpenSubmenus([]);
-            break;
+          exportExcel();
+          setIsDropdownVisible(false);
+          setOpenSubmenus([]);
+          break;
         case MENU_KEYS.EXPORT_TO_EXCEL_PIVOTED:
-            exportExcelPivoted();
-            setIsDropdownVisible(false);
-            setOpenSubmenus([]);
-            break;
+          exportExcelPivoted();
+          setIsDropdownVisible(false);
+          setOpenSubmenus([]);
+          break;
         case MENU_KEYS.EXPORT_TO_JSON:
           exportJson();
           setIsDropdownVisible(false);

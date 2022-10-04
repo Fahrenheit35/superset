@@ -212,8 +212,12 @@ export default class ResultSet extends React.PureComponent<
   }
 
   renderControls() {
-    if (this.props.search || this.props.visualize || this.props.csv  ||
-      this.props.excel) {
+    if (
+      this.props.search ||
+      this.props.visualize ||
+      this.props.csv ||
+      this.props.excel
+    ) {
       let { data } = this.props.query.results;
       if (this.props.cache && this.props.query.cached) {
         ({ data } = this.state);

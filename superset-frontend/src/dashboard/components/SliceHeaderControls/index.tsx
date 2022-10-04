@@ -125,6 +125,7 @@ export interface SliceHeaderControlsProps {
   supersetCanExplore?: boolean;
   supersetCanShare?: boolean;
   supersetCanCSV?: boolean;
+  supersetCanExcel?: boolean;
   sliceCanEdit?: boolean;
 }
 interface State {
@@ -200,19 +201,18 @@ class SliceHeaderControls extends React.PureComponent<
         this.props.exportCSV && this.props.exportCSV(this.props.slice.slice_id);
         break;
       case MENU_KEYS.FULLSCREEN:
-
         this.props.handleToggleFullSize();
         break;
       case MENU_KEYS.EXPORT_EXCEL:
-          // eslint-disable-next-line no-unused-expressions
-          this.props.exportExcel &&
-            this.props.exportExcel(this.props.slice.slice_id);
-          break;
+        // eslint-disable-next-line no-unused-expressions
+        this.props.exportExcel &&
+          this.props.exportExcel(this.props.slice.slice_id);
+        break;
       case MENU_KEYS.EXPORT_EXCEL_PIVOTED:
-          // eslint-disable-next-line no-unused-expressions
-          this.props.exportExcel &&
-            this.props.exportExcelPivoted(this.props.slice.slice_id);
-          break;
+        // eslint-disable-next-line no-unused-expressions
+        this.props.exportExcelPivoted &&
+          this.props.exportExcelPivoted(this.props.slice.slice_id);
+        break;
       case MENU_KEYS.EXPORT_FULL_CSV:
         // eslint-disable-next-line no-unused-expressions
         this.props.exportFullCSV &&
@@ -448,7 +448,7 @@ class SliceHeaderControls extends React.PureComponent<
                   <Menu.Item key={MENU_KEYS.EXPORT_FULL_CSV}>
                     {t('Export full CSV')}
                   </Menu.Item>
-              )}
+                )}
 
               <Menu.Item
                 key={MENU_KEYS.DOWNLOAD_AS_IMAGE}
