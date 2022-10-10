@@ -9760,7 +9760,7 @@ msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:201
 msgid "Transpose pivot"
-msgstr "Транспорировать ось"
+msgstr "Транспонировать ось"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:203
 msgid "Swap rows and columns"
@@ -12025,9 +12025,8 @@ msgid "Delete email report"
 msgstr "Оповещения и рассылки"
 
 #: superset-frontend/src/components/ReportModal/HeaderReportDropdown/index.tsx:207
-#, fuzzy
 msgid "Set up an email report"
-msgstr "Оповещения и рассылки"
+msgstr "Настроить e-mail отчет"
 
 #: superset-frontend/src/components/ReportModal/HeaderReportDropdown/index.tsx:258
 #, fuzzy
@@ -12794,9 +12793,8 @@ msgstr "Установить действие фильтра"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:402
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:356
-#, fuzzy
 msgid "Share chart by email"
-msgstr "Поделиться графиком"
+msgstr "Поделиться графиком через e-mail"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:404
 msgid "Check out this chart: "
@@ -12961,7 +12959,7 @@ msgstr "Очистить все"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterControls.tsx:152
 #, python-format
 msgid "Filters out of scope (%d)"
-msgstr ""
+msgstr "(%d)фильтра (ов) не применяются"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterValue.tsx:179
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:502
@@ -14785,25 +14783,23 @@ msgstr "Редактирование свойств"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:308
 msgid "Export to original .CSV"
-msgstr ""
+msgstr "Экспорт в обычный .CSV"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:315
 msgid "Export to pivoted .CSV"
-msgstr ""
+msgstr "Экспорт в сводный .CSV"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:322
-#, fuzzy
 msgid "Export to .XLSX"
-msgstr "Экспорт в YAML"
+msgstr "Экспорт в .XLSX"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:329
 msgid "Export to pivoted .XLSX"
-msgstr ""
+msgstr "кспорт в сводный .XLSX"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:342
-#, fuzzy
 msgid "Export to .JSON"
-msgstr "Экспорт в YAML"
+msgstr "Экспорт в .JSON"
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:361
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:363
@@ -16882,12 +16878,11 @@ msgstr "Мои"
 #: superset-frontend/src/views/CRUD/welcome/DashboardTable.tsx:228
 #: superset-frontend/src/views/CRUD/welcome/SavedQueries.tsx:297
 msgid "View All »"
-msgstr ""
+msgstr "Посмотреть все"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:26
-#, fuzzy
 msgid "charts"
-msgstr "график"
+msgstr "графики"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:27
 #, fuzzy
