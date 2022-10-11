@@ -3050,6 +3050,7 @@
       "Superset dashboard": ["Дашборд Superset"],
       "Check out this dashboard: ": ["Посмотреть дашборд: "],
       "Refresh dashboard": ["Обновить дашборд"],
+      "Exit fullscreen": ["Выйти из полноэкр. режима"],
       "Enter fullscreen": ["Полноэкранный режим"],
       "Edit properties": ["Редактирование свойств"],
       "Edit CSS": ["Редактировать CSS"],

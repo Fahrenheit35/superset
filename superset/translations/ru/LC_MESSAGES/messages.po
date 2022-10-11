@@ -12525,9 +12525,8 @@ msgstr "Обновить дашборд"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:260
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:289
-#, fuzzy
 msgid "Exit fullscreen"
-msgstr "Полноэкранный режим"
+msgstr "Выйти из полноэкр. режима"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:261
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:290
