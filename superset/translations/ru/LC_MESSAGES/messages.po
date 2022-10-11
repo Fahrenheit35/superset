@@ -12390,7 +12390,7 @@ msgstr "[название]"
 
 #: superset-frontend/src/dashboard/components/SaveModal.tsx:209
 msgid "also copy (duplicate) charts"
-msgstr ""
+msgstr "Скопировать графики"
 
 #: superset-frontend/src/dashboard/components/SliceAdder.jsx:293
 msgid "Filter your charts"
@@ -12499,7 +12499,6 @@ msgstr "дашборд"
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:611
 #: superset-frontend/src/dashboard/components/Header/index.jsx:613
-#, fuzzy
 msgid "Edit dashboard"
 msgstr "Редактировать дашборд"
 
@@ -12532,7 +12531,6 @@ msgstr "Полноэкранный режим"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:261
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:290
-#, fuzzy
 msgid "Enter fullscreen"
 msgstr "Полноэкранный режим"
 
@@ -12743,7 +12741,7 @@ msgstr "Прокешировано %s"
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:275
 #, python-format
 msgid "Fetched %s"
-msgstr ""
+msgstr "Обновлено %s"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:284
 #, python-format

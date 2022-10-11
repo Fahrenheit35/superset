@@ -3028,7 +3028,7 @@
       "Overwrite Dashboard [%s]": ["Перезаписать дашборд [%s]"],
       "Save as:": ["Сохранить как:"],
       "[dashboard name]": ["[название]"],
-      "also copy (duplicate) charts": [""],
+      "also copy (duplicate) charts": ["Скопировать графики"],
       "Filter your charts": ["Фильтровать графики"],
       "Superset chart": ["График Superset"],
       "Check out this chart in dashboard:": [
@@ -3043,12 +3043,14 @@
       "Incompatible Filters (%d)": ["Несовместимые фильтры (%d)"],
       "Unset Filters (%d)": ["Сбросить фильтры (%d)"],
       "Redo the action": [""],
+      "Edit dashboard": ["Редактировать дашборд"],
       "An error occurred while fetching available CSS templates": [
         "Произошла ошибка при получении доступных CSS-шаблонов"
       ],
       "Superset dashboard": ["Дашборд Superset"],
       "Check out this dashboard: ": ["Посмотреть дашборд: "],
       "Refresh dashboard": ["Обновить дашборд"],
+      "Enter fullscreen": ["Полноэкранный режим"],
       "Edit properties": ["Редактирование свойств"],
       "Edit CSS": ["Редактировать CSS"],
       "Download as image": ["Сохранить как изображение"],
@@ -3102,7 +3104,7 @@
         "Нажмите, чтобы очистить отображаемые фильтры"
       ],
       "Cached %s": ["Прокешировано %s"],
-      "Fetched %s": [""],
+      "Fetched %s": ["Обновлено %s"],
       "Query %s: %s": [""],
       "Force refresh": ["Принудительное обновление"],
       "View query": ["Скопировать запрос"],
