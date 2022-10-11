@@ -12764,7 +12764,6 @@ msgstr "Изменить описание графика"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:326
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:371
-#, fuzzy
 msgid "Edit chart"
 msgstr "Редактировать график"
 
@@ -12776,9 +12775,8 @@ msgid "View query"
 msgstr "Скопировать запрос"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:352
-#, fuzzy
 msgid "View as table"
-msgstr "Посмотреть примеры"
+msgstr "Табличный просмотр"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:355
 #, fuzzy, python-format
