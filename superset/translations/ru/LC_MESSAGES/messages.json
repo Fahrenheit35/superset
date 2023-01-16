@@ -7,21 +7,73 @@
         "plural_forms": "nplurals=1; plural=0",
         "lang": "ru"
       },
-      "The hostname provided can't be resolved.": [""],
-      "The host might be down, and can't be reached on the provided port.": [
-        ""
+      "The datasource is too large to query.": [
+        "Проблема 1000 - Источник данных слишком велик для запроса."
       ],
-      "The username provided when connecting to a database is not valid.": [""],
-      "The password provided when connecting to a database is not valid.": [""],
-      "Either the username or the password is wrong.": [""],
-      "Either the database is spelled incorrectly or does not exist.": [""],
-      "The submitted payload has the incorrect format.": [""],
-      "The submitted payload has the incorrect schema.": [""],
+      "The database is under an unusual load.": [
+        "Проблема 1001 - Необычная загрузка базы данных."
+      ],
+      "The database returned an unexpected error.": [
+        "Проблема 1002 - База данных вернула непредвиденную ошибку."
+      ],
+      "There is a syntax error in the SQL query. Perhaps there was a misspelling or a typo.": [
+        "Проблема 1003 - Ошибка синтаксиса в SQL-запросе. Возможно там орфографическая ошибка или опечатка."
+      ],
+      "The column was deleted or renamed in the database.": [
+        "Проблема 1004 - Столбец был удалён или переименован в базе данных."
+      ],
+      "The table was deleted or renamed in the database.": [
+        "Проблема 1005 - Таблица была удалена или переименована в базе данных."
+      ],
+      "One or more parameters specified in the query are missing.": [
+        "Проблема 1006 - Отсутствуют один или несколько параметров, используемых в запросе."
+      ],
+      "The hostname provided can't be resolved.": ["Неразрешенное имя хоста."],
+      "The port is closed.": ["Порт закрыт."],
+      "The host might be down, and can't be reached on the provided port.": [
+        "Возможно, хост не работает, и с ним невозможно связаться по предоставленному порту."
+      ],
+      "Superset encountered an error while running a command.": [
+        "Обнаружена ошибка при выполнении команды."
+      ],
+      "Superset encountered an unexpected error.": [
+        "Обнаружена ошибка графика рассылки."
+      ],
+      "The username provided when connecting to a database is not valid.": [
+        "Недопустимое имя пользователя для подключении к базе данных."
+      ],
+      "The password provided when connecting to a database is not valid.": [
+        "Недопустмый пароль при подключении к базе данных."
+      ],
+      "Either the username or the password is wrong.": [
+        "Неправильное имя пользователя или пароль."
+      ],
+      "Either the database is spelled incorrectly or does not exist.": [
+        "База данных указана неправильно или её не существет."
+      ],
+      "The schema was deleted or renamed in the database.": [
+        "Проблема 1004 - Столбец был удалён или переименован в базе данных."
+      ],
+      "User doesn't have the proper permissions.": [
+        "У пользователя недостаточно прав."
+      ],
+      "One or more parameters needed to configure a database are missing.": [
+        "Проблема 1006 - Отсутствуют один или несколько параметров, используемых в запросе."
+      ],
+      "The submitted payload has the incorrect format.": [
+        "Тело запроса имеет неверный формат."
+      ],
+      "The submitted payload has the incorrect schema.": [
+        "Тело запроса имеет неверную схему."
+      ],
       "Results backend needed for asynchronous queries is not configured.": [
-        ""
+        "Серверная часть резлультатов, необходимая для асинхронных запросов, не является конфигурацией."
       ],
       "Database does not allow data manipulation.": [
         "База данных не допускает манипуляций с данными."
+      ],
+      "The CTAS (create table as select) doesn't have a SELECT statement at the end.\nPlease make sure your query has a SELECT as its last statement. Then, try running your query again.": [
+        "CTAS (create table as select) может быть выполнено только в запросе, последняя операция которого SELECT.\nПожалуйста, убедитесь, что ваш запрос содержит SELECT в качестве последнего утверждения.\nЗатем попытайтесь выполнить свой запрос ещё раз."
       ],
       "CVAS (create view as select) query has more than one statement.": [
         "Запрос CVAS (create view as select) содержит более одного оператора."
@@ -29,16 +81,35 @@
       "CVAS (create view as select) query is not a SELECT statement.": [
         "Запрос CVAS (create view as select) не содержит Select."
       ],
-      "Query is too complex and takes too long to run.": [""],
-      "The database is currently running too many queries.": [""],
-      "The query has a syntax error.": [""],
-      "The results backend no longer has the data from the query.": [""],
-      "The query associated with the results was deleted.": [""],
-      "The results stored in the backend were stored in a different format, and no longer can be deserialized.": [
-        ""
+      "Query is too complex and takes too long to run.": [
+        "Запрос слишком сложен и долго выполняется."
       ],
-      "Failed to start remote query on a worker.": [""],
-      "Custom SQL fields cannot contain sub-queries.": [""],
+      "The database is currently running too many queries.": [
+        "В базе данных выполняет слишком много запросов."
+      ],
+      "One or more parameters specified in the query are malformatted.": [
+        "Проблема 1006 - Неправильно отформатирован один или несколько параметров, используемых в запросе."
+      ],
+      "The query has a syntax error.": [
+        "Запрос содержит синтаксическую ошибку."
+      ],
+      "The results backend no longer has the data from the query.": [
+        "Серверная часть результатов больше не содержит данных из запроса."
+      ],
+      "The query associated with the results was deleted.": [
+        "Запрос, связанный с результатами, был удалён."
+      ],
+      "The results stored in the backend were stored in a different format, and no longer can be deserialized.": [
+        "Результаты, сохраненные в серверной части, были сохранены в другом формате\nи больше не могут быть десериализованы."
+      ],
+      "The port number is invalid.": ["Номер порта недействителен."],
+      "Failed to start remote query on a worker.": [
+        "Не удалось запустить удаленный запрос worker."
+      ],
+      "The database was deleted.": ["База данных была удалена."],
+      "Custom SQL fields cannot contain sub-queries.": [
+        "Пользовательские поля SQL не могут содержать подзапросы."
+      ],
       "Invalid certificate": ["Недействительный сертификат"],
       "Unsafe return type for function %(func)s: %(value_type)s": [
         "Небезопасный возвращаемый тип для функции %(func)s: %(value_type)s"
@@ -52,59 +123,66 @@
       "Unsupported template value for key %(key)s": [
         "Неподдерживаемое значение для ключа шаблона %(key)s"
       ],
-      "The query was killed after %(sqllab_timeout)s seconds. It might be too complex, or the database might be under heavy load.": [
-        ""
+      "Only SELECT statements are allowed against this database.": [
+        "Для этой базы данных разрешены только выражения SELECT."
       ],
-      "Results backend is not configured.": [""],
-      "CTAS (create table as select) can only be run with a query where the last statement is a SELECT. Please make sure your query has a SELECT as its last statement. Then, try running your query again.": [
-        "CTAS (create table as select) можно запустить только с запросом, где последним оператором является SELECT. Пожалуйста, убедитесь, что ваш запрос содержит SELECT в качестве последнего утверждения. Затем попробуйте выполнить свой запрос еще раз."
+      "The query was killed after %(sqllab_timeout)s seconds. It might be too complex,\nor the database might be under heavy load.": [
+        "Запрос был прерван через %(sqllab_timeout)s секунд. Это может быть слишком сложно,\nили база данных может находиться под большой нагрузкой."
       ],
-      "CVAS (create view as select) can only be run with a query with a single SELECT statement. Please make sure your query has only a SELECT statement. Then, try running your query again.": [
-        "ожет быть выполнено только в запросе, в котором есть только одна операция SELECT."
+      "Results backend is not configured.": [
+        "Серверная часть результатов не настроена."
+      ],
+      "CTAS (create table as select) can only be run with a query where the last\nstatement is a SELECT. Please make sure your query has a SELECT as its\nlast statement. Then, try running your query again.": [
+        "CTAS (create table as select) можно запустить только с запросом, где\nпоследним оператором является SELECT. Пожалуйста, убедитесь, что ваш\nзапрос содержит SELECT в качестве последнего утверждения.\nЗатем попробуйте выполнить свой запрос еще раз."
+      ],
+      "CVAS (create view as select) can only be run with a query with a single SELECT statement.\nPlease make sure your query has only a SELECT statement.\nThen, try running your query again.": [
+        "CVAS (create view as select) может быть выполнено только в запросе,\nв котором есть только одна операция SELECT."
       ],
       "Viz is missing a datasource": [
         "У визуализации отсутствует источник данных"
       ],
-      "Applied rolling window did not return any data. Please make sure the source query satisfies the minimum periods defined in the rolling window.": [
-        "Примененное скользящее окно не вернуло никаких данных. Пожалуйста, убедитесь, что исходный запрос удовлетворяет минимальным периодам, определенным в окне перехода."
+      "Applied rolling window did not return any data. Please make sure the\nsource query satisfies the minimum periods defined in the rolling window.": [
+        "Примененное скользящее окно не вернуло никаких данных.\nПожалуйста, убедитесь, что исходный запрос удовлетворяет минимальным периодам,\nопределенным в окне перехода."
       ],
       "From date cannot be larger than to date": [
         "Невозможно выбрать дату [from], которая позже текущего дня"
       ],
-      "Cached value not found": ["Значение не найдено в кеше"],
+      "Cached value not found": ["Кэшированное значение не найдено."],
       "Columns missing in datasource: %(invalid_columns)s": [
         "В источнике данных отсутствуют столбцы: %(invalid_columns)s"
       ],
       "Table View": ["Табличный вид"],
-      "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics]. Please choose one or the other.": [
-        "Нельзя использовать [Столбцы] одновременно с [Группировка по][Показатели][Процентные показатели]. Пожалуйста, выберите что-то одно."
+      "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics].\nPlease choose one or the other.": [
+        "Нельзя использовать [Столбцы] одновременно с [Группировка по][Показатели][Процентные показатели].\nПожалуйста, выберите что-то одно."
       ],
       "Pick a granularity in the Time section or uncheck 'Include Time'": [
         "Выберите столбец с датой и необходимый период в секции «Время» или снимите флажок «Включая дату»"
       ],
-      "Time Table View": [""],
+      "Time Table View": ["Просмотр таблицы времени."],
       "Pick at least one metric": ["Выберите хотя бы один показатель"],
       "When using 'Group By' you are limited to use a single metric": [
-        "При использовании поля [Группировка] вы не ограничены использованием одного среза"
+        "При использовании поля [Группировка по] вы не ограничены использованием одного показателя"
       ],
       "Pivot Table": ["Сводная таблица"],
       "Please choose at least one 'Group by' field ": [
-        "Пожалуйста, выберите хотя бы один срез в поле ‘Группировка’ "
+        "Пожалуйста, выберите хотя бы один показатель в поле ‘Группировка’ "
       ],
       "Please choose at least one metric": [
         "Пожалуйста, выберите хотя бы один показатель"
       ],
       "Group By' and 'Columns' can't overlap": [
-        "Нельзя использовать один и тот же срез в двух полях"
+        "Нельзя использовать один и тот же показатель в двух полях"
       ],
       "Treemap": ["Treemap"],
       "Calendar Heatmap": ["Calendar Heatmap"],
       "Bubble Chart": ["Пузырьковая диаграмма"],
       "Please use 3 different metric labels": [
-        "Пожалуйста, выберите разные срезы данных для левой и правой оси"
+        "Пожалуйста, используйте 3 разные метрические метки."
       ],
-      "Pick a metric for x, y and size": ["Выберите срез для X, Y и размер"],
-      "Bullet Chart": ["Bullet Chart"],
+      "Pick a metric for x, y and size": [
+        "Выберите показатель для X, Y и размер"
+      ],
+      "Bullet Chart": ["Пузырьковая диаграмма"],
       "Pick a metric to display": ["Выберите показатель для отображения"],
       "Big Number with Trendline": ["Big Number с трендом"],
       "Pick a metric!": ["Выберите показатель!"],
@@ -114,7 +192,7 @@
         "Выберите период для временных рядов"
       ],
       "An enclosed time range (both start and end) must be specified when using a Time Comparison.": [
-        "При использовании сравнения времени необходимо указать закрытый временной диапазон (как начальный, так и конечный)."
+        "При использовании сравнения времени необходимо указать закрытый временной диапазон\n(как начальный, так и конечный)."
       ],
       "Time Series - Multiple Line Charts": [
         "Временной Ряд - Множественный Линейный График"
@@ -125,19 +203,19 @@
       "Pick a metric for left axis!": ["Выберите значение для левой оси!"],
       "Pick a metric for right axis!": ["Выберите значение для правой оси!"],
       "Please choose different metrics on left and right axis": [
-        "Пожалуйста, выберите разные срезы данных для левой и правой оси"
+        "Пожалуйста, выберите разные значения данных для левой и правой оси"
       ],
       "Time Series - Bar Chart": ["Time Series - Bar Chart"],
       "Time Series - Period Pivot": ["Time Series - Period Pivot"],
       "Time Series - Percent Change": ["Time Series - Percent Change"],
       "Time Series - Stacked": ["Time Series - Stacked"],
-      "Histogram": ["Histogram"],
+      "Histogram": ["Гистограмма"],
       "Must have at least one numeric column specified": [
         "Должен быть указан хотя бы один числовой столбец"
       ],
       "Distribution - Bar Chart": ["Distribution - Bar Chart"],
       "Can't have overlap between Series and Breakdowns": [
-        "Срезы в полях [Столбцы данных] и [Ряды данных] должны быть разными"
+        "Значения в полях [Столбцы данных] и [Ряды данных] должны быть разными"
       ],
       "Pick at least one field for [Series]": [
         "Выберите хотя бы одно значение для поля [Столбцы данных]"
@@ -145,18 +223,20 @@
       "Sunburst": ["Sunburst"],
       "Sankey": ["Sankey"],
       "Pick exactly 2 columns as [Source / Target]": [
-        "Выберите ровно два среза в поле [Источник / Назначение]"
+        "Выберите ровно два столбца как [Источник / Назначение]"
       ],
       "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}": [
-        "В полях [Источника] и [Назначения] есть одинаковый срез данных - {}. Срезы не должны пересекаться!"
+        "В полях [Источника] и [Назначения] есть одинаковое значение данных - {}. Значения не должны пересекаться!"
       ],
       "Directed Force Layout": [""],
       "Country Map": ["Карта Стран"],
       "World Map": ["Карта Мира"],
       "Filters": ["Фильтры"],
-      "Invalid filter configuration, please select a column": [""],
-      "Parallel Coordinates": [""],
-      "Heatmap": ["Heatmap"],
+      "Invalid filter configuration, please select a column": [
+        "Неправильная конфигурация фильтра, пожалуйста, выберите столбец"
+      ],
+      "Parallel Coordinates": ["Параллельные координаты"],
+      "Heatmap": ["Тепловая карта"],
       "Horizon Charts": ["Horizon Charts"],
       "Mapbox": ["Mapbox"],
       "[Longitude] and [Latitude] must be set": [
@@ -176,9 +256,11 @@
       ],
       "Deck.gl - Multiple Layers": ["Deck.gl - Multiple Layers"],
       "Bad spatial key": ["Плохой пространственный ключ"],
-      "Invalid spatial point encountered: %s": [""],
-      "Encountered invalid NULL spatial entry,                                        please consider filtering those out": [
-        ""
+      "Invalid spatial point encountered: %s": [
+        "Обнаружена недопустимая пространственная точка: %s"
+      ],
+      "Encountered invalid NULL spatial entry, please consider filtering those out": [
+        "Обнаружена недопустимая пространственная запись NULL, пожалуйста, рассмотрите возможность их фильтрации"
       ],
       "Deck.gl - Scatter plot": ["Deck.gl - Scatter plot"],
       "Deck.gl - Screen Grid": ["Deck.gl - Screen Grid"],
@@ -194,7 +276,9 @@
         "Time Series - Nightingale Rose Chart"
       ],
       "Partition Diagram": ["Partition Diagram"],
-      "Invalid advanced data type: %(advanced_data_type)s": [""],
+      "Invalid advanced data type: %(advanced_data_type)s": [
+        "Недопустимое расширение типа данных: %(advanced_data_type)s"
+      ],
       "Deleted %(num)d annotation layer": ["Удалено слоёв аннотации: %(num)d"],
       "All Text": ["Весь текст"],
       "Deleted %(num)d annotation": ["Удалено %(num)d аннотаций"],
@@ -233,17 +317,21 @@
       ],
       "Name must be unique": ["Имя должно быть уникальным"],
       "Deleted %(num)d chart": ["Удалено %(num)d графиков"],
+      "Is certified": ["Подтверждено"],
       "`confidence_interval` must be between 0 and 1 (exclusive)": [
         "`доверительный_интервал` должен быть между 0 и 1 (исключая)"
       ],
       "lower percentile must be greater than 0 and less than 100. Must be lower than upper percentile.": [
-        "нижний процентиль должен быть больше 0 и меньше верхнего процентиля."
+        "нижний процентиль должен быть больше 0 и меньше 100. Должно быть ниже, чем верхний процентиль."
       ],
       "upper percentile must be greater than 0 and less than 100. Must be higher than lower percentile.": [
-        "верхний процентиль должен быть больше нижнего процентиля и меньше 100."
+        "верхний процентиль должен быть больше 0 и меньше 100. Должно быть выше, чем нижний процентиль."
       ],
       "`width` must be greater or equal to 0": [
         "`ширина` должна быть больше, чем 0"
+      ],
+      "`row_limit` must be greater than or equal to 0": [
+        "`лимит_строк` должен быть больше или равен 0"
       ],
       "`row_offset` must be greater than or equal to 0": [
         "`смещение_строк` должно быть больше или равно 0"
@@ -252,13 +340,13 @@
         "Существуют оповещения или рассылки: %s,"
       ],
       "Time string is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later].": [
-        ""
+        "Временная строка неопределена. Пожалуйста, уточните [%(human_readable)s ago] или [%(human_readable)s later]."
       ],
       "Cannot parse time string [%(human_readable)s]": [
         "Не удается разобрать временную строку [%(human_readable)s]"
       ],
       "Time delta is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later].": [
-        ""
+        "Временная дельта неопределена. Пожалуйста, уточните [%(human_readable)s ago] или [%(human_readable)s later]."
       ],
       "Database does not exist": ["База данных не существует"],
       "Dashboards do not exist": ["Дашборды отсутствуют"],
@@ -272,6 +360,9 @@
       "There are associated alerts or reports": [
         "Существуют привязанные оповещения или рассылки"
       ],
+      "You don't have access to this chart.": [
+        "У вас нет доступа к этой диаграмме."
+      ],
       "Changing this chart is forbidden": ["Изменение этого графика запрещено"],
       "Charts could not be deleted.": ["Графики не могут быть удалены."],
       "Import chart failed for an unknown reason": [
@@ -282,11 +373,21 @@
       ],
       "Request is incorrect: %(error)s": ["Запрос некорректен: %(error)s"],
       "Request is not JSON": ["Запрос не в формате JSON"],
+      "Empty query result": ["Пустой результат запроса"],
       "Owners are invalid": ["Владельцы недействительны"],
-      "Datasource type is invalid": [""],
-      "Invalid result type: %(result_type)s": [""],
+      "Some roles do not exist": ["Некоторых ролей не существует"],
+      "Datasource type is invalid": ["Недопустимый тип источника данных"],
+      "Datasource does not exist": ["Источника данных не существует"],
+      "Query does not exist": ["Запрос не существует"],
+      "Invalid result type: %(result_type)s": [
+        "Недопустимый тип результата: %(result_type)s"
+      ],
+      "A time column must be specified when using a Time Comparison.": [
+        "При использовании Time Comparison необходимо указать столбец времени."
+      ],
+      "The chart does not exist": ["Диаграмма не существует"],
       "Duplicate column/metric labels: %(labels)s. Please make sure all columns and metrics have a unique label.": [
-        ""
+        "Повторяющиеся метки столбцов/показателей: %(labels)s.\nПожалуйста, убедитесь, что все столбцы и показатели имеют уникальныую метку."
       ],
       "The following entries in `series_columns` are missing in `columns`: %(columns)s. ": [
         ""
@@ -1783,8 +1884,10 @@
         ""
       ],
       "Grid": ["Сетка"],
-      "Weight": ["Высота"],
-      "Metric used as a weight for the grid's coloring": [""],
+      "Weight": ["Вес"],
+      "Metric used as a weight for the grid's coloring": [
+        "Метрика, используемая в качестве веса для раскраски сетки"
+      ],
       "Aggregates data within the boundary of grid cells and maps the aggregated values to a dynamic color scale": [
         ""
       ],

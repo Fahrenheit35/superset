@@ -29,125 +29,103 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 
 #: superset/errors.py:95
-#, fuzzy
 msgid "The datasource is too large to query."
 msgstr "Проблема 1000 - Источник данных слишком велик для запроса."
 
 #: superset/errors.py:96
-#, fuzzy
 msgid "The database is under an unusual load."
 msgstr "Проблема 1001 - Необычная загрузка базы данных."
 
 #: superset/errors.py:97
-#, fuzzy
 msgid "The database returned an unexpected error."
 msgstr "Проблема 1002 - База данных вернула непредвиденную ошибку."
 
 #: superset/errors.py:98
-#, fuzzy
-msgid ""
-"There is a syntax error in the SQL query. Perhaps there was a misspelling"
-" or a typo."
-msgstr "Проблема 1003 - Ошибка в SQL-запросе. Возможно опечатка."
+msgid "There is a syntax error in the SQL query. Perhaps there was a misspelling or a typo."
+msgstr "Проблема 1003 - Ошибка синтаксиса в SQL-запросе. Возможно там орфографическая ошибка или опечатка."
 
 #: superset/errors.py:102
-#, fuzzy
 msgid "The column was deleted or renamed in the database."
 msgstr "Проблема 1004 - Столбец был удалён или переименован в базе данных."
 
 #: superset/errors.py:103
-#, fuzzy
 msgid "The table was deleted or renamed in the database."
 msgstr "Проблема 1005 - Таблица была удалена или переименована в базе данных."
 
 #: superset/errors.py:104
-#, fuzzy
 msgid "One or more parameters specified in the query are missing."
-msgstr ""
-"Проблема 1006 - Отсутствуют один или несколько параметров, используемых в"
-" запросе."
+msgstr "Проблема 1006 - Отсутствуют один или несколько параметров, используемых в запросе."
 
 #: superset/errors.py:105
 msgid "The hostname provided can't be resolved."
-msgstr ""
+msgstr "Неразрешенное имя хоста."
 
 #: superset/errors.py:106
-#, fuzzy
 msgid "The port is closed."
-msgstr "Рассылка не удалась"
+msgstr "Порт закрыт."
 
 #: superset/errors.py:107
 msgid "The host might be down, and can't be reached on the provided port."
-msgstr ""
+msgstr "Возможно, хост не работает, и с ним невозможно связаться по предоставленному порту."
 
 #: superset/errors.py:108
-#, fuzzy
 msgid "Superset encountered an error while running a command."
-msgstr "Обнаружена ошибка в запросе."
+msgstr "Обнаружена ошибка при выполнении команды."
 
 #: superset/errors.py:109
-#, fuzzy
 msgid "Superset encountered an unexpected error."
-msgstr "Неожиданная ошибка графика рассылки"
+msgstr "Обнаружена ошибка графика рассылки."
 
 #: superset/errors.py:110
 msgid "The username provided when connecting to a database is not valid."
-msgstr ""
+msgstr "Недопустимое имя пользователя для подключении к базе данных."
 
 #: superset/errors.py:111
 msgid "The password provided when connecting to a database is not valid."
-msgstr ""
+msgstr "Недопустмый пароль при подключении к базе данных."
 
 #: superset/errors.py:112
 msgid "Either the username or the password is wrong."
-msgstr ""
+msgstr "Неправильное имя пользователя или пароль."
 
 #: superset/errors.py:113
 msgid "Either the database is spelled incorrectly or does not exist."
-msgstr ""
+msgstr "База данных указана неправильно или её не существет."
 
 #: superset/errors.py:114
-#, fuzzy
 msgid "The schema was deleted or renamed in the database."
 msgstr "Проблема 1004 - Столбец был удалён или переименован в базе данных."
 
 #: superset/errors.py:115
-#, fuzzy
 msgid "User doesn't have the proper permissions."
-msgstr "У вас нет прав на "
+msgstr "У пользователя недостаточно прав."
 
 #: superset/errors.py:116
-#, fuzzy
 msgid "One or more parameters needed to configure a database are missing."
-msgstr ""
-"Проблема 1006 - Отсутствуют один или несколько параметров, используемых в"
-" запросе."
+msgstr "Проблема 1006 - Отсутствуют один или несколько параметров, используемых в запросе."
 
 #: superset/errors.py:117
 msgid "The submitted payload has the incorrect format."
-msgstr ""
+msgstr "Тело запроса имеет неверный формат."
 
 #: superset/errors.py:118
 msgid "The submitted payload has the incorrect schema."
-msgstr ""
+msgstr "Тело запроса имеет неверную схему."
 
 #: superset/errors.py:119
 msgid "Results backend needed for asynchronous queries is not configured."
-msgstr ""
+msgstr "Серверная часть резлультатов, необходимая для асинхронных запросов, не является конфигурацией."
 
 #: superset/errors.py:120
 msgid "Database does not allow data manipulation."
 msgstr "База данных не допускает манипуляций с данными."
 
 #: superset/errors.py:121
-#, fuzzy
-msgid ""
-"The CTAS (create table as select) doesn't have a SELECT statement at the "
-"end. Please make sure your query has a SELECT as its last statement. "
-"Then, try running your query again."
-msgstr ""
-"CTAS (create table as select) может быть выполнено только в запросе, "
-"последняя операция которого SELECT."
+msgid "The CTAS (create table as select) doesn't have a SELECT statement at the end.
+Please make sure your query has a SELECT as its last statement. Then, try running your query again."
+msgstr "CTAS (create table as select) может быть выполнено только в запросе, последняя операция которого SELECT.
+Пожалуйста, убедитесь, что ваш запрос содержит SELECT в качестве последнего утверждения.
+Затем попытайтесь выполнить свой запрос ещё раз."
 
 #: superset/errors.py:126
 msgid "CVAS (create view as select) query has more than one statement."
@@ -159,59 +137,53 @@ msgstr "Запрос CVAS (create view as select) не содержит Select."
 
 #: superset/errors.py:128
 msgid "Query is too complex and takes too long to run."
-msgstr ""
+msgstr "Запрос слишком сложен и долго выполняется."
 
 #: superset/errors.py:129
 msgid "The database is currently running too many queries."
-msgstr ""
+msgstr "В базе данных выполняет слишком много запросов."
 
 #: superset/errors.py:130
-#, fuzzy
 msgid "One or more parameters specified in the query are malformatted."
-msgstr ""
-"Проблема 1006 - Отсутствуют один или несколько параметров, используемых в"
-" запросе."
+msgstr "Проблема 1006 - Неправильно отформатирован один или несколько параметров, используемых в запросе."
 
 #: superset/errors.py:131
 #, fuzzy
 msgid "The object does not exist in the given database."
-msgstr "Имя таблицы, которая существует в исходной базе данных"
+msgstr "Имя таблицы, которая существует в исходной базе данных."
 
 #: superset/errors.py:132
 msgid "The query has a syntax error."
-msgstr ""
+msgstr "Запрос содержит синтаксическую ошибку."
 
 #: superset/errors.py:133
 msgid "The results backend no longer has the data from the query."
-msgstr ""
+msgstr "Серверная часть результатов больше не содержит данных из запроса."
 
 #: superset/errors.py:134
 msgid "The query associated with the results was deleted."
-msgstr ""
+msgstr "Запрос, связанный с результатами, был удалён."
 
 #: superset/errors.py:135
-msgid ""
-"The results stored in the backend were stored in a different format, and "
-"no longer can be deserialized."
-msgstr ""
+msgid "The results stored in the backend were stored in a different format, and no longer can be deserialized."
+msgstr "Результаты, сохраненные в серверной части, были сохранены в другом формате
+и больше не могут быть десериализованы."
 
 #: superset/errors.py:139
-#, fuzzy
 msgid "The port number is invalid."
-msgstr "Параметры базы данных недействительны."
+msgstr "Номер порта недействителен."
 
 #: superset/errors.py:140 superset/sqllab/sql_json_executer.py:190
 msgid "Failed to start remote query on a worker."
-msgstr ""
+msgstr "Не удалось запустить удаленный запрос worker."
 
 #: superset/errors.py:141
-#, fuzzy
 msgid "The database was deleted."
-msgstr "Источник данных, похоже, был удален"
+msgstr "База данных была удалена."
 
 #: superset/connectors/sqla/utils.py:175 superset/errors.py:142
 msgid "Custom SQL fields cannot contain sub-queries."
-msgstr ""
+msgstr "Пользовательские поля SQL не могут содержать подзапросы."
 
 #: superset/databases/schemas.py:173 superset/exceptions.py:188
 msgid "Invalid certificate"
@@ -238,53 +210,46 @@ msgid "Unsupported template value for key %(key)s"
 msgstr "Неподдерживаемое значение для ключа шаблона %(key)s"
 
 #: superset/sql_lab.py:225
-#, fuzzy
 msgid "Only SELECT statements are allowed against this database."
-msgstr "Для этой БД разрешены только выражения `SELECT`"
+msgstr "Для этой базы данных разрешены только выражения SELECT."
 
 #: superset/sql_lab.py:294
 #, python-format
-msgid ""
-"The query was killed after %(sqllab_timeout)s seconds. It might be too "
-"complex, or the database might be under heavy load."
-msgstr ""
+msgid "The query was killed after %(sqllab_timeout)s seconds. It might be too complex,
+or the database might be under heavy load."
+msgstr "Запрос был прерван через %(sqllab_timeout)s секунд. Это может быть слишком сложно,
+или база данных может находиться под большой нагрузкой."
 
 #: superset/sql_lab.py:404 superset/views/core.py:2185
 msgid "Results backend is not configured."
-msgstr ""
+msgstr "Серверная часть результатов не настроена."
 
 #: superset/sql_lab.py:434
-msgid ""
-"CTAS (create table as select) can only be run with a query where the last"
-" statement is a SELECT. Please make sure your query has a SELECT as its "
-"last statement. Then, try running your query again."
-msgstr ""
-"CTAS (create table as select) можно запустить только с запросом, где "
-"последним оператором является SELECT. Пожалуйста, убедитесь, что ваш "
-"запрос содержит SELECT в качестве последнего утверждения. Затем "
-"попробуйте выполнить свой запрос еще раз."
+msgid "CTAS (create table as select) can only be run with a query where the last
+statement is a SELECT. Please make sure your query has a SELECT as its
+last statement. Then, try running your query again."
+msgstr "CTAS (create table as select) можно запустить только с запросом, где
+последним оператором является SELECT. Пожалуйста, убедитесь, что ваш
+запрос содержит SELECT в качестве последнего утверждения.
+Затем попробуйте выполнить свой запрос еще раз."
 
 #: superset/sql_lab.py:451
-msgid ""
-"CVAS (create view as select) can only be run with a query with a single "
-"SELECT statement. Please make sure your query has only a SELECT "
-"statement. Then, try running your query again."
-msgstr ""
-"ожет быть выполнено только в запросе, в котором есть только одна операция"
-" SELECT."
+msgid "CVAS (create view as select) can only be run with a query with a single SELECT statement.
+Please make sure your query has only a SELECT statement.
+Then, try running your query again."
+msgstr "CVAS (create view as select) может быть выполнено только в запросе,
+в котором есть только одна операция SELECT."
 
 #: superset/viz.py:142
 msgid "Viz is missing a datasource"
 msgstr "У визуализации отсутствует источник данных"
 
 #: superset/viz.py:246
-msgid ""
-"Applied rolling window did not return any data. Please make sure the "
-"source query satisfies the minimum periods defined in the rolling window."
-msgstr ""
-"Примененное скользящее окно не вернуло никаких данных. Пожалуйста, "
-"убедитесь, что исходный запрос удовлетворяет минимальным периодам, "
-"определенным в окне перехода."
+msgid "Applied rolling window did not return any data. Please make sure the
+source query satisfies the minimum periods defined in the rolling window."
+msgstr "Примененное скользящее окно не вернуло никаких данных.
+Пожалуйста, убедитесь, что исходный запрос удовлетворяет минимальным периодам,
+определенным в окне перехода."
 
 #: superset/utils/date_parser.py:267 superset/viz.py:385
 msgid "From date cannot be larger than to date"
@@ -292,7 +257,7 @@ msgstr "Невозможно выбрать дату [from], которая по
 
 #: superset/viz.py:556
 msgid "Cached value not found"
-msgstr "Значение не найдено в кеше"
+msgstr "Кэшированное значение не найдено."
 
 #: superset/common/query_context_processor.py:121 superset/viz.py:571
 #, python-format
@@ -304,22 +269,18 @@ msgid "Table View"
 msgstr "Табличный вид"
 
 #: superset/viz.py:725
-msgid ""
-"You cannot use [Columns] in combination with [Group "
-"By]/[Metrics]/[Percentage Metrics]. Please choose one or the other."
-msgstr ""
-"Нельзя использовать [Столбцы] одновременно с [Группировка "
-"по][Показатели][Процентные показатели]. Пожалуйста, выберите что-то одно."
+msgid "You cannot use [Columns] in combination with [Group By]/[Metrics]/[Percentage Metrics].
+Please choose one or the other."
+msgstr "Нельзя использовать [Столбцы] одновременно с [Группировка по][Показатели][Процентные показатели].
+Пожалуйста, выберите что-то одно."
 
 #: superset/viz.py:771
 msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
-msgstr ""
-"Выберите столбец с датой и необходимый период в секции «Время» или "
-"снимите флажок «Включая дату»"
+msgstr "Выберите столбец с датой и необходимый период в секции «Время» или снимите флажок «Включая дату»"
 
 #: superset/viz.py:851
 msgid "Time Table View"
-msgstr ""
+msgstr "Просмотр таблицы времени."
 
 #: superset/viz.py:859 superset/viz.py:1815
 msgid "Pick at least one metric"
@@ -327,9 +288,7 @@ msgstr "Выберите хотя бы один показатель"
 
 #: superset/viz.py:863
 msgid "When using 'Group By' you are limited to use a single metric"
-msgstr ""
-"При использовании поля [Группировка] вы не ограничены использованием "
-"одного среза"
+msgstr "При использовании поля [Группировка по] вы не ограничены использованием одного показателя"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/index.js:30
 #: superset/viz.py:896
@@ -338,7 +297,7 @@ msgstr "Сводная таблица"
 
 #: superset/viz.py:913
 msgid "Please choose at least one 'Group by' field "
-msgstr "Пожалуйста, выберите хотя бы один срез в поле ‘Группировка’ "
+msgstr "Пожалуйста, выберите хотя бы один показатель в поле ‘Группировка’ "
 
 #: superset/viz.py:925
 msgid "Please choose at least one metric"
@@ -346,7 +305,7 @@ msgstr "Пожалуйста, выберите хотя бы один показ
 
 #: superset/viz.py:929
 msgid "Group By' and 'Columns' can't overlap"
-msgstr "Нельзя использовать один и тот же срез в двух полях"
+msgstr "Нельзя использовать один и тот же показатель в двух полях"
 
 #: superset-frontend/plugins/legacy-plugin-chart-treemap/src/index.js:40
 #: superset/viz.py:1037
@@ -365,16 +324,16 @@ msgstr "Пузырьковая диаграмма"
 
 #: superset/viz.py:1195
 msgid "Please use 3 different metric labels"
-msgstr "Пожалуйста, выберите разные срезы данных для левой и правой оси"
+msgstr "Пожалуйста, используйте 3 разные метрические метки."
 
 #: superset/viz.py:1197
 msgid "Pick a metric for x, y and size"
-msgstr "Выберите срез для X, Y и размер"
+msgstr "Выберите показатель для X, Y и размер"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bullet/index.js:30
 #: superset/viz.py:1224
 msgid "Bullet Chart"
-msgstr "Bullet Chart"
+msgstr "Пузырьковая диаграмма"
 
 #: superset/viz.py:1236
 msgid "Pick a metric to display"
@@ -403,12 +362,9 @@ msgid "Pick a time granularity for your time series"
 msgstr "Выберите период для временных рядов"
 
 #: superset/common/query_context_processor.py:272 superset/viz.py:1449
-msgid ""
-"An enclosed time range (both start and end) must be specified when using "
-"a Time Comparison."
-msgstr ""
-"При использовании сравнения времени необходимо указать закрытый временной"
-" диапазон (как начальный, так и конечный)."
+msgid "An enclosed time range (both start and end) must be specified when using a Time Comparison."
+msgstr "При использовании сравнения времени необходимо указать закрытый временной диапазон
+(как начальный, так и конечный)."
 
 #: superset/viz.py:1520
 msgid "Time Series - Multiple Line Charts"
@@ -428,7 +384,7 @@ msgstr "Выберите значение для правой оси!"
 
 #: superset/viz.py:1612
 msgid "Please choose different metrics on left and right axis"
-msgstr "Пожалуйста, выберите разные срезы данных для левой и правой оси"
+msgstr "Пожалуйста, выберите разные значения данных для левой и правой оси"
 
 #: superset/viz.py:1672
 msgid "Time Series - Bar Chart"
@@ -449,7 +405,7 @@ msgstr "Time Series - Stacked"
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:37
 #: superset/viz.py:1745
 msgid "Histogram"
-msgstr "Histogram"
+msgstr "Гистограмма"
 
 #: superset/viz.py:1754
 msgid "Must have at least one numeric column specified"
@@ -461,7 +417,7 @@ msgstr "Distribution - Bar Chart"
 
 #: superset/viz.py:1812
 msgid "Can't have overlap between Series and Breakdowns"
-msgstr "Срезы в полях [Столбцы данных] и [Ряды данных] должны быть разными"
+msgstr "Значения в полях [Столбцы данных] и [Ряды данных] должны быть разными"
 
 #: superset/viz.py:1817
 msgid "Pick at least one field for [Series]"
@@ -477,15 +433,11 @@ msgstr "Sankey"
 
 #: superset/viz.py:1945
 msgid "Pick exactly 2 columns as [Source / Target]"
-msgstr "Выберите ровно два среза в поле [Источник / Назначение]"
+msgstr "Выберите ровно два столбца как [Источник / Назначение]"
 
 #: superset/viz.py:1994
-msgid ""
-"There's a loop in your Sankey, please provide a tree. Here's a faulty "
-"link: {}"
-msgstr ""
-"В полях [Источника] и [Назначения] есть одинаковый срез данных - {}. "
-"Срезы не должны пересекаться!"
+msgid "There's a loop in your Sankey, please provide a tree. Here's a faulty link: {}"
+msgstr "В полях [Источника] и [Назначения] есть одинаковое значение данных - {}. Значения не должны пересекаться!"
 
 #: superset/viz.py:2007
 msgid "Directed Force Layout"
@@ -510,17 +462,17 @@ msgstr "Фильтры"
 
 #: superset/viz.py:2162
 msgid "Invalid filter configuration, please select a column"
-msgstr ""
+msgstr "Неправильная конфигурация фильтра, пожалуйста, выберите столбец"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/index.js:30
 #: superset/viz.py:2221
 msgid "Parallel Coordinates"
-msgstr ""
+msgstr "Параллельные координаты"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:38
 #: superset/viz.py:2251
 msgid "Heatmap"
-msgstr "Heatmap"
+msgstr "Тепловая карта"
 
 #: superset/viz.py:2312
 msgid "Horizon Charts"
@@ -561,14 +513,11 @@ msgstr "Плохой пространственный ключ"
 #: superset/viz.py:2532
 #, python-format
 msgid "Invalid spatial point encountered: %s"
-msgstr ""
+msgstr "Обнаружена недопустимая пространственная точка: %s"
 
 #: superset/viz.py:2569
-msgid ""
-"Encountered invalid NULL spatial entry,"
-"                                        please consider filtering those "
-"out"
-msgstr ""
+msgid "Encountered invalid NULL spatial entry, please consider filtering those out"
+msgstr "Обнаружена недопустимая пространственная запись NULL, пожалуйста, рассмотрите возможность их фильтрации"
 
 #: superset/viz.py:2664
 msgid "Deck.gl - Scatter plot"
@@ -621,7 +570,7 @@ msgstr "Partition Diagram"
 #: superset/advanced_data_type/api.py:100
 #, python-format
 msgid "Invalid advanced data type: %(advanced_data_type)s"
-msgstr ""
+msgstr "Недопустимое расширение типа данных: %(advanced_data_type)s"
 
 #: superset/annotation_layers/api.py:355
 #, python-format
@@ -715,34 +664,28 @@ msgstr[0] "Удалено %(num)d графиков"
 
 #: superset/charts/filters.py:64 superset/dashboards/filters.py:219
 #: superset/datasets/filters.py:39
-#, fuzzy
 msgid "Is certified"
-msgstr "Изменено"
+msgstr "Подтверждено"
 
 #: superset/charts/schemas.py:566
 msgid "`confidence_interval` must be between 0 and 1 (exclusive)"
 msgstr "`доверительный_интервал` должен быть между 0 и 1 (исключая)"
 
 #: superset/charts/schemas.py:638
-msgid ""
-"lower percentile must be greater than 0 and less than 100. Must be lower "
-"than upper percentile."
-msgstr "нижний процентиль должен быть больше 0 и меньше верхнего процентиля."
+msgid "lower percentile must be greater than 0 and less than 100. Must be lower than upper percentile."
+msgstr "нижний процентиль должен быть больше 0 и меньше 100. Должно быть ниже, чем верхний процентиль."
 
 #: superset/charts/schemas.py:653
-msgid ""
-"upper percentile must be greater than 0 and less than 100. Must be higher"
-" than lower percentile."
-msgstr "верхний процентиль должен быть больше нижнего процентиля и меньше 100."
+msgid "upper percentile must be greater than 0 and less than 100. Must be higher than lower percentile."
+msgstr "верхний процентиль должен быть больше 0 и меньше 100. Должно быть выше, чем нижний процентиль."
 
 #: superset/charts/schemas.py:968
 msgid "`width` must be greater or equal to 0"
 msgstr "`ширина` должна быть больше, чем 0"
 
 #: superset/charts/schemas.py:1110
-#, fuzzy
 msgid "`row_limit` must be greater than or equal to 0"
-msgstr "`лимит_строк` должен быть больше или равен 1"
+msgstr "`лимит_строк` должен быть больше или равен 0"
 
 #: superset/charts/schemas.py:1117
 msgid "`row_offset` must be greater than or equal to 0"
@@ -764,10 +707,8 @@ msgstr "Существуют оповещения или рассылки: %s,"
 
 #: superset/charts/commands/exceptions.py:38
 #, python-format
-msgid ""
-"Time string is ambiguous. Please specify [%(human_readable)s ago] or "
-"[%(human_readable)s later]."
-msgstr ""
+msgid "Time string is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later]."
+msgstr "Временная строка неопределена. Пожалуйста, уточните [%(human_readable)s ago] или [%(human_readable)s later]."
 
 #: superset/charts/commands/exceptions.py:51
 #, python-format
@@ -776,10 +717,8 @@ msgstr "Не удается разобрать временную строку [
 
 #: superset/charts/commands/exceptions.py:66
 #, python-format
-msgid ""
-"Time delta is ambiguous. Please specify [%(human_readable)s ago] or "
-"[%(human_readable)s later]."
-msgstr ""
+msgid "Time delta is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later]."
+msgstr "Временная дельта неопределена. Пожалуйста, уточните [%(human_readable)s ago] или [%(human_readable)s later]."
 
 #: superset/charts/commands/exceptions.py:82
 #: superset/datasets/commands/exceptions.py:41
@@ -820,9 +759,8 @@ msgid "There are associated alerts or reports"
 msgstr "Существуют привязанные оповещения или рассылки"
 
 #: superset/charts/commands/exceptions.py:131
-#, fuzzy
 msgid "You don't have access to this chart."
-msgstr "У вас нет прав на редактирование этого дашборда: %(name)s."
+msgstr "У вас нет доступа к этой диаграмме."
 
 #: superset/charts/commands/exceptions.py:135
 msgid "Changing this chart is forbidden"
@@ -838,9 +776,7 @@ msgstr "Импорт графика не удался по неизвестно�
 
 #: superset/charts/data/api.py:127
 msgid "Chart has no query context saved. Please save the chart again."
-msgstr ""
-"На диаграмме не сохранен контекст запроса. Пожалуйста, сохраните "
-"диаграмму еще раз."
+msgstr "На диаграмме не сохранен контекст запроса. Пожалуйста, сохраните диаграмму еще раз."
 
 #: superset/charts/data/api.py:147 superset/charts/data/api.py:235
 #: superset/charts/data/api.py:301
@@ -853,9 +789,8 @@ msgid "Request is not JSON"
 msgstr "Запрос не в формате JSON"
 
 #: superset/charts/data/api.py:355
-#, fuzzy
 msgid "Empty query result"
-msgstr "Пустой запрос?"
+msgstr "Пустой результат запроса"
 
 #: superset/commands/exceptions.py:108
 #: superset/datasets/commands/exceptions.py:144
@@ -863,53 +798,43 @@ msgid "Owners are invalid"
 msgstr "Владельцы недействительны"
 
 #: superset/commands/exceptions.py:115
-#, fuzzy
 msgid "Some roles do not exist"
-msgstr "Дашборды отсутствуют"
+msgstr "Некоторых ролей не существует"
 
 #: superset/commands/exceptions.py:123
 msgid "Datasource type is invalid"
-msgstr ""
+msgstr "Недопустимый тип источника данных"
 
 #: superset/commands/exceptions.py:131
-#, fuzzy
 msgid "Datasource does not exist"
-msgstr "Датасет не существует"
+msgstr "Источника данных не существует"
 
 #: superset/commands/exceptions.py:138
-#, fuzzy
 msgid "Query does not exist"
-msgstr "График не существует"
+msgstr "Запрос не существует"
 
 #: superset/common/query_actions.py:202
 #, python-format
 msgid "Invalid result type: %(result_type)s"
-msgstr ""
+msgstr "Недопустимый тип результата: %(result_type)s"
 
 #: superset/common/query_context_processor.py:329
-#, fuzzy
 msgid "A time column must be specified when using a Time Comparison."
-msgstr ""
-"При использовании сравнения времени необходимо указать закрытый временной"
-" диапазон (как начальный, так и конечный)."
+msgstr "При использовании Time Comparison необходимо указать столбец времени."
 
 #: superset/common/query_context_processor.py:490
-#, fuzzy
 msgid "The chart does not exist"
-msgstr "График не существует"
+msgstr "Диаграмма не существует"
 
 #: superset/common/query_object.py:294
 #, python-format
-msgid ""
-"Duplicate column/metric labels: %(labels)s. Please make sure all columns "
-"and metrics have a unique label."
-msgstr ""
+msgid "Duplicate column/metric labels: %(labels)s. Please make sure all columns and metrics have a unique label."
+msgstr "Повторяющиеся метки столбцов/показателей: %(labels)s.
+Пожалуйста, убедитесь, что все столбцы и показатели имеют уникальныую метку."
 
 #: superset/common/query_object.py:316
 #, python-format
-msgid ""
-"The following entries in `series_columns` are missing in `columns`: "
-"%(columns)s. "
+msgid "The following entries in `series_columns` are missing in `columns`: %(columns)s. "
 msgstr ""
 
 #: superset/common/query_object.py:436
@@ -7184,11 +7109,11 @@ msgstr "Сетка"
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Screengrid/controlPanel.ts:73
 msgid "Weight"
-msgstr "Высота"
+msgstr "Вес"
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Screengrid/controlPanel.ts:74
 msgid "Metric used as a weight for the grid's coloring"
-msgstr ""
+msgstr "Метрика, используемая в качестве веса для раскраски сетки"
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Screengrid/index.js:27
 msgid ""
