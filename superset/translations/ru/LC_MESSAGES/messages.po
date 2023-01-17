@@ -1536,8 +1536,8 @@ msgstr "Движок должен быть указан при передаче 
 
 #: superset/databases/commands/validate.py:60 superset/databases/schemas.py:312
 #, python-format
-msgid "Engine '%(engine)s' is not a valid engine."
-msgstr "Движок '%(engine)s' не является допстимым движка"
+msgid "Engine \"%(engine)s\" is not a valid engine."
+msgstr "Движок \"%(engine)s\" не является допстимым движка"
 
 #: superset/databases/commands/exceptions.py:32
 msgid "Database parameters are invalid."
@@ -1599,7 +1599,6 @@ msgid "Unexpected error occurred, please check your logs for details"
 msgstr "Произошла непредвиденная ошибка, пожалуйста, проверьте логи для подробностей"
 
 #: superset/databases/commands/exceptions.py:142
-#, fuzzy
 msgid "no SQL validator is configured"
 msgstr "Средство проверки SQL не настроено."
 
@@ -1627,7 +1626,7 @@ msgstr "Невозможно загрузить драйвер базы данн
 #: superset/databases/commands/validate.py:73
 #, python-format
 msgid "Engine \"%(engine)s\" cannot be configured through parameters."
-msgstr ""
+msgstr "Движок \"%(engine)s\" не может быть настроен с помощью параметров."
 
 #: superset/databases/commands/validate.py:140
 msgid "Database is offline."
@@ -1635,23 +1634,16 @@ msgstr "База данных выключена"
 
 #: superset/databases/commands/validate_sql.py:73 superset/views/core.py:2379
 #, python-format
-msgid ""
-"%(validator)s was unable to check your query.\n"
-"Please recheck your query.\n"
-"Exception: %(ex)s"
-msgstr ""
-"%(validator)s не может проверить ваш запрос\n"
-"Пожалуйста, проверьте ваш запрос\n"
-"Исключение: %(ex)s"
+msgid "%(validator)s was unable to check your query.\n Please recheck your query.\n Exception: %(ex)s"
+msgstr "%(validator)s не может проверить ваш запрос\n Пожалуйста, проверьте ваш запрос\n Исключение: %(ex)s"
 
 #: superset/databases/commands/validate_sql.py:101
-#, fuzzy
 msgid "no SQL validator is configured for {}"
-msgstr "Неверная конфигурация широты и долготы."
+msgstr "Средство проверки SQL не настроено для {}"
 
 #: superset/databases/commands/validate_sql.py:114
 msgid "No validator named {} found (configured for the {} engine)"
-msgstr ""
+msgstr "Не найден валидатор с именем {} (сконфигурированный для движка {})"
 
 #: superset/datasets/api.py:680
 #, python-format
@@ -1700,24 +1692,20 @@ msgstr "Один или несколько столбцов уже сущест�
 
 #: superset/datasets/commands/exceptions.py:99
 msgid "One or more metrics do not exist"
-msgstr "Выберите один или несколько показателей для отображения"
+msgstr "Один или несколько показателей не существует"
 
 #: superset/datasets/commands/exceptions.py:109
 msgid "One or more metrics are duplicated"
-msgstr "Выберите один или несколько показателей для отображения"
+msgstr "Один или несколько показателей дублируются"
 
 #: superset/datasets/commands/exceptions.py:119
 msgid "One or more metrics already exist"
-msgstr "Выберите один или несколько показателей для отображения"
+msgstr "Один или несколько показателей уже существуют"
 
 #: superset/datasets/commands/exceptions.py:130
 #, python-format
-msgid ""
-"Table [%(table_name)s] could not be found, please double check your "
-"database connection, schema, and table name"
-msgstr ""
-"Не удалось найти таблицу [%(table_name)s]. Пожалуйста, проверьте "
-"подключение к базе данных, схему и имя таблицы"
+msgid "Table [%(table_name)s] could not be found, please double check your database connection, schema, and table name"
+msgstr "Не удалось найти таблицу [%(table_name)s]. Пожалуйста, проверьте подключение к базе данных, схему и имя таблицы"
 
 #: superset/datasets/commands/exceptions.py:149
 msgid "Dataset does not exist"
@@ -1745,9 +1733,8 @@ msgid "Dataset(s) could not be bulk deleted."
 msgstr "Датасет(ы) не может быть удалены."
 
 #: superset/datasets/commands/exceptions.py:177
-#, fuzzy
 msgid "Samples for dataset could not be retrieved."
-msgstr "Датасет не может быть создан."
+msgstr "Не удалось получить образцы для набора данных."
 
 #: superset/datasets/commands/exceptions.py:181
 msgid "Changing this dataset is forbidden"
@@ -1758,27 +1745,25 @@ msgid "Import dataset failed for an unknown reason"
 msgstr "Импорт датасета не удался по неизвестной причине"
 
 #: superset/datasets/commands/exceptions.py:189
-#, fuzzy
 msgid "You don't have access to this dataset."
-msgstr "У вас нет прав на редактирование этого дашборда: %(name)s."
+msgstr "У вас нет прав на редактирование этого дашборда"
 
 #: superset/datasets/metrics/commands/exceptions.py:23
 msgid "Dataset metric not found."
-msgstr "Метрика датасета не найдена"
+msgstr "Показатель датасета не найдена"
 
 #: superset/datasets/metrics/commands/exceptions.py:27
 msgid "Dataset metric delete failed."
-msgstr "Не удалось удалить метрику датасета"
+msgstr "Не удалось удалить показатель датасета"
 
 #: superset/db_engine_specs/athena.py:55
 #: superset/db_engine_specs/bigquery.py:185
 #: superset/db_engine_specs/postgres.py:144
 #: superset/db_engine_specs/snowflake.py:105
 #, python-format
-msgid ""
-"Please check your query for syntax errors at or near "
-"\"%(syntax_error)s\". Then, try running your query again."
-msgstr ""
+msgid "Please check your query for syntax errors at or near \"%(syntax_error)s\". Then, try running your query again."
+msgstr "Пожалуйста, проверьте ваш запрос на наличие синтаксических ошибок \"%(syntax_error)s\".
+Затем попробуйте выполнить ваш запрос ещй раз"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:29
 #: superset-frontend/src/explore/components/DataTableControl/index.tsx:143
@@ -1792,7 +1777,7 @@ msgstr "секунд"
 
 #: superset/db_engine_specs/base.py:99
 msgid "5 second"
-msgstr "30 секунд"
+msgstr "5 секунд"
 
 #: superset/db_engine_specs/base.py:100
 msgid "30 second"
@@ -1808,11 +1793,11 @@ msgstr "5 минут"
 
 #: superset/db_engine_specs/base.py:103
 msgid "10 minute"
-msgstr "1 минута"
+msgstr "10 минут"
 
 #: superset/db_engine_specs/base.py:104
 msgid "15 minute"
-msgstr "1 минута"
+msgstr "15 минут"
 
 #: superset/db_engine_specs/base.py:105
 msgid "30 minute"
@@ -1874,7 +1859,7 @@ msgstr "Пароль"
 
 #: superset/db_engine_specs/base.py:1558
 msgid "Hostname or IP address"
-msgstr "Hostname or IP address"
+msgstr "Имя хоста или IP-адрес"
 
 #: superset/db_engine_specs/base.py:1561
 msgid "Database port"
@@ -1883,7 +1868,7 @@ msgstr "Порт Базы данных"
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:89
 #: superset/db_engine_specs/base.py:1564
 msgid "Database name"
-msgstr "Название таблицы"
+msgstr "Название базы данных"
 
 #: superset/db_engine_specs/base.py:1566
 msgid "Additional parameters"
@@ -1891,51 +1876,44 @@ msgstr "Дополнительные параметры"
 
 #: superset/db_engine_specs/base.py:1569
 msgid "Use an encrypted connection to the database"
-msgstr ""
+msgstr "Используйте зашифрованное подключение к базе данных"
 
 #: superset/db_engine_specs/bigquery.py:155
-msgid ""
-"We were unable to connect to your database. Please confirm that your "
-"service account has the Viewer and Job User roles on the project."
-msgstr ""
+msgid "We were unable to connect to your database.
+Please confirm that your service account has the Viewer and Job User roles on the project."
+msgstr "Нам не удалось подключиться к вашей базе данных.
+Пожалуйста, подтвердите, что в вашей учетной записи службы есть роли пользователя просмотра и задания в проекте"
 
 #: superset/db_engine_specs/bigquery.py:164
 #, python-format
-msgid ""
-"The table \"%(table)s\" does not exist. A valid table must be used to run"
-" this query."
-msgstr ""
+msgid "The table \"%(table)s\" does not exist. A valid table must be used to run this query."
+msgstr "Таблица \"%(table)s\" не существует. Для выполнения этого запроса должна использоваться допустимая таблица."
 
 #: superset/db_engine_specs/bigquery.py:172
 #, python-format
 msgid "We can't seem to resolve column \"%(column)s\" at line %(location)s."
-msgstr ""
+msgstr "Мы не можем разрешить столбец \"%(column)s\" в строке %(location)s."
 
 #: superset/db_engine_specs/bigquery.py:177
 #, python-format
-msgid ""
-"The schema \"%(schema)s\" does not exist. A valid schema must be used to "
-"run this query."
-msgstr ""
+msgid "The schema \"%(schema)s\" does not exist. A valid schema must be used to run this query."
+msgstr "Схема \"%(schema)s\" не существует. Для выполнения этого запроса должна использоваться допустимая схемв"
 
 #: superset/db_engine_specs/duckdb.py:56 superset/db_engine_specs/sqlite.py:65
 #, python-format
 msgid "We can't seem to resolve the column \"%(column_name)s\""
-msgstr ""
+msgstr "Мы не можем разрешить столбец \"%(column_name)s\""
 
 #: superset/db_engine_specs/gsheets.py:74 superset/db_engine_specs/mysql.py:172
 #, python-format
-msgid ""
-"Please check your query for syntax errors near \"%(server_error)s\". "
-"Then, try running your query again."
-msgstr ""
+msgid "Please check your query for syntax errors near \"%(server_error)s\". Then, try running your query again."
+msgstr "Пожалуйста, проверьте ваш запрос на наличие синтаксических ошибок рядом с \"%(server_error)s\".
+Затем попробуйте выполнить ваш запрос ещё раз."
 
 #: superset/db_engine_specs/mssql.py:76
 #, python-format
-msgid ""
-"Either the username \"%(username)s\", password, or database name "
-"\"%(database)s\" is incorrect."
-msgstr ""
+msgid "Either the username \"%(username)s\", password, or database name \"%(database)s\" is incorrect."
+msgstr "Либо имя пользователя \"%(username)s\", пароль либо имя базы данных \"%(database)s\" неверно."
 
 #: superset/db_engine_specs/mssql.py:84
 #: superset/db_engine_specs/postgres.py:113
@@ -1943,7 +1921,7 @@ msgstr ""
 #: superset/db_engine_specs/redshift.py:72
 #, python-format
 msgid "The hostname \"%(hostname)s\" cannot be resolved."
-msgstr ""
+msgstr "Имя хоста \"%(hostname)s\" не может быть разрешено "
 
 #: superset/db_engine_specs/mssql.py:89
 #: superset/db_engine_specs/postgres.py:118
@@ -1951,80 +1929,73 @@ msgstr ""
 #: superset/db_engine_specs/redshift.py:77
 #, python-format
 msgid "Port %(port)s on hostname \"%(hostname)s\" refused the connection."
-msgstr ""
+msgstr "Порт %(port)s на имя хоста \"%(hostname)s\" отказал в подключении."
 
 #: superset/db_engine_specs/mssql.py:94
 #: superset/db_engine_specs/postgres.py:123
 #: superset/db_engine_specs/presto.py:202
 #: superset/db_engine_specs/redshift.py:82
 #, python-format
-msgid ""
-"The host \"%(hostname)s\" might be down, and can't be reached on port "
-"%(port)s."
-msgstr ""
+msgid "The host \"%(hostname)s\" might be down, and can't be reached on port %(port)s."
+msgstr "Хост \"%(hostname)s\" может быть недоступен и не может быть достигнут на порту %(port)s."
 
 #: superset/db_engine_specs/mysql.py:152 superset/db_engine_specs/presto.py:192
 #: superset/db_engine_specs/redshift.py:67
 #, python-format
 msgid "Either the username \"%(username)s\" or the password is incorrect."
-msgstr ""
+msgstr "Либо имя пользователя \"%(username)s\", либо пароль неверны."
 
 #: superset/db_engine_specs/mysql.py:157
 #, python-format
 msgid "Unknown MySQL server host \"%(hostname)s\"."
-msgstr ""
+msgstr "Неизвестный хост сервера MySQL \"%(hostname)s\"."
 
 #: superset/db_engine_specs/mysql.py:162
 #, python-format
 msgid "The host \"%(hostname)s\" might be down and can't be reached."
-msgstr ""
+msgstr "Хост \"%(hostname)s\" может быть недоступен и не может быть достигнут."
 
 #: superset/db_engine_specs/mysql.py:167
 #: superset/db_engine_specs/postgres.py:131
 #, python-format
 msgid "Unable to connect to database \"%(database)s\"."
-msgstr ""
+msgstr "Не удается подключиться к базе данных \"%(database)s\"."
 
 #: superset/db_engine_specs/postgres.py:98
-#, fuzzy, python-format
+#, python-format
 msgid "The username \"%(username)s\" does not exist."
-msgstr "Показатель ‘%(username)s’ не существует"
+msgstr "Имя пользователя \"%(username)s\" не существует"
 
 #: superset/db_engine_specs/postgres.py:103
 #, python-format
 msgid "The password provided for username \"%(username)s\" is incorrect."
-msgstr ""
+msgstr "Пароль, указанный для имени пользователя \"%(username)s\", неверен."
 
 #: superset/db_engine_specs/postgres.py:108
 msgid "Please re-enter the password."
-msgstr ""
+msgstr "Пожалуйста, повторно введите пароль."
 
 #: superset/db_engine_specs/postgres.py:136
 #: superset/db_engine_specs/presto.py:168
 #, python-format
-msgid ""
-"We can't seem to resolve the column \"%(column_name)s\" at line "
-"%(location)s."
-msgstr ""
+msgid "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s."
+msgstr "Мы не можем разрешить столбец \"%(column_name)s\" в строке %(location)s."
 
 #: superset/db_engine_specs/presto.py:176
 #, python-format
-msgid ""
-"The table \"%(table_name)s\" does not exist. A valid table must be used "
-"to run this query."
-msgstr ""
+msgid "The table \"%(table_name)s\" does not exist. A valid table must be used to run this query."
+msgstr "Таблица \"%(table_name)s\" не существует.
+Для выполнения этого запроса должна использоваться допустимая таблица."
 
 #: superset/db_engine_specs/presto.py:184
 #, python-format
-msgid ""
-"The schema \"%(schema_name)s\" does not exist. A valid schema must be "
-"used to run this query."
-msgstr ""
+msgid "The schema \"%(schema_name)s\" does not exist. A valid schema must be used to run this query."
+msgstr "Схема \"%(schema_name)s\" не существует. Для выполнения этого запроса должна использоваться допустимая схема"
 
 #: superset/db_engine_specs/presto.py:215
 #, python-format
 msgid "Unable to connect to catalog named \"%(catalog_name)s\"."
-msgstr ""
+msgstr "Не удается подключиться к катологу с именем \"%(catalog_name)s\"."
 
 #: superset/db_engine_specs/presto.py:1017
 msgid "Unknown Presto Error"
@@ -2032,20 +2003,19 @@ msgstr "Неизвестная ошибка"
 
 #: superset/db_engine_specs/redshift.py:90
 #, python-format
-msgid ""
-"We were unable to connect to your database named \"%(database)s\". Please"
-" verify your database name and try again."
-msgstr ""
+msgid "We were unable to connect to your database named \"%(database)s\".
+Please verify your database name and try again."
+msgstr "Нам не удалось подключиться к вашей базе данных с именем \"%(database)s\".
+Пожалуйста, подтвердите имя вашей базы данных и повторите попытку."
 
 #: superset/db_engine_specs/snowflake.py:100
 #, python-format
 msgid "%(object)s does not exist in this database."
-msgstr ""
+msgstr "%(object)s не существует в этой базе данных. "
 
 #: superset/embedded_dashboard/commands/exceptions.py:34
-#, fuzzy
 msgid "You don't have access to this embedded dashboard config."
-msgstr "У вас нет прав на редактирование этого дашборда: %(name)s."
+msgstr "У вас нет прав на редактирование этого дашборда"
 
 #: superset/initialization/__init__.py:221
 msgid "Home"
@@ -2094,7 +2064,6 @@ msgid "CSS Templates"
 msgstr "Шаблоны CSS"
 
 #: superset/initialization/__init__.py:273
-#, fuzzy
 msgid "Row Level Security"
 msgstr "Безопасность на уровне строк"
 
@@ -2158,9 +2127,8 @@ msgid "Access requests"
 msgstr "Запросы доступа"
 
 #: superset/key_value/exceptions.py:30
-#, fuzzy
 msgid "An error occurred while parsing the key."
-msgstr "Произошла ошибка при обновлении значения"
+msgstr "При разборе ключа произошла ошибка."
 
 #: superset/key_value/exceptions.py:42
 #: superset/temporary_cache/commands/exceptions.py:37
@@ -2174,13 +2142,12 @@ msgstr "Произошла ошибка при обновлении значен
 
 #: superset/key_value/exceptions.py:50
 #: superset/temporary_cache/commands/exceptions.py:45
-#, fuzzy
 msgid "You don't have permission to modify the value."
-msgstr "У вас нет прав на редактирование этого графика"
+msgstr "У вас нет прав на редактирование этого значения"
 
 #: superset/key_value/utils.py:60
 msgid "Invalid permalink key"
-msgstr ""
+msgstr "Недопустимый ключ постоянной ссылки"
 
 #: superset/queries/saved_queries/api.py:201
 #, python-format
@@ -2197,14 +2164,12 @@ msgid "Saved query not found."
 msgstr "Сохранённый запрос не найден."
 
 #: superset/queries/saved_queries/commands/exceptions.py:36
-#, fuzzy
 msgid "Import saved query failed for an unknown reason."
-msgstr "Импорт графика не удался по неизвестной причине"
+msgstr "Импорт запроса не удался по неизвестной причине"
 
 #: superset/queries/saved_queries/commands/exceptions.py:40
-#, fuzzy
 msgid "Saved query parameters are invalid."
-msgstr "Параметры графика недействительны."
+msgstr "Параметры запроса недействительны."
 
 #: superset/reports/api.py:492
 #, python-format
@@ -2215,9 +2180,8 @@ msgstr[0] "Удалено %(num)d рассылок"
 #: superset/reports/schemas.py:186 superset/reports/schemas.py:192
 #: superset/reports/schemas.py:198 superset/reports/schemas.py:280
 #: superset/reports/schemas.py:286 superset/reports/schemas.py:293
-#, fuzzy
 msgid "Value must be greater than 0"
-msgstr "`смещение_строк` должно быть больше или равно 0"
+msgstr "Значение должно быть больше 0"
 
 #: superset/reports/commands/alert.py:97
 #, python-format
@@ -2251,11 +2215,11 @@ msgstr "Выберите диаграмму или панель монитори
 
 #: superset/reports/commands/exceptions.py:91
 msgid "Please save your chart first, then try creating a new email report."
-msgstr ""
+msgstr "Пожалуйста, сначала сохраните свою диаграмму, а затем попробуйте создать новый отчет по электронной почте."
 
 #: superset/reports/commands/exceptions.py:103
 msgid "Please save your dashboard first, then try creating a new email report."
-msgstr ""
+msgstr "Пожалуйста, сначала сохраните ваш дашборд, а затем попробуйте создать новый отчет по электронной почте."
 
 #: superset/reports/commands/exceptions.py:111
 msgid "Report Schedule parameters are invalid."
@@ -2290,14 +2254,12 @@ msgid "Report Schedule execution failed when generating a screenshot."
 msgstr "Ошибка при генерировании скриншота во время выполнения рассылки."
 
 #: superset/reports/commands/exceptions.py:143
-#, fuzzy
 msgid "Report Schedule execution failed when generating a csv."
-msgstr "Ошибка при генерировании скриншота во время выполнения рассылки."
+msgstr "Сбой выполнения расписания отчета прм создании csv-файла."
 
 #: superset/reports/commands/exceptions.py:147
-#, fuzzy
 msgid "Report Schedule execution failed when generating a dataframe."
-msgstr "Ошибка при генерировании скриншота во время выполнения рассылки."
+msgstr "Сбой выполнения расписания отчета прм создании фрейма данных. "
 
 #: superset/reports/commands/exceptions.py:151
 msgid "Report Schedule execution got an unexpected error."
@@ -2305,25 +2267,25 @@ msgstr "Во время выполнения рассылки произошла
 
 #: superset/reports/commands/exceptions.py:155
 msgid "Report Schedule is still working, refusing to re-compute."
-msgstr ""
+msgstr "Расписание отчетов все ещё работает, отказываясь от повторного вычисления."
 
 #: superset/reports/commands/exceptions.py:159
 msgid "Report Schedule reached a working timeout."
 msgstr "Рассылка достигла тайм-аута в работе."
 
 #: superset/reports/commands/exceptions.py:168
-#, fuzzy, python-format
+#, python-format
 msgid "A report named \"%(name)s\" already exists"
-msgstr "Источник данных %(name)s уже существует"
+msgstr "Отчет с именем %(name)s уже существует"
 
 #: superset/reports/commands/exceptions.py:170
-#, fuzzy, python-format
+#, python-format
 msgid "An alert named \"%(name)s\" already exists"
-msgstr "Источник данных %(name)s уже существует"
+msgstr "Предупреждение с именем %(name)s уже существует"
 
 #: superset/reports/commands/exceptions.py:176
 msgid "Resource already has an attached report."
-msgstr ""
+msgstr "Ресурс уже имеет прикрепленный отчет."
 
 #: superset/reports/commands/exceptions.py:181
 msgid "Alert query returned more than one row."
@@ -2346,9 +2308,8 @@ msgid "Alert found an error while executing a query."
 msgstr "Обнаружена ошибка в запросе."
 
 #: superset/reports/commands/exceptions.py:202
-#, fuzzy
 msgid "A timeout occurred while executing the query."
-msgstr "Обнаружена ошибка в запросе."
+msgstr "Во время выполнения запроса произошел таймаут"
 
 #: superset/reports/commands/exceptions.py:206
 msgid "A timeout occurred while taking a screenshot."
@@ -2364,15 +2325,15 @@ msgstr "Произошла ошибка при создании источник
 
 #: superset/reports/commands/exceptions.py:218
 msgid "Alert fired during grace period."
-msgstr "Alert fired during grace period."
+msgstr "Предупреждение сработало во время пробного периода."
 
 #: superset/reports/commands/exceptions.py:222
 msgid "Alert ended grace period."
-msgstr "Alert ended grace period."
+msgstr "Пробный период оповещений закончился."
 
 #: superset/reports/commands/exceptions.py:226
 msgid "Alert on grace period"
-msgstr "Alert on grace period"
+msgstr "Оповещение о пробном периоде."
 
 #: superset/reports/commands/exceptions.py:230
 msgid "Report Schedule sellenium user not found"
@@ -2396,17 +2357,12 @@ msgstr "Произошла ошибка при удалении журналов
 
 #: superset/reports/notifications/email.py:62
 #, python-format
-msgid ""
-"\n"
-"            Error: %(text)s\n"
-"            "
-msgstr ""
-"\n"
-"            Ошибка: %(text)s"
+msgid "\n" Error: %(text)s\n" "
+msgstr "\n" Ошибка: %(text)s" "
 
 #: superset/reports/notifications/email.py:98
 msgid "Explore in Superset"
-msgstr ""
+msgstr "Исследуйте в надмножестве"
 
 #: superset/reports/notifications/email.py:140
 #, python-format
@@ -2421,7 +2377,7 @@ msgstr "%(prefix)s %(title)s"
 #: superset/reports/notifications/slack.py:57
 #, python-format
 msgid ""
-"*%(name)s*\n"
+*%(name)s*\n"
 "\n"
 "%(description)s\n"
 "\n"
@@ -2441,17 +2397,15 @@ msgid ""
 msgstr ""
 
 #: superset/security/analytics_db_safety.py:44
-#, fuzzy, python-format
+#, python-format
 msgid "%(dialect)s cannot be used as a data source for security reasons."
-msgstr ""
-"БД SQLite не может быть использована как источник данных из-за "
-"потенциальных проблем с безопасностью."
+msgstr "%(dialect)s не может быть использована как источник данных из-за потенциальных проблем с безопасностью."
 
 #: superset/sqllab/command.py:162
-msgid ""
-"The database referenced in this query was not found. Please contact an "
-"administrator for further assistance or try again."
-msgstr ""
+msgid "The database referenced in this query was not found.
+Please contact an administrator for further assistance or try again."
+msgstr "База данных, на которую ссылается этот запрос, не найдена.
+Пожалуйста, обратитесь к администратору за дополнительной помощью или повторите попытку."
 
 #: superset/sqllab/query_render.py:97
 #, python-format
@@ -2461,14 +2415,13 @@ msgstr[0] "Следующие параметры в запросе не опре
 
 #: superset/sqllab/query_render.py:118
 msgid "The query contains one or more malformed template parameters."
-msgstr ""
+msgstr "Запрос содержит один или несеколько неверно сформированных параметров шаблона."
 
 #: superset/sqllab/query_render.py:121
-msgid ""
-"Please check your query and confirm that all template parameters are "
-"surround by double braces, for example, \"{{ ds }}\". Then, try running "
-"your query again."
-msgstr ""
+msgid "Please check your query and confirm that all template parameters are surround by double braces,
+for example, \"{{ ds }}\". Then, try running your query again."
+msgstr "Пожалуйста, проверьте свой запрос и подтвердите, что все параметры шаблона заключены в двойные фигурные скобки,
+например, \"{{ ds }}\". Затем попробуйте выполнить свой запрос ещё раз."
 
 #: superset/templates/appbuilder/navbar_right.html:35
 msgid "New"
@@ -2608,7 +2561,6 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: superset/templates/superset/fab_overrides/list_with_checkboxes.html:82
-#, fuzzy
 msgid "Use the edit button to change this field"
 msgstr "Используйте кнопку правки для изменения этого поля"
 
@@ -2617,9 +2569,8 @@ msgid "Test Connection"
 msgstr "Тестовое соединение"
 
 #: superset/temporary_cache/commands/exceptions.py:49
-#, fuzzy
 msgid "Resource was not found."
-msgstr "База данных не найдена."
+msgstr "Ресурс не найден."
 
 #: superset/utils/core.py:881
 #, python-format
@@ -2629,51 +2580,43 @@ msgstr "Доступ к базе данных предоставлен для п
 #: superset/utils/core.py:1068
 #, python-format
 msgid "Unsupported clause type: %(clause)s"
-msgstr ""
+msgstr "Неподдерживаемый тип предложения: %(clause)s"
 
 #: superset/utils/core.py:1306
-#, fuzzy
 msgid "Invalid metric object"
-msgstr "Недействительный сертификат"
+msgstr "Недействительный объект показателя"
 
 #: superset/utils/date_parser.py:393
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to find such a holiday: [%(holiday)s]"
-msgstr "Невозможно найти такой выходной день: [{}]"
+msgstr "Невозможно найти такой выходной день: [%(holiday)s]"
 
 #: superset/utils/pandas_postprocessing/boxplot.py:88
-msgid ""
-"percentiles must be a list or tuple with two numeric values, of which the"
-" first is lower than the second value"
-msgstr ""
-"процентили должны быть списками из кортежами из двух числовых значений, в"
-" которых первое значение меньше второго"
+msgid "percentiles must be a list or tuple with two numeric values, of which the first is lower than the second value"
+msgstr "процентили должны быть списками из кортежами из двух числовых значений,
+в которых первое значение меньше второго"
 
 #: superset/utils/pandas_postprocessing/compare.py:53
 msgid "`compare_columns` must have the same length as `source_columns`."
-msgstr ""
+msgstr "`compare_columns` должен иметь ту же длину, что и `source_columns`"
 
 #: superset/utils/pandas_postprocessing/compare.py:57
 msgid "`compare_type` must be `difference`, `percentage` or `ratio`"
-msgstr ""
+msgstr "compare_type` должно быть `difference`, `percentage` или `ratio`"
 
 #: superset/utils/pandas_postprocessing/contribution.py:59
 #, python-format
-msgid ""
-"Column \"%(column)s\" is not numeric or does not exists in the query "
-"results."
-msgstr ""
-"Столбец \"%(column)s\" не является числовым или не существует в "
-"результатах запроса."
+msgid "Column \"%(column)s\" is not numeric or does not exists in the query results."
+msgstr "Столбец \"%(column)s\" не является числовым или не существует в результатах запроса."
 
 #: superset/utils/pandas_postprocessing/contribution.py:69
 msgid "`rename_columns` must have the same length as `columns`."
-msgstr ""
+msgstr "`rename_columns` должен иметь ту же длину, что и `columns`"
 
 #: superset/utils/pandas_postprocessing/cum.py:55
 #, python-format
 msgid "Invalid cumulative operator: %(operator)s"
-msgstr ""
+msgstr "Недопустимый кумулятивный оператор: %(operator)s"
 
 #: superset/utils/pandas_postprocessing/geography.py:49
 msgid "Invalid geohash string"
@@ -2689,16 +2632,15 @@ msgstr "Недействительная строка geodetic"
 
 #: superset/utils/pandas_postprocessing/pivot.py:71
 msgid "Pivot operation requires at least one index"
-msgstr ""
+msgstr "Для операции сводки требуется по крайней мере один индекс"
 
 #: superset/utils/pandas_postprocessing/pivot.py:75
 msgid "Pivot operation must include at least one aggregate"
-msgstr ""
+msgstr "Своднай операция должна включать по крайней мере один агрегат"
 
 #: superset/utils/pandas_postprocessing/prophet.py:61
-#, fuzzy
 msgid "`prophet` package not installed"
-msgstr "`fbprophet` пакет не установлен"
+msgstr "`prophet пакет не установлен"
 
 #: superset/utils/pandas_postprocessing/prophet.py:114
 msgid "Time grain missing"
@@ -2710,9 +2652,8 @@ msgid "Unsupported time grain: %(time_grain)s"
 msgstr "Недействительная гранулярность времени: %(time_grain)s"
 
 #: superset/utils/pandas_postprocessing/prophet.py:126
-#, fuzzy
 msgid "Periods must be a whole number"
-msgstr "Периоды должны быть положительными делами числами"
+msgstr "Периоды должны быть целым числом"
 
 #: superset/utils/pandas_postprocessing/prophet.py:129
 msgid "Confidence interval must be between 0 and 1 (exclusive)"
@@ -2727,38 +2668,35 @@ msgid "DataFrame include at least one series"
 msgstr "Пожалуйста, выберите хотя бы один показатель"
 
 #: superset/utils/pandas_postprocessing/rename.py:53
-#, fuzzy
 msgid "Label already exists"
-msgstr "Источник данных %(name)s уже существует"
+msgstr "Ярлык уже существует"
 
 #: superset/utils/pandas_postprocessing/resample.py:43
 msgid "Resample operation requires DatetimeIndex"
-msgstr ""
+msgstr "Для операции повторной выборки требуется DatetimeIndex"
 
 #: superset/utils/pandas_postprocessing/resample.py:46
 #, fuzzy
 msgid "Resample method should in "
-msgstr ""
-"Одна из функций (Resample) библиотеки Pandas, которая определяет метод "
-"обработки данных"
+msgstr "Одна из функций (Resample) библиотеки Pandas, которая определяет метод обработки данных"
 
 #: superset/utils/pandas_postprocessing/rolling.py:67
 msgid "Undefined window for rolling operation"
-msgstr ""
+msgstr "Неопределенное окно для операции прокатки"
 
 #: superset/utils/pandas_postprocessing/rolling.py:69
 msgid "Window must be > 0"
-msgstr ""
+msgstr "Окно должно быть > 0"
 
 #: superset/utils/pandas_postprocessing/rolling.py:84
 #, python-format
 msgid "Invalid rolling_type: %(type)s"
-msgstr ""
+msgstr "Недопустимый rolling_type: %(type)s"
 
 #: superset/utils/pandas_postprocessing/rolling.py:90
 #, python-format
 msgid "Invalid options for %(rolling_type)s: %(options)s"
-msgstr ""
+msgstr "Недопустимый параметр %(rolling_type)s: %(options)s"
 
 #: superset/utils/pandas_postprocessing/utils.py:141
 msgid "Referenced columns not available in DataFrame."
@@ -2772,7 +2710,7 @@ msgstr "Столбец, на который ссылается агрегат, �
 #: superset/utils/pandas_postprocessing/utils.py:174
 #, python-format
 msgid "Operator undefined for aggregator: %(name)s"
-msgstr ""
+msgstr "Оператор не определен для агрегатора: %(name)s"
 
 #: superset/utils/pandas_postprocessing/utils.py:186
 #, python-format
@@ -2890,12 +2828,9 @@ msgid "Name"
 msgstr "Название"
 
 #: superset/views/base.py:257
-msgid ""
-"Table [%{table}s] could not be found, please double check your database "
-"connection, schema, and table name, error: {}"
-msgstr ""
-"Не удалось найти таблицу [{}]. Проверьте подключение к базе данных, схему"
-" и имя таблицы."
+msgid "Table [%{table}s] could not be found,
+please double check your database connection, schema, and table name, error: {}"
+msgstr "Не удалось найти таблицу [{}]. Проверьте подключение к базе данных, схему и имя таблицы."
 
 #: superset/views/base.py:535
 msgid "json isn't valid"
@@ -2955,19 +2890,13 @@ msgstr "Запросы доступа, похоже, были удалены"
 
 #: superset/views/core.py:377
 #, python-format
-msgid ""
-"%(user)s was granted the role %(role)s that gives access to the "
-"%(datasource)s"
-msgstr ""
-"%(user)s была предоставлена роль %(role)s, которая дает доступ к ресурсам"
-" %(datasource)s"
+msgid "%(user)s was granted the role %(role)s that gives access to the %(datasource)s"
+msgstr "%(user)s была предоставлена роль %(role)s, которая дает доступ к ресурсам %(datasource)s"
 
 #: superset/views/core.py:400
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
-msgstr ""
-"Роль %(r) s была расширена для обеспечения доступа к источнику данных "
-"%(ds)s"
+msgstr "Роль %(r) s была расширена для обеспечения доступа к источнику данных %(ds)s"
 
 #: superset/views/core.py:417
 msgid "You have no permission to approve this request"
@@ -2982,45 +2911,38 @@ msgstr "У вас нет прав на "
 #: superset/views/core.py:640
 #, fuzzy
 msgid "download as csv"
-msgstr "Сохранить как изображение"
+msgstr "Загрузить в формате csv"
 
 #: superset/views/core.py:720
 #, python-format
-msgid ""
-"Cannot import dashboard: %(db_error)s.\n"
-"Make sure to create the database before importing the dashboard."
-msgstr ""
-"Невозможно импортировать дашборд: %(db_error)s.\n"
-"Убедитесь, что перед импортом дашборда была создана база данных."
+msgid "Cannot import dashboard: %(db_error)s.\n Make sure to create the database before importing the dashboard."
+msgstr "Невозможно импортировать дашборд: %(db_error)s.\n
+Убедитесь, что перед импортом дашборда была создана база данных."
 
 #: superset/views/core.py:731
 msgid "An unknown error occurred. Please contact your Superset administrator"
-msgstr ""
-"Произошла неизвестная ошибка. Пожалуйста, свяжитесь с администратором "
-"Superset"
+msgstr "Произошла неизвестная ошибка. Пожалуйста, свяжитесь с администратором Superset"
 
 #: superset/views/core.py:773
-#, fuzzy
 msgid "Error: permalink state not found"
-msgstr "Не найдено состояние графика рассылки"
+msgstr "Ошибка: состояние постоянной ссылки не найдено"
 
 #: superset/views/core.py:776 superset/views/core.py:1987
 #, python-format
 msgid "Error: %(msg)s"
-msgstr ""
+msgstr "Ошибка: %(msg)s"
 
 #: superset/views/core.py:790
 msgid "Form data not found in cache, reverting to chart metadata."
-msgstr ""
+msgstr "Данные формы не найдены в кэше, возвращаясь к метаданным диаграммы."
 
 #: superset/views/core.py:796
 msgid "Form data not found in cache, reverting to dataset metadata."
-msgstr ""
+msgstr "Данные формы не найдены в кэше, возврат к метаданным dataset."
 
 #: superset/views/core.py:824
-#, fuzzy
 msgid "[Missing Dataset]"
-msgstr "Выберите источник данных"
+msgstr "[Отсутствующий набор данных]"
 
 #: superset/views/core.py:864 superset/views/core.py:1045
 msgid "alter this "
@@ -3071,12 +2993,8 @@ msgid "Dashboard [{}] just got created and chart [{}] was added to it"
 msgstr "Дашборд [{}] был создан, и на него был добавлен график [{}]"
 
 #: superset/views/core.py:1299
-msgid ""
-"This dashboard was changed recently. Please reload dashboard to get "
-"latest version."
-msgstr ""
-"Этот дашборд был недавно изменён. Пожалуйста, перезагрузите дашборд, "
-"чтобы получить последнюю версию."
+msgid "This dashboard was changed recently. Please reload dashboard to get latest version."
+msgstr "Этот дашборд был недавно изменён. Пожалуйста, перезагрузите дашборд, чтобы получить последнюю версию."
 
 #: superset/views/core.py:1393
 #, python-format
@@ -3084,18 +3002,13 @@ msgid "Could not load database driver: %(driver_name)s"
 msgstr "Невозможно загрузить драйвер базы данных: %(driver_name)s"
 
 #: superset/views/core.py:1402
-msgid ""
-"Invalid connection string, a valid string usually follows:\n"
-"'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
-msgstr ""
-"Недействительная строка подключения, правильная строка обычно следует "
-"следующему шаблону:\n"
-"‘драйвер://пользователь:пароль@хостБД/имяБД’"
+msgid "Invalid connection string, a valid string usually follows:\n
+'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
+msgstr "Недействительная строка подключения, правильная строка обычно следует следующему шаблону:\n
+‘DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME’"
 
 #: superset/views/core.py:1795
-msgid ""
-"Malformed request. slice_id or table_name and db_name arguments are "
-"expected"
+msgid "Malformed request. slice_id or table_name and db_name arguments are expected"
 msgstr "Неправильный запрос. Ожидаются аргументы slice_id или table_name и db_name"
 
 #: superset/views/core.py:1805
@@ -3109,54 +3022,42 @@ msgid "Table %(table)s wasn't found in the database %(db)s"
 msgstr "Таблица %(table)s не найдена в базе данных %(db)s"
 
 #: superset/views/core.py:1990
-#, fuzzy
 msgid "permalink state not found"
 msgstr "Не найдено состояние графика рассылки"
 
 #: superset/views/core.py:2060
-msgid ""
-"One or more required fields are missing in the request. Please try again,"
-" and if the problem persists conctact your administrator."
-msgstr ""
+msgid "One or more required fields are missing in the request. Please try again,
+and if the problem persists conctact your administrator."
+msgstr "В запросе отсутсвует одно или несколько обязательных полей.
+Пожалуйста, попробуйте еще раз, и если проблема не устранится, обратитесь к своему администратору"
 
 #: superset/views/core.py:2070
-#, fuzzy
 msgid "The database was not found."
 msgstr "База данных не найдена."
 
 #: superset/views/core.py:2200
-msgid ""
-"Data could not be retrieved from the results backend. You need to re-run "
-"the original query."
-msgstr ""
-"Данные не удалось извлечь из серверной части результатов. Вам нужно "
-"повторно запустить исходный запрос."
+msgid "Data could not be retrieved from the results backend. You need to re-run the original query."
+msgstr "Данные не удалось извлечь из серверной части результатов. Вам нужно повторно запустить исходный запрос."
 
 #: superset/views/core.py:2214
-msgid ""
-"The query associated with these results could not be find. You need to "
-"re-run the original query."
-msgstr ""
+msgid "The query associated with these results could not be find. You need to re-run the original query."
+msgstr "Запрос, связанный с этими результатами, не удалось найти. Вам нужно повторно запустить исходный запрос."
 
 #: superset/views/core.py:2229
-msgid ""
-"You are not authorized to see this query. If you think this is an error, "
-"please reach out to your administrator."
-msgstr ""
+msgid "You are not authorized to see this query.
+If you think this is an error, please reach out to your administrator."
+msgstr "Вы не авторизованы для просмотра этого запроса.
+Если вы считаете, что это ошибка, обратитесь к своему администратору."
 
 #: superset/views/core.py:2247
-msgid ""
-"Data could not be deserialized from the results backend. The storage "
-"format might have changed, rendering the old data stake. You need to re-"
-"run the original query."
-msgstr ""
-"Данные не удалось десериализовать из серверной части результатов. Формат "
-"хранилища мог измениться, что привело к потере старых данных. Вам нужно "
-"повторно запустить исходный запрос."
+msgid "Data could not be deserialized from the results backend.
+The storage format might have changed, rendering the old data stake. You need to re-run the original query."
+msgstr "Данные не удалось десериализовать из серверной части результатов.
+Формат хранилища мог измениться, что привело к потере старых данных. Вам нужно повторно запустить исходный запрос."
 
 #: superset/views/core.py:2264
 msgid "The provided `rows` argument is not a valid integer."
-msgstr ""
+msgstr "Предоставленный аргумент `rows` не является допустимым целым числом."
 
 #: superset/views/core.py:2713
 #, python-format
@@ -3184,20 +3085,13 @@ msgid "A human-friendly name"
 msgstr "Понятное человеку имя"
 
 #: superset/views/dynamic_plugins.py:48
-msgid ""
-"Used internally to identify the plugin. Should be set to the package name"
-" from the pluginʼs package.json"
-msgstr ""
-"Используется системой для идентификации плагина. Должно быть установлено "
-"в имя пакета, которое указано в файле package.json"
+msgid "Used internally to identify the plugin. Should be set to the package name from the pluginʼs package.json"
+msgstr "Используется системой для идентификации плагина.
+Должно быть установлено в имя пакета, которое указано в файле package.json"
 
 #: superset/views/dynamic_plugins.py:52
-msgid ""
-"A full URL pointing to the location of the built plugin (could be hosted "
-"on a CDN for example)"
-msgstr ""
-"Полный URL-адрес, указывающий на местоположение встроенного плагина "
-"(например, может быть размещен на CDN)."
+msgid "A full URL pointing to the location of the built plugin (could be hosted on a CDN for example)"
+msgstr "Полный URL-адрес, указывающий на местоположение встроенного плагина (например, может быть размещен на CDN)."
 
 #: superset/views/dynamic_plugins.py:58
 msgid "Custom Plugins"
@@ -3246,7 +3140,7 @@ msgstr "Измененный На"
 #: superset-frontend/src/components/Chart/Chart.jsx:80
 #: superset/views/utils.py:274
 msgid "The dataset associated with this chart no longer exists"
-msgstr ""
+msgstr "Набор данных, связанный с этой диаграммой, больше не существует"
 
 #: superset/views/utils.py:503
 msgid "Could not determine datasource type"
@@ -3269,19 +3163,14 @@ msgid "Edit Chart"
 msgstr "Редактировать график"
 
 #: superset/views/chart/mixin.py:64
-msgid ""
-"These parameters are generated dynamically when clicking the save or "
-"overwrite button in the explore view. This JSON object is exposed here "
-"for reference and for power users who may want to alter specific "
-"parameters."
-msgstr ""
-"Эти параметры генерируются автоматически при нажатии кнопки сохранения. "
-"Опытные пользователи могут изменить определенные объекты в формате JSON."
+msgid "These parameters are generated dynamically when clicking the save or overwrite button in the explore view.
+This JSON object is exposed here for reference and for power users who may want to alter specific parameters."
+msgstr "Эти параметры генерируются автоматически при нажатии кнопки сохранения.
+Опытные пользователи могут изменить определенные объекты в формате JSON."
 
 #: superset/views/chart/mixin.py:70
-msgid ""
-"Duration (in seconds) of the caching timeout for this chart. Note this "
-"defaults to the datasource/table timeout if undefined."
+msgid "Duration (in seconds) of the caching timeout for this chart.
+Note this defaults to the datasource/table timeout if undefined."
 msgstr "Продолжительность (в секундах) таймаута кэширования для этого графика."
 
 #: superset/views/chart/mixin.py:82
@@ -3311,19 +3200,14 @@ msgid "Edit Dashboard"
 msgstr "Редактировать дашборд"
 
 #: superset/views/dashboard/mixin.py:47
-msgid ""
-"This json object describes the positioning of the widgets in the "
-"dashboard. It is dynamically generated when adjusting the widgets size "
-"and positions by using drag & drop in the dashboard view"
-msgstr ""
-"Этот объект JSON описывает расположение виджетов в дашборде. Он "
-"динамически генерируется при настройке размера и позиции виджетов в "
-"дашборде с помощью drag & drop"
+msgid "This json object describes the positioning of the widgets in the dashboard.
+It is dynamically generated when adjusting the widgets size and positions by using drag & drop in the dashboard view"
+msgstr "Этот объект JSON описывает расположение виджетов в дашборде.
+Он динамически генерируется при настройке размера и позиции виджетов в дашборде с помощью drag & drop"
 
 #: superset/views/dashboard/mixin.py:53
-msgid ""
-"The CSS for individual dashboards can be altered here, or in the "
-"dashboard view where changes are immediately visible"
+msgid "The CSS for individual dashboards can be altered here,
+or in the dashboard view where changes are immediately visible"
 msgstr "В этом поле можно задать индивидуальный стиль для дашборда с помощью CSS"
 
 #: superset/views/dashboard/mixin.py:58
@@ -3332,29 +3216,25 @@ msgstr "Получить читаемый URL-адрес для дашборда
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.tsx:625
 #: superset/views/dashboard/mixin.py:59
-msgid ""
-"This JSON object is generated dynamically when clicking the save or "
-"overwrite button in the dashboard view. It is exposed here for reference "
-"and for power users who may want to alter specific parameters."
-msgstr ""
-"Этот JSON-объект генерируется автоматически при сохранении или перезаписи"
-" дашборда. Он размещён здесь справочно и для опытных пользователей."
+msgid "This JSON object is generated dynamically when clicking the save or "overwrite button in the dashboard view.
+It is exposed here for reference and for power users who may want to alter specific parameters."
+msgstr "Этот JSON-объект генерируется автоматически при сохранении или перезаписи дашборда.
+Он размещён здесь справочно и для опытных пользователей."
 
 #: superset/views/dashboard/mixin.py:65
 msgid "Owners is a list of users who can alter the dashboard."
 msgstr "Владельцы - это пользователи, которые могут изменять дашборд."
 
 #: superset/views/dashboard/mixin.py:66
-msgid ""
-"Roles is a list which defines access to the dashboard. Granting a role "
-"access to a dashboard will bypass dataset level checks.If no roles "
-"defined then the dashboard is available to all roles."
-msgstr ""
+msgid "Roles is a list which defines access to the dashboard.
+Granting a role access to a dashboard will bypass dataset level checks.
+If no roles defined then the dashboard is available to all roles."
+msgstr "Роли - это список, который определяет доступ к дашборду.
+Предоставление роли доступа к дашборду позволит обойти проверки на уровне набора данных.
+Если роли не определены, то дашборд доступна для всех ролей."
 
 #: superset/views/dashboard/mixin.py:71
-msgid ""
-"Determines whether or not this dashboard is visible in the list of all "
-"dashboards"
+msgid "Determines whether or not this dashboard is visible in the list of all dashboards"
 msgstr "Определяет видимость дашборда в списке всех дашбордов"
 
 #: superset-frontend/src/components/DynamicEditableTitle/index.tsx:186
@@ -3411,7 +3291,7 @@ msgstr "Имя таблицы, которая будет сформирован�
 #: superset/views/database/forms.py:99 superset/views/database/forms.py:253
 #: superset/views/database/forms.py:389
 msgid "Table name cannot contain a schema"
-msgstr ""
+msgstr "Имя таблицы не может содержать схему"
 
 #: superset/views/database/forms.py:104
 msgid "CSV File"
@@ -3447,13 +3327,10 @@ msgstr "Метод добавления"
 
 #: superset/views/database/forms.py:142 superset/views/database/forms.py:298
 #: superset/views/database/forms.py:429
-msgid ""
-"If table exists do one of the following: Fail (do nothing), Replace (drop"
-" and recreate table) or Append (insert data)."
-msgstr ""
-"Если таблица уже существует, выполните одно из следующих действий: Fail "
-"(ничего не делать), Replace (удалить и заново создать таблицу) или Append"
-" (добавить данные)."
+msgid "If table exists do one of the following: Fail (do nothing),
+Replace (drop and recreate table) or Append (insert data)."
+msgstr "Если таблица уже существует, выполните одно из следующих действий: Fail (ничего не делать),
+Replace (удалить и заново создать таблицу) или Append (добавить данные)."
 
 #: superset/views/database/forms.py:148 superset/views/database/forms.py:304
 #: superset/views/database/forms.py:435
@@ -3475,25 +3352,18 @@ msgid "Header Row"
 msgstr "Строка заголовков"
 
 #: superset/views/database/forms.py:156 superset/views/database/forms.py:312
-msgid ""
-"Row containing the headers to use as column names (0 is first line of "
-"data). Leave empty if there is no header row."
-msgstr ""
-"Строка, содержащая заголовки для использования в качестве имен столбцов "
-"(0 - первая строка данных). Оставьте пустым, если строка заголовка "
-"отсутствует."
+msgid "Row containing the headers to use as column names (0 is first line of data).
+Leave empty if there is no header row."
+msgstr "Строка, содержащая заголовки для использования в качестве имен столбцов (0 - первая строка данных).
+Оставьте пустым, если строка заголовка отсутствует."
 
 #: superset/views/database/forms.py:165 superset/views/database/forms.py:321
 msgid "Index Column"
 msgstr "Столбец индекса"
 
 #: superset/views/database/forms.py:166 superset/views/database/forms.py:322
-msgid ""
-"Column to use as the row labels of the dataframe. Leave empty if no index"
-" column."
-msgstr ""
-"Столбец для использования в качестве меток строк данных. Оставьте пустым,"
-" если столбец индекса отсутствует."
+msgid "Column to use as the row labels of the dataframe. Leave empty if no index column."
+msgstr "Столбец для использования в качестве меток строк данных. Оставьте пустым, если столбец индекса отсутствует."
 
 #: superset/views/database/forms.py:174 superset/views/database/forms.py:330
 msgid "Mangle Duplicate Columns"
@@ -3501,9 +3371,7 @@ msgstr "Дубликаты"
 
 #: superset/views/database/forms.py:175 superset/views/database/forms.py:331
 msgid "Specify duplicate columns as \"X.0, X.1\"."
-msgstr ""
-"Если есть столбцы с одинаковым именем, то присвоить им порядковые номера "
-"- столбец1, столбец2, … и т.д."
+msgstr "Если есть столбцы с одинаковым именем, то присвоить им порядковые номера - столбец1, столбец2, … и т.д."
 
 #: superset/views/database/forms.py:178 superset/views/database/forms.py:442
 #, fuzzy
@@ -3511,10 +3379,9 @@ msgid "Use Columns"
 msgstr "Столбец(ы) %s"
 
 #: superset/views/database/forms.py:180 superset/views/database/forms.py:444
-msgid ""
-"Json list of the column names that should be read. If not None, only "
-"these columns will be read from the file."
-msgstr ""
+msgid "Json list of the column names that should be read. If not None, only these columns will be read from the file."
+msgstr "Json список имен столбцов, которые должны быть прочитаны.
+Если не указано ни одного, из файла будут считаны только эти столбцы"
 
 #: superset/views/database/forms.py:187
 msgid "Skip Initial Space"
@@ -3554,9 +3421,7 @@ msgstr "Разбор Дат"
 
 #: superset/views/database/forms.py:207 superset/views/database/forms.py:347
 msgid "A comma separated list of columns that should be parsed as dates."
-msgstr ""
-"Разделённый запятыми список столбцов, которые должен быть "
-"интерпретированы как даты."
+msgstr "Разделённый запятыми список столбцов, которые должен быть интерпретированы как даты."
 
 #: superset/views/database/forms.py:213
 msgid "Infer Datetime Format"
@@ -3564,9 +3429,7 @@ msgstr "Формат даты и времени"
 
 #: superset/views/database/forms.py:214
 msgid "Use Pandas to interpret the datetime format automatically."
-msgstr ""
-"Используйте Pandas для автоматической интерпретации формата даты и "
-"времени."
+msgstr "Используйте Pandas для автоматической интерпретации формата даты и времени."
 
 #: superset/views/database/forms.py:217 superset/views/database/forms.py:353
 msgid "Decimal Character"
@@ -3593,23 +3456,21 @@ msgstr "Обозначения столбцов"
 
 #: superset/views/database/forms.py:228 superset/views/database/forms.py:364
 #: superset/views/database/forms.py:455
-msgid ""
-"Column label for index column(s). If None is given and Dataframe Index is"
-" True, Index Names are used."
-msgstr ""
-"Обозначение столбца для столбцов с индексами. Если поле пустое, а "
-"настройка [Индекс] включена, то используются имена индексов."
+msgid "Column label for index column(s). If None is given and Dataframe Index is True, Index Names are used."
+msgstr "Обозначение столбца для столбцов с индексами.
+Если поле пустое, а настройка [Индекс] включена, то используются имена индексов."
 
 #: superset/views/database/forms.py:236 superset/views/database/forms.py:372
 msgid "Null values"
 msgstr "Значение фильтра"
 
 #: superset/views/database/forms.py:238 superset/views/database/forms.py:374
-msgid ""
-"Json list of the values that should be treated as null. Examples: [\"\"],"
-" [\"None\", \"N/A\"], [\"nan\", \"null\"]. Warning: Hive database "
-"supports only single value. Use [\"\"] for empty string."
-msgstr ""
+msgid "Json list of the values that should be treated as null.
+Examples: [\"\"], [\"None\", \"N/A\"], [\"nan\", \"null\"].
+Warning: Hive database supports only single value. Use [\"\"] for empty string."
+msgstr "Json список значений, которые следует рассматривать как null.
+Например: [\"\"], [\"None\", \"N/A\"], [\"nan\", \"null\"].
+Предупреждение: База данных Hive поддерживает только одно значение. Используйте [\"\"] для пустой строки."
 
 #: superset/views/database/forms.py:250
 msgid "Name of table to be created from excel data."
@@ -3632,18 +3493,16 @@ msgid "Strings used for sheet names (default is the first sheet)."
 msgstr "Строки, используемые для имён листов (по-умолчанию это первый лист)."
 
 #: superset/views/database/forms.py:386
-#, fuzzy
 msgid "Name of table to be created from columnar data."
-msgstr "Имя таблицы, которая будет сформирована из данных csv."
+msgstr "Имя таблицы, которая будет создана из столбчатых данных."
 
 #: superset/views/database/forms.py:394
 msgid "Columnar File"
 msgstr "Columnar File"
 
 #: superset/views/database/forms.py:395
-#, fuzzy
 msgid "Select a Columnar file to be uploaded to a database."
-msgstr "Выберите файл CSV, который будет загружен в БД."
+msgstr "Выберите столбчатый файл, который будет загружен в БД."
 
 #: superset/views/database/mixins.py:34
 msgid "Show Database"
@@ -3662,12 +3521,14 @@ msgid "Expose this DB in SQL Lab"
 msgstr "Показать базу данных в SQL Редакторе"
 
 #: superset/views/database/mixins.py:105
-msgid ""
-"Operate the database in asynchronous mode, meaning  that the queries are "
-"executed on remote workers as opposed to on the web server itself. This "
-"assumes that you have a Celery worker setup as well as a results backend."
-" Refer to the installation docs for more information."
-msgstr ""
+msgid "Operate the database in asynchronous mode,
+meaning  that the queries are executed on remote workers as opposed to on the web server itself.
+This assumes that you have a Celery worker setup as well as a results backend.
+Refer to the installation docs for more information."
+msgstr "Управляйте базой данных в асинхронном режиме, что означает,
+что запросы выполняются на удаленных рабочих, а не на самом веб-сервере.
+Это предполагает, что у вас есть настройка Celery worker, а также серверная часть результатов.
+Для получения дополнительной информации обратитесь к документации по установке."
 
 #: superset/views/database/mixins.py:113
 msgid "Allow CREATE TABLE AS option in SQL Lab"
@@ -3678,59 +3539,41 @@ msgid "Allow CREATE VIEW AS option in SQL Lab"
 msgstr "Разрешить выполнять инструкцию CREATE TABLE AS в редакторе SQL"
 
 #: superset/views/database/mixins.py:115
-msgid ""
-"Allow users to run non-SELECT statements (UPDATE, DELETE, CREATE, ...) in"
-" SQL Lab"
-msgstr ""
-"Позволяет пользователям запускать инструкции (UPDATE, DELETE, CREATE, …) "
-"без SELECT в редакторе SQL"
+msgid "Allow users to run non-SELECT statements (UPDATE, DELETE, CREATE, ...) in SQL Lab"
+msgstr "Позволяет пользователям запускать инструкции (UPDATE, DELETE, CREATE, …) без SELECT в редакторе SQL"
 
 #: superset/views/database/mixins.py:120
-msgid ""
-"When allowing CREATE TABLE AS option in SQL Lab, this option forces the "
-"table to be created in this schema"
-msgstr ""
-"При разрешении опции CREATE TABLE AS в редакторе SQL эта опция создаст "
-"таблицу в выбранной схеме"
+msgid "When allowing CREATE TABLE AS option in SQL Lab, this option forces the table to be created in this schema"
+msgstr "При разрешении опции CREATE TABLE AS в редакторе SQL эта опция создаст таблицу в выбранной схеме"
 
 #: superset/views/database/mixins.py:166
-msgid ""
-"If Presto, all the queries in SQL Lab are going to be executed as the "
-"currently logged on user who must have permission to run them.<br/>If "
-"Hive and hive.server2.enable.doAs is enabled, will run the queries as "
-"service account, but impersonate the currently logged on user via "
-"hive.server2.proxy.user property."
-msgstr ""
-"Если вы используете Presto, все запросы в SQL-Редакторе будут выполняться"
-" от авторизованного пользователя, который должен иметь разрешение на их "
-"выполнение. <br/> Если включен Hive, то запросы будут выполняться через "
-"техническую учетную запись, но ассоциировать зарегистрированного "
-"пользователя можно через свойство hive.server2.proxy.user."
+msgid "If Presto, all the queries in SQL Lab are going to be executed
+as the currently logged on user who must have permission to run them.
+<br/>If Hive and hive.server2.enable.doAs is enabled, will run the queries as service account,
+but impersonate the currently logged on user via hive.server2.proxy.user property."
+msgstr "Если вы используете Presto, все запросы в SQL-Редакторе будут выполняться от авторизованного пользователя,
+который должен иметь разрешение на их выполнение.
+<br/> Если включен Hive, то запросы будут выполняться через техническую учетную запись,
+но ассоциировать зарегистрированного пользователя можно через свойство hive.server2.proxy.user."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:161
 #: superset/views/database/mixins.py:173
-msgid ""
-"Allow SQL Lab to fetch a list of all tables and all views across all "
-"database schemas. For large data warehouse with thousands of tables, this"
-" can be expensive and put strain on the system."
-msgstr ""
-"Разрешить SQL Lab извлекать список всех таблиц и всех представлений во "
-"всех схемах базы данных. Для большого хранилища данных с тысячами таблиц "
-"это может быть дорогостоящим и создавать нагрузку на систему."
+msgid "Allow SQL Lab to fetch a list of all tables and all views across all database schemas.
+For large data warehouse with thousands of tables, this can be expensive and put strain on the system."
+msgstr "Разрешить SQL Lab извлекать список всех таблиц и всех представлений во всех схемах базы данных.
+Для большого хранилища данных с тысячами таблиц это может быть дорогостоящим и создавать нагрузку на систему."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:245
 #: superset/views/database/mixins.py:178
-msgid ""
-"Duration (in seconds) of the caching timeout for charts of this database."
-" A timeout of 0 indicates that the cache never expires. Note this "
-"defaults to the global timeout if undefined."
-msgstr ""
+msgid "Duration (in seconds) of the caching timeout for charts of this database.
+A timeout of 0 indicates that the cache never expires. Note this defaults to the global timeout if undefined."
+msgstr "Продолжительность (в секундах) тайм-аута кэширования для графиков этой базы данных.
+Тайм-аут, равный 0, указывает на то, что срок действия кэша никогда не истекает.
+Обратите внимание, что по умолчанию используется глобальный тайм-аут, если он не определен."
 
 #: superset/views/database/mixins.py:183
 msgid "If selected, please set the schemas allowed for csv upload in Extra."
-msgstr ""
-"Если включено, выберите схему, в которую разрешено загружать CSV на "
-"вкладке “Дополнительно”."
+msgstr "Если включено, выберите схему, в которую разрешено загружать CSV на вкладке “Дополнительно”."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:338
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:444
@@ -3800,19 +3643,13 @@ msgstr "Бэкэнд"
 #: superset/views/database/mixins.py:247 superset/views/database/mixins.py:271
 #, python-format
 msgid "Extra field cannot be decoded by JSON. %(msg)s"
-msgstr ""
+msgstr "Дополнительное поле не может быть расшифровано JSON. %(msg)s"
 
 #: superset/views/database/validators.py:40
-msgid ""
-"Invalid connection string, a valid string usually "
-"follows:'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-"
-"NAME'<p>Example:'postgresql://user:password@your-postgres-"
-"db/database'</p>"
-msgstr ""
-"Недействительная строка подключения, правильная строка обычно следует "
-"следующему шаблону: "
-"драйвер://пользователь:пароль@хостБД/имяБД<p>Пример:’postgresql://user:password"
-"@your-postgres-db/database'</p>"
+msgid "Invalid connection string, a valid string usually follows:
+'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'<p>Example:'postgresql://user:password@your-postgres-db/database'</p>"
+msgstr "Недействительная строка подключения, правильная строка обычно следует следующему шаблону:
+драйвер://пользователь:пароль@хостБД/имяБД<p>Пример:’postgresql://user:password@your-postgres-db/database'</p>"
 
 #: superset/views/database/views.py:115
 msgid "CSV to Database configuration"
@@ -3820,30 +3657,22 @@ msgstr "Настройка CSV для БД"
 
 #: superset/views/database/views.py:133
 #, python-format
-msgid ""
-"Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
-"for csv uploads. Please contact your Superset Admin."
-msgstr ""
-"Схема “%(schema_name)s” в базе данных “%(database_name)s” не разрешена "
-"для загрузки CSV. Пожалуйста, свяжитесь с администратором Superset."
+msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for csv uploads.
+Please contact your Superset Admin."
+msgstr "Схема “%(schema_name)s” в базе данных “%(database_name)s” не разрешена для загрузки CSV.
+Пожалуйста, свяжитесь с администратором Superset."
 
 #: superset/views/database/views.py:226
 #, python-format
-msgid ""
-"Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in"
-" database \"%(db_name)s\". Error message: %(error_msg)s"
-msgstr ""
-"Невозможно загрузить CSV-файл \"%(filename)s\" таблицу \"%(table_name)s\""
-" базы данных \"%(db_name)s”. Сообщение об ошибке: %(error_msg)s"
+msgid "Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\".
+Error message: %(error_msg)s"
+msgstr "Невозможно загрузить CSV-файл \"%(filename)s\" таблицу \"%(table_name)s\"базы данных \"%(db_name)s”.
+Сообщение об ошибке: %(error_msg)s"
 
 #: superset/views/database/views.py:238
 #, python-format
-msgid ""
-"CSV file \"%(csv_filename)s\" uploaded to table \"%(table_name)s\" in "
-"database \"%(db_name)s\""
-msgstr ""
-"CSV-файл \"%(csv_filename)s\" загружен в таблицу \"%(table_name)s\" базы "
-"данных \"%(db_name)s\""
+msgid "CSV file \"%(csv_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
+msgstr "CSV-файл \"%(csv_filename)s\" загружен в таблицу \"%(table_name)s\" базы данных \"%(db_name)s\""
 
 #: superset/views/database/views.py:254
 msgid "Excel to Database configuration"
@@ -3851,81 +3680,60 @@ msgstr "Настройка CSV для БД"
 
 #: superset/views/database/views.py:269
 #, python-format
-msgid ""
-"Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
-"for excel uploads. Please contact your Superset Admin."
-msgstr ""
-"Схема “%(schema_name)s” в базе данных “%(database_name)s” не разрешена "
-"для загрузок Excel-файлов. Пожалуйста, свяжитесь с администратором "
-"Superset."
+msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for excel uploads.
+Please contact your Superset Admin."
+msgstr "Схема “%(schema_name)s” в базе данных “%(database_name)s” не разрешена для загрузок Excel-файлов.
+Пожалуйста, свяжитесь с администратором Superset."
 
 #: superset/views/database/views.py:363
 #, python-format
-msgid ""
-"Unable to upload Excel file \"%(filename)s\" to table \"%(table_name)s\" "
-"in database \"%(db_name)s\". Error message: %(error_msg)s"
-msgstr ""
-"Невозможно загрузить Excel-файл \"%(filename)s\" в таблицу "
-"\"%(table_name)s\" базы данных \"%(db_name)s”. Сообщение об ошибке: "
-"%(error_msg)s"
+msgid "Unable to upload Excel file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\".
+Error message: %(error_msg)s"
+msgstr "Невозможно загрузить Excel-файл \"%(filename)s\" в таблицу \"%(table_name)s\" базы данных \"%(db_name)s”.
+Сообщение об ошибке: %(error_msg)s"
 
 #: superset/views/database/views.py:375
 #, python-format
-msgid ""
-"Excel file \"%(excel_filename)s\" uploaded to table \"%(table_name)s\" in"
-" database \"%(db_name)s\""
-msgstr ""
-"Excel-файл “%(excel_filename)s\" загружен в таблицу \"%(table_name)s\" "
-"базы данных \"%(db_name)s\""
+msgid "Excel file \"%(excel_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
+msgstr "Excel-файл “%(excel_filename)s\" загружен в таблицу \"%(table_name)s\" базы данных \"%(db_name)s\""
 
 #: superset/views/database/views.py:391
 msgid "Columnar to Database configuration"
 msgstr "Columnar to Database configuration"
 
 #: superset/views/database/views.py:416
-msgid ""
-"Multiple file extensions are not allowed for columnar uploads. Please "
-"make sure all files are of the same extension."
-msgstr ""
+msgid "Multiple file extensions are not allowed for columnar uploads.
+Please make sure all files are of the same extension."
+msgstr "При загрузке в виде столбцов не допускается использование нескольких разрешений файлов.
+Пожалуйтса, убедитесь, что все файлы имеют одинаковое расширение."
 
 #: superset/views/database/views.py:429
-#, fuzzy, python-format
-msgid ""
-"Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
-"for columnar uploads. Please contact your Superset Admin."
-msgstr ""
-"Схема “%(schema_name)s” в базе данных “%(database_name)s” не разрешена "
-"для загрузок Excel-файлов. Пожалуйста, свяжитесь с администратором "
-"Superset."
+#, python-format
+msgid "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed for columnar uploads.
+Please contact your Superset Admin."
+msgstr "База данных \"%(database_name)s\" в схеме \"%(schema_name)s\" не разрешена для загрузок Excel-файлов.
+Пожалуйста, свяжитесь с администратором Superset."
 
 #: superset/views/database/views.py:504
-#, fuzzy, python-format
-msgid ""
-"Unable to upload Columnar file \"%(filename)s\" to table "
-"\"%(table_name)s\" in database \"%(db_name)s\". Error message: "
-"%(error_msg)s"
-msgstr ""
-"Невозможно загрузить Excel-файл \"%(filename)s\" в таблицу "
-"\"%(table_name)s\" базы данных \"%(db_name)s”. Сообщение об ошибке: "
-"%(error_msg)s"
+#, python-format
+msgid "Unable to upload Columnar file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\".
+Error message: %(error_msg)s"
+msgstr "Невозможно загрузить Excel-файл \"%(filename)s\" в таблицу \"%(table_name)s\" базы данных \"%(db_name)s”.
+Сообщение об ошибке: %(error_msg)s"
 
 #: superset/views/database/views.py:516
 #, python-format
-msgid ""
-"Columnar file \"%(columnar_filename)s\" uploaded to table "
-"\"%(table_name)s\" in database \"%(db_name)s\""
-msgstr ""
-"Columnar file \"%(columnar_filename)s\" uploaded to table "
-"\"%(table_name)s\" in database \"%(db_name)s\""
+msgid "Columnar file \"%(columnar_filename)s\" uploaded to table \"%(table_name)s\" in database \"%(db_name)s\""
+msgstr "Столбчатый файл \"%(columnar_filename)s\" загржено в таблицу \"%(table_name)s\" в базе данных \"%(db_name)s\""
 
 #: superset/views/datasource/views.py:71
 msgid "Request missing data field."
-msgstr ""
+msgstr "Запросите отсутствующее поле данных."
 
 #: superset/views/datasource/views.py:105
 #, python-format
 msgid "Duplicate column name(s): %(columns)s"
-msgstr ""
+msgstr "Повторяющееся имя столбца: %(columns)s"
 
 #: superset/views/log/__init__.py:21
 msgid "Logs"
@@ -3974,9 +3782,8 @@ msgid "Origin"
 msgstr "Источник"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:35
-#, fuzzy
 msgid "Time Granularity"
-msgstr "Гранулярность времени"
+msgstr "Временная детализация"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:39
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:26
@@ -4011,7 +3818,7 @@ msgstr "Аггрегация"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:59
 msgid "Raw records"
-msgstr ""
+msgstr "Необработанные записи"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/CertifiedIconWithTooltip.tsx:46
 #: superset-frontend/src/components/CertifiedBadge/index.tsx:44
@@ -4028,6 +3835,7 @@ msgstr "описание"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ControlHeader.tsx:74
 #: superset-frontend/src/explore/components/ControlHeader.tsx:92
+#, fuzzy
 msgid "bolt"
 msgstr ""
 
@@ -4048,7 +3856,7 @@ msgstr "Изменение этого элемента применяется с
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/InfoTooltipWithTrigger.tsx:52
 msgid "Show info tooltip"
-msgstr ""
+msgstr "Показать информационную подсказку"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/SQLPopover.tsx:64
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:233
@@ -4062,34 +3870,32 @@ msgid "Column name"
 msgstr "Имена столбца(ов) "
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/labelUtils.tsx:108
-#, fuzzy
 msgid "Metric name"
-msgstr "Имя запроса"
+msgstr "Имя показателя"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:53
-#, fuzzy
 msgid "unknown type icon"
-msgstr "Неизвестная ошибка"
+msgstr "значок неизвестного типа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:57
 msgid "function type icon"
-msgstr ""
+msgstr "значок типа функии"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:59
 msgid "string type icon"
-msgstr ""
+msgstr "значок строкового типа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:61
 msgid "numeric type icon"
-msgstr ""
+msgstr "значок числового типа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:63
 msgid "boolean type icon"
-msgstr ""
+msgstr "значок логического типа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/components/ColumnTypeLabel/ColumnTypeLabel.tsx:65
 msgid "temporal type icon"
-msgstr ""
+msgstr "значок временного типа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:25
 #: superset-frontend/src/explore/controlPanels/sections.tsx:127
@@ -4101,22 +3907,19 @@ msgstr "Расширенный анализ"
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:119
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:367
 #: superset-frontend/src/explore/controlPanels/sections.tsx:129
-msgid ""
-"This section contains options that allow for advanced analytical post "
-"processing of query results"
-msgstr ""
-"В этом разделе содержатся параметры, которые позволяют производить "
-"аналитическую пост-обработку результатов запроса"
+msgid "This section contains options that allow for advanced analytical post processing of query results"
+msgstr "В этом разделе содержатся параметры,
+которые позволяют производить аналитическую пост-обработку результатов запроса"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:33
 #: superset-frontend/src/explore/controlPanels/sections.tsx:135
 msgid "Rolling window"
-msgstr "Rolling"
+msgstr "Вращающееся окно"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:39
 #: superset-frontend/src/explore/controlPanels/sections.tsx:141
 msgid "Rolling function"
-msgstr "Rolling"
+msgstr "Функция прокатки"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:41
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:242
@@ -4125,7 +3928,7 @@ msgstr "Rolling"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterCard/ScopeRow.tsx:77
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:120
 msgid "None"
-msgstr ""
+msgstr "Никто"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:44
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:258
@@ -4133,12 +3936,8 @@ msgstr ""
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:388
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:182
 #: superset-frontend/src/explore/controlPanels/sections.tsx:150
-msgid ""
-"Defines a rolling window function to apply, works along with the "
-"[Periods] text box"
-msgstr ""
-"Одна из функций (Rolling) библиотеки Pandas, которая определяет способ "
-"агрегации данных"
+msgid "Defines a rolling window function to apply, works along with the [Periods] text box"
+msgstr "Одна из функций (Rolling) библиотеки Pandas, которая определяет способ агрегации данных"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:56
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:270
@@ -4155,12 +3954,9 @@ msgstr "Период"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:402
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:196
 #: superset-frontend/src/explore/controlPanels/sections.tsx:162
-msgid ""
-"Defines the size of the rolling window function, relative to the time "
-"granularity selected"
-msgstr ""
-"Одна из функций (Rolling) библиотеки Pandas, которая определяет период, к"
-" которому применяется функция агрегации"
+msgid "Defines the size of the rolling window function, relative to the time granularity selected"
+msgstr "Одна из функций (Rolling) библиотеки Pandas, которая определяет период,
+к которому применяется функция агрегации"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:80
 #: superset-frontend/src/explore/controlPanels/sections.tsx:172
@@ -4173,17 +3969,13 @@ msgstr "HIde Periods"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:416
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:210
 #: superset-frontend/src/explore/controlPanels/sections.tsx:174
-msgid ""
-"The minimum number of rolling periods required to show a value. For "
-"instance if you do a cumulative sum on 7 days you may want your \"Min "
-"Period\" to be 7, so that all data points shown are the total of 7 "
-"periods. This will hide the \"ramp up\" taking place over the first 7 "
-"periods"
-msgstr ""
-"Скрыть необходимое количество периодов. Например, если вы делаете "
-"накопительную сумму показателя за 7 дней, но хотите скрыть нарастающий "
-"итог за первые 6 дней, то указав в данном столбце «6», вы скроете "
-"нарастание, происходящее в течение первых 6 периодов"
+msgid "The minimum number of rolling periods required to show a value.
+For instance if you do a cumulative sum on 7 days you may want your \"Min Period\" to be 7,
+so that all data points shown are the total of 7 periods.
+This will hide the \"ramp up\" taking place over the first 7 periods"
+msgstr "Скрыть необходимое количество периодов. Например, если вы делаете накопительную сумму показателя за 7 дней,
+но хотите скрыть нарастающий итог за первые 6 дней, то указав в данном столбце «6», вы скроете нарастание,
+происходящее в течение первых 6 периодов"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:102
 #: superset-frontend/src/explore/controlPanels/sections.tsx:184
@@ -4200,11 +3992,12 @@ msgstr "Временной сдвиг"
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:199
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:447
 #: superset-frontend/src/explore/controlPanels/sections.tsx:205
-msgid ""
-"Overlay one or more timeseries from a relative time period. Expects "
-"relative time deltas in natural language (example:  24 hours, 7 days, 52 "
-"weeks, 365 days). Free text is supported."
-msgstr ""
+msgid "Overlay one or more timeseries from a relative time period.
+Expects relative time deltas in natural language (example:  24 hours, 7 days, 52 weeks, 365 days).
+Free text is supported."
+msgstr "Наложение одной или нескольких временных серий из относительного периода времени.
+Ожидает относительные временные значения на естественном языке (пример: 24 часа, 7 дней, 52 недели, 365 дней).
+Поддерживается свободный текст."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:137
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:328
@@ -4219,15 +4012,12 @@ msgstr "Тип расчёта"
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:219
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:469
 #: superset-frontend/src/explore/controlPanels/sections.tsx:225
-#, fuzzy
-msgid ""
-"How to display time shifts: as individual lines; as the difference "
-"between the main time series and each time shift; as the percentage "
-"change; or as the ratio between series and time shifts."
-msgstr ""
-"Как отображать смещения во времени: как отдельные линии; как абсолютную "
-"разницу между основным временным рядом и каждым смещением; как процентное"
-" изменение; или как соотношение между рядами и смещениями."
+msgid "How to display time shifts: as individual lines;
+as the difference between the main time series and each time shift; as the percentage change;
+or as the ratio between series and time shifts."
+msgstr "Как отображать смещения во времени: как отдельные линии;
+как абсолютную разницу между основным временным рядом и каждым смещением;
+как процентное изменение; или как соотношение между рядами и смещениями."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:153
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:344
@@ -4255,15 +4045,13 @@ msgstr "Правило"
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:239
 #: superset-frontend/src/explore/controlPanels/sections.tsx:243
 msgid "Pandas resample rule"
-msgstr ""
-"Одна из функций (Resample) библиотеки Pandas, которая определяет период, "
-"к которому применяется функция агрегации"
+msgstr "Одна из функций (Resample) библиотеки Pandas, которая определяет период,
+к которому применяется функция агрегации"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:182
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:249
-#, fuzzy
 msgid "Fill method"
-msgstr "Добавить слой аннотации"
+msgstr "Способ заполнения"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:194
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:379
@@ -4272,9 +4060,7 @@ msgstr "Добавить слой аннотации"
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:261
 #: superset-frontend/src/explore/controlPanels/sections.tsx:261
 msgid "Pandas resample method"
-msgstr ""
-"Одна из функций (Resample) библиотеки Pandas, которая определяет метод "
-"обработки данных"
+msgstr "Одна из функций (Resample) библиотеки Pandas, которая определяет метод обработки данных"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/annotationsAndLayers.tsx:25
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:104
@@ -4311,11 +4097,11 @@ msgstr "Ось X"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:39
 msgid "X Axis Title"
-msgstr ""
+msgstr "Название оси X"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:53
 msgid "X AXIS TITLE BOTTOM MARGIN"
-msgstr ""
+msgstr "НИЖНЕЕ ПОЛЕ ЗАГОЛОВКА ПО ОСИ X"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:61
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:168
@@ -4341,64 +4127,55 @@ msgstr "Ось Y"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:67
 msgid "Y Axis Title"
-msgstr ""
+msgstr "Название оси Y"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:81
 msgid "Y AXIS TITLE MARGIN"
-msgstr ""
+msgstr "ПОЛЕ ЗАГОЛОВКА ПО ОСИ Y"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:96
 msgid "Y AXIS TITLE POSITION"
-msgstr ""
+msgstr "ПОЛОЖЕНИЕ ЗАГОЛОВКА ПО ОСИ Y"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:36
-#, fuzzy
 msgid "Predictive Analytics"
-msgstr "Расширенный анализ"
+msgstr "Прогнозная аналитика"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:44
 msgid "Enable forecast"
-msgstr ""
+msgstr "Включить прогноз"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:47
 msgid "Enable forecasting"
-msgstr ""
+msgstr "Включить прогнозирование"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:56
-#, fuzzy
 msgid "Forecast periods"
-msgstr "Период"
+msgstr "Прогнозируемые периоды"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:59
 msgid "How many periods into the future do we want to predict"
-msgstr ""
+msgstr "На сколько периодов в будущее мы хотим предсказать"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:70
 msgid "Confidence interval"
 msgstr "Доверительный интервал"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:73
-#, fuzzy
 msgid "Width of the confidence interval. Should be between 0 and 1"
 msgstr "Доверительный интервал должен быть между 0 и 1 (исключая)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:92
-msgid ""
-"Should yearly seasonality be applied. An integer value will specify "
-"Fourier order of seasonality."
-msgstr ""
+msgid "Should yearly seasonality be applied. An integer value will specify Fourier order of seasonality."
+msgstr "Следует ли применять ежегодную сезонность. Целочисленное значение будет указывать порядок сезонности Фурье."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:111
-msgid ""
-"Should weekly seasonality be applied. An integer value will specify "
-"Fourier order of seasonality."
-msgstr ""
+msgid "Should weekly seasonality be applied. An integer value will specify Fourier order of seasonality."
+msgstr "Следует ли применять еженедельную сезонность. Целочисленное значение будет указывать порядок сезонности Фурье."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:130
-msgid ""
-"Should daily seasonality be applied. An integer value will specify "
-"Fourier order of seasonality."
-msgstr ""
+msgid "Should daily seasonality be applied. An integer value will specify Fourier order of seasonality."
+msgstr "Следует ли применять ежедневную сезонность. Целочисленное значение будет указывать порядок сезонности Фурье."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:28
 #: superset-frontend/src/explore/controlPanels/sections.tsx:27
