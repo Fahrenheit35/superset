@@ -4248,29 +4248,21 @@ msgstr "Измерение"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:36
 #: superset-frontend/src/explore/controls.jsx:126
-msgid ""
-"One or many columns to group by. High cardinality groupings should "
-"include a series limit to limit the number of fetched and rendered "
-"series."
-msgstr ""
+msgid "One or many columns to group by.
+High cardinality groupings should include a series limit to limit the number of fetched and rendered series."
+msgstr "Нужна хотя бы одна колонка для группировки. Группировки с высокой мощностью должны включать ограничения серии,
+чтобы ограничить количество выбранных и отображаемых серий."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:69
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:239
-#, fuzzy
 msgid "One or many columns to pivot as columns"
-msgstr ""
-"Выберите один или несколько срезов для отображения показателей в столбцах"
-" сводной таблицы"
+msgstr "Выберите один или несколько срезов для отображения показателей в столбцах сводной таблицы"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:77
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:431
 #: superset-frontend/src/explore/controls.jsx:399
-msgid ""
-"Defines the grouping of entities. Each series is shown as a specific "
-"color on the chart and has a legend toggle"
-msgstr ""
-"Группировка в ряды данных. Каждый ряд отображается в виде определенного "
-"цвета на графике и имеет легенду"
+msgid "Defines the grouping of entities. Each series is shown as a specific color on the chart and has a legend toggle"
+msgstr "Группировка в ряды данных. Каждый ряд отображается в виде определенного цвета на графике и имеет легенду"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:86
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:440
@@ -4292,7 +4284,6 @@ msgstr "Выберите один или несколько показателе
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:134
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:204
-#, fuzzy
 msgid "Right Axis Metric"
 msgstr "Показатель для правой оси"
 
@@ -4300,7 +4291,7 @@ msgstr "Показатель для правой оси"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:206
 #: superset-frontend/src/explore/controls.jsx:217
 msgid "Choose a metric for right axis"
-msgstr "Выберите метрику для правой оси"
+msgstr "Выберите показатель для правой оси"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:140
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:412
@@ -4312,11 +4303,11 @@ msgstr "Сортировка"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:142
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:414
 #: superset-frontend/src/explore/controls.jsx:383
-msgid ""
-"Metric used to define how the top series are sorted if a series or row "
-"limit is present. If undefined reverts to the first metric (where "
-"appropriate)."
-msgstr ""
+msgid "Metric used to define how the top series are sorted if a series or row limit is present.
+If undefined reverts to the first metric (where appropriate)."
+msgstr "Показатель используется для определения того, как сортируются верхние ряды,
+если присутствует ограничение по ряду или строке.
+Если не определено, возвращается к первому показателю (где это уместно)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:156
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:463
@@ -4327,7 +4318,7 @@ msgstr "Размер пузырька"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:157
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:464
 msgid "Metric used to calculate bubble size"
-msgstr ""
+msgstr "Показатель, используемый для расчета размера пузырька"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:163
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:450
@@ -4344,7 +4335,7 @@ msgstr "Показатель, отраженный на оси Y"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:174
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:230
 msgid "Color Metric"
-msgstr "Цвет метрики"
+msgstr "Цвет показателя"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:176
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:233
@@ -4359,27 +4350,24 @@ msgid ""
 "The time column for the visualization. Note that you can define arbitrary"
 " expression that return a DATETIME column in the table. Also note that "
 "the filter below is applied against this column or expression"
-msgstr ""
-"Столбец данных с датой или временем. Вы можете определить произвольное "
-"выражение, которое будет возвращать столбец даты/времени в таблице. "
-"Фильтр ниже будет применён к этому столбцу или выражению"
+msgstr "Столбец данных с датой или временем. Вы можете определить произвольное выражение,
+которое будет возвращать столбец даты/времени в таблице. Фильтр ниже будет применён к этому столбцу или выражению"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/dndControls.tsx:191
 msgid "Drop temporal column here"
-msgstr ""
+msgstr "Опустите временную колонку здесь"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/emitFilterControl.tsx:30
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/emitFilterControl.tsx:33
-#, fuzzy
 msgid "Enable dashboard cross filters"
 msgstr "Редактировать свойства дашборда"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:122
-msgid ""
-"One or many columns to group by. High cardinality groupings should "
-"include a sort by metric and series limit to limit the number of fetched "
-"and rendered series."
-msgstr ""
+msgid "One or many columns to group by.
+High cardinality groupings should include a sort by metric and series limit to limit the number of fetched
+and rendered series."
+msgstr "Нужна хотя бы одна колонка для группировки. Группировки с высокой мощностью должны включать сортировку
+по показателю и ограничения серии, чтобы ограничить количество выбранных и отображаемых серий.
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:191
 #: superset-frontend/src/explore/controls.jsx:202
@@ -4387,7 +4375,6 @@ msgid "The type of visualization to display"
 msgstr "Выберите необходимый тип визуализации"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:196
-#, fuzzy
 msgid "Fixed Color"
 msgstr "Фиксированный цвет"
 
@@ -4397,40 +4384,32 @@ msgid "Use this to define a static color for all circles"
 msgstr "Используйте это цвет для заливки всех кругов одним цветом"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:211
-#, fuzzy
 msgid "Linear Color Scheme"
-msgstr "Цветовая схема"
+msgstr "Линейная цветовая схема"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:251
 #: superset-frontend/src/explore/controls.jsx:258
-msgid ""
-"Defines the origin where time buckets start, accepts natural dates as in "
-"`now`, `sunday` or `1970-01-01`"
-msgstr ""
+msgid "Defines the origin where time buckets start, accepts natural dates as in `now`, `sunday` or `1970-01-01`"
+msgstr "Определяет начало координат, с которого начинаются временные интервалы, принимает естественные даты, такие как
+`now`, `sunday` или `1970-01-01`"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:280
 #: superset-frontend/src/explore/controls.jsx:287
-msgid ""
-"The time granularity for the visualization. Note that you can type and "
-"use simple natural language as in `10 seconds`, `1 day` or `56 weeks`"
-msgstr ""
-"Интервал времени, в границах которого строится график. Обратите внимание,"
-" что для определения диапазона времени, вы можете использовать "
-"естественный язык. Например, можно указать словосочетания - «10 seconds»,"
-" «1 day» или «56 weeks»"
+msgid "The time granularity for the visualization.
+Note that you can type and use simple natural language as in `10 seconds`, `1 day` or `56 weeks`"
+msgstr "Интервал времени, в границах которого строится график.
+Обратите внимание, что для определения диапазона времени, вы можете использовать естественный язык.
+Например, можно указать словосочетания - «10 seconds», «1 day» или «56 weeks»"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:329
 #: superset-frontend/src/explore/controls.jsx:326
-msgid ""
-"The time granularity for the visualization. This applies a date "
-"transformation to alter your time column and defines a new time "
-"granularity. The options here are defined on a per database engine basis "
-"in the Superset source code."
-msgstr ""
-"Гранулярность для визуализации. С помощью этого применяются "
-"преобразования к столбцу с датой/временем и определяет новую "
-"гранулярность (минута, день, год, и т.п.). Доступные опции определены в "
-"исходном коде Superset для каждого типа движка БД."
+msgid "The time granularity for the visualization.
+This applies a date transformation to alter your time column and defines a new time granularity.
+The options here are defined on a per database engine basis in the Superset source code."
+msgstr "Гранулярность для визуализации.
+С помощью этого применяются преобразования к столбцу с датой/временем и
+определяет новую гранулярность (минута, день, год, и т.п.).
+Доступные опции определены в исходном коде Superset для каждого типа движка БД."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:345
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:35
@@ -4440,15 +4419,15 @@ msgstr "Нет фильтра"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:346
 #: superset-frontend/src/explore/controls.jsx:343
-msgid ""
-"The time range for the visualization. All relative times, e.g. \"Last "
-"month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using"
-" the server's local time (sans timezone). All tooltips and placeholder "
-"times are expressed in UTC (sans timezone). The timestamps are then "
-"evaluated by the database using the engine's local timezone. Note one can"
-" explicitly set the timezone per the ISO 8601 format if specifying either"
-" the start and/or end time."
-msgstr ""
+msgid "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\",
+etc. are evaluated on the server using the server's local time (sans timezone).
+All tooltips and placeholder times are expressed in UTC (sans timezone).
+The timestamps are then evaluated by the database using the engine's local timezone.
+Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time."
+msgstr "Временной диапазон для визуализации. Все относительные времена, например \"Последний месяц\",
+\"Последние 7 дней\", \"сейчас\", и т.д. вычисляются на сервере с использованием местного времени сервера
+(без часового пояса). Временные метки затем оцениваются базой данных с использованием локального часового пояса движка.
+Примечание, можно явно установить часовой пояс в соответствии с форматом ISO 8601, указав время начала и/или окончания."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:362
 #: superset-frontend/src/explore/controls.jsx:356
@@ -4483,14 +4462,13 @@ msgstr "Лимит кол-ва рядов"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:388
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:402
 #: superset-frontend/src/explore/controls.jsx:370
-#, fuzzy
-msgid ""
-"Limits the number of series that get displayed. A joined subquery (or an "
-"extra phase where subqueries are not supported) is applied to limit the "
-"number of series that get fetched and rendered. This feature is useful "
-"when grouping by high cardinality column(s) though does increase the "
-"query complexity and cost."
-msgstr "Ограничивает количество отображаемых временных рядов."
+msgid "Limits the number of series that get displayed.
+A joined subquery (or an extra phase where subqueries are not supported) is applied to limit the number of series
+that get fetched and rendered. This feature is useful when grouping by high cardinality column(s)
+though does increase the query complexity and cost."
+msgstr "Ограничивает количество отображаемых временных рядов. Объединенный подзапрос (или дополнительная фаза, где
+подзапросы не поддерживаются) применяется для ограничения количества серий, которые извлекаются и визуализируются.
+Эта функция полезна при группировке по столбцам с высокой мощностью, хотя и увеличивает сложность и стоимость запроса."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:472
 #: superset-frontend/src/explore/controls.jsx:438
@@ -4498,7 +4476,6 @@ msgid "Y Axis Format"
 msgstr "Формат Оси Y"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:497
-#, fuzzy
 msgid "Time format"
 msgstr "Формат Datetime"
 
@@ -4513,7 +4490,6 @@ msgid "Truncate Metric"
 msgstr "Показатель для сортировки"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:540
-#, fuzzy
 msgid "Whether to truncate metrics"
 msgstr "Показатель, по которому сортировать результаты"
 
@@ -4525,32 +4501,25 @@ msgid "Sort descending"
 msgstr "Сортировка по убыв."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/legacySortBy.tsx:31
-#, fuzzy
-msgid ""
-"Whether to sort descending or ascending. Takes effect only when \"Sort "
-"by\" is set"
+msgid "Whether to sort descending or ascending. Takes effect only when \"Sort by\" is set"
 msgstr "Сортировка по убыванию или по возрастанию"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/ColumnConfigControl.tsx:168
-#, fuzzy
 msgid "Show less columns"
-msgstr "Показать колонку Druid"
+msgstr "Показать меньше колонок"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/ColumnConfigControl.tsx:173
-#, fuzzy
 msgid "Show all columns"
-msgstr "Показать столбец"
+msgstr "Показать все колонки"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:47
 #, fuzzy
 msgid "Emit Target"
-msgstr "Редактировать датасет"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:48
-msgid ""
-"If you wish to specify a different target column than the original "
-"column, it can be entered here"
-msgstr ""
+msgid "If you wish to specify a different target column than the original column, it can be entered here"
+msgstr "Если вы хотите указать столбец, отличный от исходного столбца, его можно ввести здесь "
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:58
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:69
@@ -4560,39 +4529,35 @@ msgstr "Формат D3"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:80
 msgid "Fraction digits"
-msgstr ""
+msgstr "Дробные цифры"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:81
 msgid "Number of decimal digits to round numbers to"
-msgstr ""
+msgstr "Количество десятичных цифр для округления чисел"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:90
-#, fuzzy
 msgid "Min Width"
-msgstr "Толщина линии"
+msgstr "Минимальная ширина"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:91
-msgid ""
-"Default minimal column width in pixels, actual width may still be larger "
-"than this if other columns don't need much space"
-msgstr ""
-"Минимальная ширина столбца по умолчанию в пикселях, фактическая ширина "
-"все равно может быть больше, если другим столбцам не требуется много "
+msgid "Default minimal column width in pixels, actual width may still be larger
+than this if other columns don't need much space"
+msgstr "Минимальная ширина столбца по умолчанию в пикселях, фактическая ширина все равно может быть больше,
+если другим столбцам не требуется много "
 "места"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:105
 msgid "Text align"
-msgstr ""
+msgstr "Выравнивание текста"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:106
 msgid "Horizontal alignment"
-msgstr ""
+msgstr "Горизонтальное выравнивание"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:111
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:334
-#, fuzzy
 msgid "Left"
-msgstr "оповещение"
+msgstr "Слева"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:112
 msgid "Center"
@@ -4600,18 +4565,17 @@ msgstr "Центр"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:113
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:335
-#, fuzzy
 msgid "Right"
-msgstr "Высота"
+msgstr "Справа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:119
 msgid "Show cell bars"
-msgstr ""
+msgstr "Показывать полосы ячеек"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:120
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:435
 msgid "Whether to display a bar chart background in table columns"
-msgstr ""
+msgstr "Отображать ли фон столбчатой диаграммы в столбцах таблицы"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:127
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:446
@@ -4620,7 +4584,7 @@ msgstr "Выровнять +/-"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:128
 msgid "Whether to align positive and negative values in cell bar chart at 0"
-msgstr ""
+msgstr "Следует ли выравнивать положительные и отрицательные значения в столбчатой диаграмме ячеек по 0"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:137
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:458
@@ -4630,24 +4594,22 @@ msgstr "Цвет +/-"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:138
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:461
 msgid "Whether to colorize numeric values by if they are positive or negative"
-msgstr ""
+msgstr "Следует ли раскрашивать числовые значения по тому, являются ли они положительными или отрицательными"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:153
 msgid "Small number format"
-msgstr ""
+msgstr "Формат малого числа"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/components/ColumnConfigControl/constants.tsx:154
-msgid ""
-"D3 number format for numbers between -1.0 and 1.0, useful when you want "
-"to have different siginificant digits for small and large numbers"
-msgstr ""
-"Числовой формат D3 для чисел от -1.0 до 1.0, полезный, когда вы хотите "
-"иметь разные значащие цифры для маленьких и больших чисел."
+msgid "D3 number format for numbers between -1.0 and 1.0, useful when you want
+to have different siginificant digits for small and large numbers"
+msgstr "Числовой формат D3 для чисел от -1.0 до 1.0, полезный,
+когда вы хотите иметь разные значащие цифры для маленьких и больших чисел."
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:22
 #: superset-frontend/plugins/plugin-chart-echarts/src/Gauge/controlPanel.tsx:149
 msgid "D3 format syntax: https://github.com/d3/d3-format"
-msgstr ""
+msgstr "Синтаксис формата D3: https://github.com/d3/d3-format"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:28
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:51
@@ -4656,31 +4618,30 @@ msgstr "Адаптивное форматирование"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:42
 msgid "Duration in ms (66000 => 1m 6s)"
-msgstr ""
+msgstr "Длительность в мс (66000 => 1m 6s)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:43
 msgid "Duration in ms (1.40008 => 1ms 400µs 80ns)"
-msgstr ""
+msgstr "Длительность в мс (1.40008 => 1ms 400µs 80ns)"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:46
 msgid "D3 time format syntax: https://github.com/d3/d3-time-format"
-msgstr ""
+msgstr "Синтаксис временного формата D3: https://github.com/d3/d3-time-format"
 
 #: superset-frontend/packages/superset-ui-core/src/chart/components/NoResultsComponent.tsx:65
-msgid ""
-"No results were returned for this query. If you expected results to be "
-"returned, ensure any filters are configured properly and the datasource "
-"contains data for the selected time range."
-msgstr ""
+msgid "No results were returned for this query.
+If you expected results to be returned, ensure any filters are configured properly and the datasource
+contains data for the selected time range."
+msgstr "По этому запросу не было возвращено никаких результатов. Если вы ожидали, что будут возвращены результаты,
+убедитесь, что все фильтры настроены правильно и источник данных содержит данные для выбранного временного диапазона."
 
 #: superset-frontend/packages/superset-ui-core/src/chart/components/NoResultsComponent.tsx:78
-#, fuzzy
 msgid "No Results"
-msgstr "Посмотреть результаты"
+msgstr "Никаких результатов"
 
 #: superset-frontend/packages/superset-ui-core/src/query/extractQueryFields.ts:130
 msgid "Found invalid orderby options"
-msgstr ""
+msgstr "Найдены недопустимые параметры сортировки"
 
 #: superset-frontend/packages/superset-ui-core/src/validator/legacyValidateInteger.ts:31
 #: superset-frontend/packages/superset-ui-core/src/validator/validateInteger.ts:32
@@ -4690,11 +4651,11 @@ msgstr ""
 #: superset-frontend/packages/superset-ui-core/src/validator/legacyValidateNumber.ts:28
 #: superset-frontend/packages/superset-ui-core/src/validator/validateNumber.ts:32
 msgid "is expected to be a number"
-msgstr ""
+msgstr "ожидается, что это будет число"
 
 #: superset-frontend/packages/superset-ui-core/src/validator/validateNonEmpty.ts:29
 msgid "cannot be empty"
-msgstr ""
+msgstr "не может быть пустым"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:32
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:26
@@ -4765,21 +4726,21 @@ msgstr "Запрос"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:40
 msgid "Domain"
-msgstr ""
+msgstr "Домен"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:49
 msgid "The time unit used for the grouping of blocks"
-msgstr ""
+msgstr "Единица времени, используемая для группировки блоков"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:56
 msgid "Subdomain"
-msgstr ""
+msgstr "Поддомен"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:65
-msgid ""
-"The time unit for each block. Should be a smaller unit than "
-"domain_granularity. Should be larger or equal to Time Grain"
-msgstr ""
+msgid "The time unit for each block. Should be a smaller unit than domain_granularity.
+Should be larger or equal to Time Grain"
+msgstr "Единица времени для каждого блока. Должна быть меньшей единицей, чем domain_granularity.
+Должно быть больше или равно Time Grain"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:77
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:49
@@ -4831,7 +4792,7 @@ msgstr "Размер ячейки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:92
 msgid "The size of the square cell, in pixels"
-msgstr ""
+msgstr "Размер квадратной ячейки, в пикселях"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:103
 msgid "Cell Padding"
@@ -4839,7 +4800,7 @@ msgstr "Заполнение ячеек"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:104
 msgid "The distance between cells, in pixels"
-msgstr ""
+msgstr "Расстояние между ячейками, в пикселях"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:117
 msgid "Cell Radius"
@@ -4847,7 +4808,7 @@ msgstr "Радиус ячейки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:118
 msgid "The pixel radius"
-msgstr ""
+msgstr "Радиус пикселя"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:129
 msgid "Color Steps"
@@ -4855,10 +4816,9 @@ msgstr "Цветовые шаги"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:130
 msgid "The number color \"steps\""
-msgstr ""
+msgstr "Цвет номера \"steps\""
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:141
-#, fuzzy
 msgid "Time Format"
 msgstr "Формат Datetime"
 
@@ -4867,43 +4827,39 @@ msgstr "Формат Datetime"
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:129
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:149
 #: superset-frontend/plugins/plugin-chart-echarts/src/controls.tsx:104
-#, fuzzy
 msgid "Legend"
-msgstr "Изменения"
+msgstr "Легенда"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:157
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:278
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:132
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:152
 msgid "Whether to display the legend (toggles)"
-msgstr ""
+msgstr "Отображать ли легенду (переключает)"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:164
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:301
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:197
-#, fuzzy
 msgid "Show Values"
-msgstr "Показать таблицу"
+msgstr "Показать значения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:167
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:304
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:200
 msgid "Whether to display the numerical values within the cells"
-msgstr ""
+msgstr "Отображать ли числовые значения в ячейках"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:178
-#, fuzzy
 msgid "Show Metric Names"
-msgstr "Показать показатель"
+msgstr "Показывать имена показатель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:181
 msgid "Whether to display the metric name as a title"
-msgstr ""
+msgstr "Отображать ли название показателей в качестве заголовка"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:191
-#, fuzzy
 msgid "Number Format"
-msgstr "Формат D3"
+msgstr "Числовой формат"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:25
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:28
@@ -4913,11 +4869,12 @@ msgid "Correlation"
 msgstr "Корреляция"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:27
-msgid ""
-"Visualizes how a metric has changed over a time using a color scale and a"
-" calendar view. Gray values are used to indicate missing values and the "
-"linear color scheme is used to encode the magnitude of each day's value."
-msgstr ""
+msgid "Visualizes how a metric has changed over a time using a color scale and acalendar view.
+Gray values are used to indicate missing values and the linear color scheme is used to encode
+the magnitude of each day's value."
+msgstr "Визуализирует, как показатель изменился с течением времени, используя цветовую шкалу и представление календаря.
+Значения серого цвета используются для обозначения отсутствующих значений, а линейная цветовая схема используется
+для кодирования величины значения каждого дня."
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:32
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:40
@@ -4968,9 +4925,8 @@ msgstr "Интенсивность"
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:38
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:35
 #: superset-frontend/plugins/plugin-chart-table/src/index.ts:46
-#, fuzzy
 msgid "Pattern"
-msgstr "Обновить"
+msgstr "Шаблон"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:36
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:36
@@ -4982,9 +4938,8 @@ msgstr "Обновить"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/index.ts:59
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/index.ts:55
 #: superset-frontend/plugins/plugin-chart-table/src/index.ts:48
-#, fuzzy
 msgid "Report"
-msgstr "рассылка"
+msgstr "Отчет"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/index.js:37
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:37
@@ -4995,9 +4950,8 @@ msgstr "рассылка"
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/index.ts:45
 #: superset-frontend/plugins/plugin-chart-echarts/src/Funnel/index.ts:59
 #: superset-frontend/src/visualizations/TimeTable/index.ts:37
-#, fuzzy
 msgid "Trend"
-msgstr "Изменения"
+msgstr "Тенденция"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:39
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:94
@@ -5009,9 +4963,8 @@ msgstr "Изменения"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/controlPanel.tsx:62
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/controlPanel.tsx:49
 #: superset-frontend/plugins/plugin-chart-word-cloud/src/plugin/controlPanel.ts:38
-#, fuzzy
 msgid "Sort by metric"
-msgstr "Показатель для сортировки"
+msgstr "Сортировка по показателю"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:40
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:95
@@ -5024,7 +4977,7 @@ msgstr "Показатель для сортировки"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/controlPanel.tsx:50
 #: superset-frontend/plugins/plugin-chart-word-cloud/src/plugin/controlPanel.ts:39
 msgid "Whether to sort results by the selected metric in descending order."
-msgstr ""
+msgstr "Следует ли сортировать результаты по выбранному показателю в порядке убывания."
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:56
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/controlPanel.ts:64
@@ -5041,9 +4994,8 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/controlPanel.tsx:120
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/controlPanel.tsx:137
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/controlPanel.tsx:113
-#, fuzzy
 msgid "Number format"
-msgstr "Формат D3"
+msgstr "Числовой формат"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:57
 msgid "Choose a number format"
@@ -5061,9 +5013,8 @@ msgstr "Выберите источник"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:66
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:62
-#, fuzzy
 msgid "Target"
-msgstr "Время начала"
+msgstr "Цель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:69
 msgid "Choose a target"
@@ -5077,19 +5028,19 @@ msgid "Flow"
 msgstr "Поток"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:28
-msgid ""
-"Showcases the flow or link between categories using thickness of chords. "
-"The value and corresponding thickness can be different for each side."
-msgstr ""
+msgid "Showcases the flow or link between categories using thickness of chords.
+The value and corresponding thickness can be different for each side."
+msgstr "Демонстрирует поток или связь между категориями, используя толщину аккордов.
+Значение и соответствующая толщина могут быть разными для каждой стороны."
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:32
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:35
 msgid "Relationships between community channels"
-msgstr ""
+msgstr "Взаимоотношения между каналами сообщества"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:34
 msgid "Chord Diagram"
-msgstr "Chord Diagram"
+msgstr "Диаграмма аккордов"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:36
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/index.js:33
@@ -5111,7 +5062,7 @@ msgstr "Chord Diagram"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/index.ts:58
 #: superset-frontend/plugins/plugin-chart-word-cloud/src/plugin/index.ts:41
 msgid "Aesthetic"
-msgstr "Aesthetic"
+msgstr "Эстетический"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/index.js:37
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:33
@@ -5182,20 +5133,15 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/controlPanel.ts:78
 msgid "ISO 3166-2 Codes"
-msgstr ""
+msgstr "ISO 3166-2 Коды"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/controlPanel.ts:79
-msgid ""
-"Column containing ISO 3166-2 codes of region/province/department in your "
-"table."
-msgstr ""
-"Столбец, содержащий коды ISO 3166-2 региона/провинции/департамента в "
-"вашей таблице."
+msgid "Column containing ISO 3166-2 codes of region/province/department in your table."
+msgstr "Столбец, содержащий коды ISO 3166-2 региона/провинции/департамента в вашей таблице."
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/controlPanel.ts:85
-#, fuzzy
 msgid "Metric to display bottom title"
-msgstr "Выберите показатель для отображения"
+msgstr "Показатель для отображения нижнего заголовка"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:25
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:26
@@ -5222,19 +5168,18 @@ msgid "Map"
 msgstr "Карта"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:27
-msgid ""
-"Visualizes how a single metric varies across a country's principal "
-"subdivisions (states, provinces, etc) on a chloropleth map. Each "
-"subdivision's value is elevated when you hover over the corresponding "
-"geographic boundary."
-msgstr ""
+msgid "Visualizes how a single metric varies across a country's principal subdivisions (states, provinces, etc)
+on a chloropleth map. Each subdivision's value is elevated when you hover over the corresponding geographic boundary."
+msgstr "Визуализирует, как один покакзатель варьируется в зависимости от основных подразделений страны
+(штатов, провинций и т.д.) на карте хороплета. Значение каждого подразделения повышается при наведении курсора мыши на
+соотвтетсвующую географическую границу."
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:32
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/index.js:35
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Geojson/index.js:33
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Scatter/index.js:37
 msgid "2D"
-msgstr ""
+msgstr "2D"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:34
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Arc/index.js:33
@@ -5242,14 +5187,13 @@ msgstr ""
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Polygon/index.js:37
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Scatter/index.js:38
 msgid "Geo"
-msgstr ""
+msgstr "Гео"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:35
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:38
 #: superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/index.ts:55
-#, fuzzy
 msgid "Range"
-msgstr "Управление"
+msgstr "Диапазон"
 
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:37
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Area/index.js:51
@@ -5259,20 +5203,19 @@ msgstr "Управление"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/index.ts:89
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Step/index.ts:76
 msgid "Stacked"
-msgstr ""
+msgstr "Сложенный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/EventFlow.tsx:50
 msgid "Sorry, there appears to be no data"
-msgstr ""
+msgstr "Извините, похоже, что данных нет"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:36
 msgid "Event definition"
-msgstr ""
+msgstr "Опреденление события"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:44
-#, fuzzy
 msgid "Event Names"
-msgstr "Полное имя"
+msgstr "Названия событий"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:45
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:45
@@ -5287,73 +5230,62 @@ msgstr "Колонки для отображения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:62
 msgid "Order by entity id"
-msgstr ""
+msgstr "Заказ по идентификатору объекта"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:63
-msgid ""
-"Important! Select this if the table is not already sorted by entity id, "
-"else there is no guarantee that all events for each entity are returned."
-msgstr ""
+msgid "Important! Select this if the table is not already sorted by entity id,
+else there is no guarantee that all events for each entity are returned."
+msgstr "Важно! Выберите этот параметр, если таблица еще не отсортирована по идентификатору объекта, иначе нет гарантий,
+что будут возвращены все события для каждого объекта."
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:77
 msgid "Minimum leaf node event count"
-msgstr ""
+msgstr "Минимальное количество событий конечного узла"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:80
-msgid ""
-"Leaf nodes that represent fewer than this number of events will be "
-"initially hidden in the visualization"
-msgstr ""
+msgid "Leaf nodes that represent fewer than this number of events will be initially hidden in the visualization"
+msgstr "Конечные узлы, которые представляют меньше этого числа событий, изначально будут скрыты в визуализации"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:95
-#, fuzzy
 msgid "Additional metadata"
 msgstr "Дополнительные метаданные"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:104
-#, fuzzy
 msgid "Metadata"
 msgstr "JSON метаданные"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:106
 msgid "Select any columns for metadata inspection"
-msgstr ""
+msgstr "Выберите любые столбцы для проверки метаданных"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:124
-#, fuzzy
 msgid "Entity ID"
-msgstr "Элемент"
+msgstr "Идентификатор объекта"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:125
-#, fuzzy
 msgid "e.g., a \"user id\" column"
-msgstr "Столбцы Временных Рядов"
+msgstr "например, столбец \"user id\""
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:128
 msgid "Max Events"
-msgstr ""
+msgstr "Максимальное количество событий"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/controlPanel.tsx:129
 msgid "The maximum number of events to return, equivalent to the number of rows"
-msgstr ""
+msgstr "Максимальное количество возвращаемых событий, эквивалентное количеству строк"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/index.ts:26
-msgid ""
-"Compares the lengths of time different activities take in a shared "
-"timeline view."
-msgstr ""
-"Сравнивает продолжительность различных действий в общем представлении "
-"временной шкалы."
+msgid "Compares the lengths of time different activities take in a shared timeline view."
+msgstr "Сравнивает продолжительность различных действий в общем представлении временной шкалы."
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/index.ts:29
-#, fuzzy
 msgid "Event Flow"
-msgstr "Event flow"
+msgstr "Поток событий"
 
 #: superset-frontend/plugins/legacy-plugin-chart-event-flow/src/index.ts:30
 #: superset-frontend/plugins/plugin-chart-echarts/src/Funnel/index.ts:56
 msgid "Progressive"
-msgstr ""
+msgstr "Прогрессивный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:36
 msgid "Axis ascending"
@@ -5364,69 +5296,58 @@ msgid "Axis descending"
 msgstr "Сортировка по убыванию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:38
-#, fuzzy
 msgid "Metric ascending"
-msgstr "Направление сортировки"
+msgstr "Показатель по возрастанию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:39
-#, fuzzy
 msgid "Metric descending"
-msgstr "Сортировать"
+msgstr "Показатель по убыванию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:104
 msgid "Heatmap Options"
-msgstr ""
+msgstr "Параметры тепловой карты"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:114
-#, fuzzy
 msgid "XScale Interval"
-msgstr "Интервал обновления"
+msgstr "Интервал шкалы X"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:119
 msgid "Number of steps to take between ticks when displaying the X scale"
-msgstr ""
+msgstr "Количество шагов, которые необходимо выполнить между тиками при отображении шкалы X"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:130
-#, fuzzy
 msgid "YScale Interval"
-msgstr "Интервал обновления"
+msgstr "Интервал шкалы Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:135
 msgid "Number of steps to take between ticks when displaying the Y scale"
-msgstr ""
+msgstr "Количество шагов, которые необходимо выполнить между тиками при отображении шкалы Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:146
-#, fuzzy
 msgid "Rendering"
-msgstr "Направление сортировки"
+msgstr "Визуализация"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:153
-msgid ""
-"image-rendering CSS attribute of the canvas object that defines how the "
-"browser scales up the image"
-msgstr ""
+msgid "image-rendering CSS attribute of the canvas object that defines how the browser scales up the image"
+msgstr "CSS-атрибут визуализацуии изображения объекта canvas, который определяет, как браузер масштабирует изображение"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:165
 msgid "Normalize Across"
-msgstr ""
+msgstr "Нормализация поперек"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:172
-msgid ""
-"Color will be rendered based on a ratio of the cell against the sum of "
-"across this criteria"
-msgstr ""
-"Цвет будет отображаться на основе соотношения ячейки к сумме по этому "
-"критерию"
+msgid "Color will be rendered based on a ratio of the cell against the sum of across this criteria"
+msgstr "Цвет будет отображаться на основе соотношения ячейки к сумме по этому критерию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:187
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:77
 msgid "Left Margin"
-msgstr ""
+msgstr "Левое отступ"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:199
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:81
 msgid "Left margin, in pixels, allowing for more room for axis labels"
-msgstr ""
+msgstr "Левое отступ в пикселях, обеспечивающее больше места для меток осей"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:212
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:187
@@ -5440,58 +5361,58 @@ msgstr "Нижнее поле в пикселях, обеспечивающее 
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:235
 msgid "Value bounds"
-msgstr ""
+msgstr "Границы значений"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:238
-msgid ""
-"Hard value bounds applied for color coding. Is only relevant and applied "
-"when the normalization is applied against the whole heatmap."
-msgstr ""
+msgid "Hard value bounds applied for color coding.
+Is only relevant and applied when the normalization is applied against the whole heatmap."
+msgstr "Жесткие границы значений, применяемые для цветового кодирования. Имеет значение и применяется только, когда
+нормализация применяется ко всей тепловой карте"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:251
 msgid "Sort X Axis"
-msgstr ""
+msgstr "Сортировка по оси X"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:263
 msgid "Sort Y Axis"
-msgstr ""
+msgstr "Сортировка по оси Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:287
 msgid "Show percentage"
-msgstr ""
+msgstr "Показать процент"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:289
-#, fuzzy
 msgid "Whether to include the percentage in the tooltip"
-msgstr "Включить фильтр на определенный интервал/диапазон времени"
+msgstr "Следует ли включать процент во всплывающую подсказку"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:315
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:141
 msgid "Normalized"
-msgstr ""
+msgstr "Нормализованный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:317
 msgid "Whether to apply a normal distribution based on rank on the color scale"
-msgstr ""
+msgstr "Следует ли применять нормальное распределение на основе ранга в цветовой шкале"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.ts:329
 msgid "Value Format"
 msgstr "Формат значения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:30
-msgid ""
-"Visualize a related metric across pairs of groups. Heatmaps excel at "
-"showcasing the correlation or strength between two groups. Color is used "
-"to emphasize the strength of the link between each pair of groups."
-msgstr ""
+msgid "Visualize a related metric across pairs of groups.
+Heatmaps excel at showcasing the correlation or strength between two groups.
+Color is used to emphasize the strength of the link between each pair of groups."
+msgstr "Визуализируйте связанные показатели по парам групп.
+Тепловые карты превосходно демонстрируют корреляцию или силу между двумя группами.
+Цвет используется для того, чтобы подчеркнуть силу связи между каждой парой групп."
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:34
 msgid "Sizes of vehicles"
-msgstr ""
+msgstr "Размеры транспортных средств"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:36
 msgid "Employment and education"
-msgstr ""
+msgstr "Занятость и образование"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:43
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:38
@@ -5510,57 +5431,52 @@ msgstr "Плотность"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/SmoothLine/index.ts:80
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Step/index.ts:71
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/index.ts:72
-#, fuzzy
 msgid "Predictive"
-msgstr "Действия"
+msgstr "Предсказующий"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/index.js:45
 #: superset-frontend/plugins/plugin-chart-word-cloud/src/plugin/index.ts:46
-#, fuzzy
 msgid "Single Metric"
-msgstr "Список показателей"
+msgstr "Единый показатель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/Histogram.jsx:117
-#, fuzzy
 msgid "count"
-msgstr "столбец"
+msgstr "считать"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/Histogram.jsx:121
-#, fuzzy
 msgid "cumulative"
-msgstr "Действия"
+msgstr "совокупный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/Histogram.jsx:125
 msgid "percentile (exclusive)"
-msgstr ""
+msgstr "процентиль (эксклюзивный)"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:38
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:48
 msgid "Select the numeric columns to draw the histogram"
-msgstr ""
+msgstr "Выберите числовые столбцы для построения гистограммы"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:86
-#, fuzzy
 msgid "No of Bins"
-msgstr "Копирование %s"
+msgstr "Количество бункеров"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:98
 msgid "Select the number of bins for the histogram"
-msgstr ""
+msgstr "Выберите количество ячеек для гистограммы"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:107
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:175
 msgid "X Axis Label"
-msgstr ""
+msgstr "Метка по оси X"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:118
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:333
 msgid "Y Axis Label"
-msgstr ""
+msgstr "Метка по оси Y"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:143
 msgid "Whether to normalize the histogram"
-msgstr ""
+msgstr "Следует ли нормализовать гистограмму"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:153
 msgid "Cumulative"
@@ -5568,7 +5484,7 @@ msgstr "Совокупный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:155
 msgid "Whether to make the histogram cumulative"
-msgstr ""
+msgstr "Следует ли делать гистограмму совокупной"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:28
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/index.js:26
@@ -5578,14 +5494,13 @@ msgid "Distribution"
 msgstr "Распределение"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:29
-msgid ""
-"Take your data points, and group them into \"bins\" to see where the "
-"densest areas of information lie"
-msgstr ""
+msgid "Take your data points, and group them into \"bins\" to see where the densest areas of information lie"
+msgstr "Возьмите свои точки данных и сгруппируйте их в \"bins\", чтобы увидеть,
+где находятся самые плотные области информации"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:33
 msgid "Population age data"
-msgstr ""
+msgstr "Данные о возрасте населения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:43
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:46
@@ -5608,43 +5523,36 @@ msgid "Compute the contribution to the total"
 msgstr "Вычислить вклад в общую сумму (долю)"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:63
-#, fuzzy
 msgid "Series Height"
-msgstr "Лимит кол-ва рядов"
+msgstr "Высота серии"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:75
 msgid "Pixel height of each series"
-msgstr ""
+msgstr "Высота пикселя каждой серии"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:83
 msgid "Value Domain"
-msgstr ""
+msgstr "Область значений"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:90
-msgid ""
-"series: Treat each series independently; overall: All series use the same"
-" scale; change: Show changes compared to the first data point in each "
-"series"
-msgstr ""
+msgid "series: Treat each series independently; overall: All series use the same scale;
+change: Show changes compared to the first data point in each series"
+msgstr "серия: Обрабатывайте каждую серию независимо; в целом: во всех сериях используется одна и та же шкала;
+изменение: Показатель изменения по сравнению с первой точкой данных в каждой серии"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/index.js:28
-msgid ""
-"Compares how a metric changes over time between different groups. Each "
-"group is mapped to a row and change over time is visualized bar lengths "
-"and color."
-msgstr ""
-"Сравнивает, как метрика меняется с течением времени между различными "
-"группами. Каждая группа сопоставляется со строкой, и изменение с течением"
-" времени визуализируется длиной и цветом полос."
+msgid "Compares how a metric changes over time between different groups.
+Each group is mapped to a row and change over time is visualized bar lengths and color."
+msgstr "Сравнивает, как метрика меняется с течением времени между различными группами.
+Каждая группа сопоставляется со строкой, и изменение с течением времени визуализируется длиной и цветом полос."
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/index.js:32
-#, fuzzy
 msgid "Horizon Chart"
-msgstr "Horizon Charts"
+msgstr "Диаграмма горизонта"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:62
 msgid "Longitude"
-msgstr ""
+msgstr "Долгота"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:63
 msgid "Column containing longitude data"
@@ -5652,7 +5560,7 @@ msgstr "Столбец, содержащий данные о долготе"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:72
 msgid "Latitude"
-msgstr ""
+msgstr "Широта"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:73
 msgid "Column containing latitude data"
@@ -5663,82 +5571,72 @@ msgid "Clustering Radius"
 msgstr "Радиус кластеризации"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:96
-msgid ""
-"The radius (in pixels) the algorithm uses to define a cluster. Choose 0 "
-"to turn off clustering, but beware that a large number of points (>1000) "
-"will cause lag."
-msgstr ""
+msgid "The radius (in pixels) the algorithm uses to define a cluster.
+Choose 0 to turn off clustering, but beware that a large number of points (>1000) will cause lag."
+msgstr "Радиус (в пикселях), используемый алгоритмом для определения кластера."
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:110
-#, fuzzy
 msgid "Points"
-msgstr "Компоненты"
+msgstr "Точки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:117
 msgid "Point Radius"
-msgstr ""
+msgstr "Радиус точки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:119
-msgid ""
-"The radius of individual points (ones that are not in a cluster). Either "
-"a numerical column or `Auto`, which scales the point based on the largest"
-" cluster"
-msgstr ""
+msgid "The radius of individual points (ones that are not in a cluster).
+Either a numerical column or `Auto`, which scales the point based on the largest cluster"
+msgstr "Радиус отдельных точек (тех, которые не входят в кластер). Либо числовой столбце, либо `Auto`,
+которой масштабирует точку на основе наибольшего кластера"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:141
 msgid "Point Radius Unit"
-msgstr ""
+msgstr "Единица измерения радиуса точки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:144
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Scatter/controlPanel.ts:90
 msgid "The unit of measure for the specified point radius"
-msgstr ""
+msgstr "Единица измерения для указанного радиуса точки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:153
 msgid "Labelling"
-msgstr ""
+msgstr "Маркировка"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:161
-#, fuzzy
 msgid "label"
-msgstr "Метка"
+msgstr "Этикетка"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:163
-msgid ""
-"`count` is COUNT(*) if a group by is used. Numerical columns will be "
-"aggregated with the aggregator. Non-numerical columns will be used to "
-"label points. Leave empty to get a count of points in each cluster."
-msgstr ""
+msgid "`count` is COUNT(*) if a group by is used. Numerical columns will be aggregated with the aggregator.
+Non-numerical columns will be used to label points. Leave empty to get a count of points in each cluster."
+msgstr "`count` is COUNT(*) если используется группировка. Числовые будут объединены с помощью агрегатора.
+Нечисловые столбцы будут использоваться для обозначения точек. Оставьте пустым, чтобы получить количество очко
+в каждом кластере."
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:180
 msgid "Cluster label aggregator"
 msgstr "Агрегатор кластерных меток"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:191
-msgid ""
-"Aggregate function applied to the list of points in each cluster to "
-"produce the cluster label."
-msgstr ""
-"Агрегатная функция, применяемая к списку точек в каждом кластере для "
-"создания метки кластера."
+msgid "Aggregate function applied to the list of points in each cluster to produce the cluster label."
+msgstr "Агрегатная функция, применяемая к списку точек в каждом кластере для создания метки кластера."
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:201
 msgid "Visual Tweaks"
-msgstr ""
+msgstr "Визуальные настройки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:208
 msgid "Live render"
-msgstr ""
+msgstr "Живой рендериг"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:210
 msgid "Points and clusters will update as the viewport is being changed"
-msgstr ""
+msgstr "Точки и кластеры будут обновляться по мере изменения видового экрана"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:221
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/Shared_DeckGL.jsx:370
-#, fuzzy
 msgid "Map Style"
-msgstr "Тип разметки"
+msgstr "Стиль карты"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:236
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/Shared_DeckGL.jsx:382
@@ -5754,22 +5652,20 @@ msgstr "Прозрачность"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:248
 msgid "Opacity of all clusters, points, and labels. Between 0 and 1."
-msgstr ""
+msgstr "Непрозрачность всех кластеров, точек и меток. Между 0 и 1."
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:260
-#, fuzzy
 msgid "RGB Color"
-msgstr "Фиксированный цвет"
+msgstr "Цвет RGB"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:263
 msgid "The color for points and clusters in RGB"
-msgstr ""
+msgstr "Цвет для точек и кластеров в RGB"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:270
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/Shared_DeckGL.jsx:293
-#, fuzzy
 msgid "Viewport"
-msgstr "рассылка"
+msgstr "Окно просмотра"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:278
 msgid "Default longitude"
@@ -5777,7 +5673,7 @@ msgstr "Долгота по умолчанию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:282
 msgid "Longitude of default viewport"
-msgstr ""
+msgstr "Долгота видового экрана по умолчанию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:292
 msgid "Default latitude"
@@ -5785,32 +5681,30 @@ msgstr "Широта по умолчанию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:296
 msgid "Latitude of default viewport"
-msgstr ""
+msgstr "Широта видового экрана по умолчанию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:308
 msgid "Zoom"
-msgstr ""
+msgstr "Масштаб"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:312
 msgid "Zoom level of the map"
-msgstr ""
+msgstr "Уровень масштабирования карты"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:325
-msgid ""
-"One or many controls to group by. If grouping, latitude and longitude "
-"columns must be present."
-msgstr ""
+msgid "One or many controls to group by. If grouping, latitude and longitude columns must be present."
+msgstr "Один или несколько элементов управления для группировки.
+При группировке должны присутствовать столбцы широты и долготы"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:30
 msgid "Light mode"
-msgstr ""
+msgstr "Светлая тема"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:31
 msgid "Dark mode"
 msgstr "Темная тема"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:33
-#, fuzzy
 msgid "MapBox"
 msgstr "Mapbox"
 
@@ -5820,7 +5714,7 @@ msgstr "Mapbox"
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bubble/index.js:36
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Scatter/index.ts:85
 msgid "Scatter"
-msgstr ""
+msgstr "Разброс"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/index.js:40
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/index.ts:46
@@ -5832,53 +5726,52 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Step/index.ts:75
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/index.ts:74
 msgid "Transformable"
-msgstr ""
+msgstr "Трансформируемый"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:64
 msgid "Significance Level"
-msgstr ""
+msgstr "Уровень значимости"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:66
 msgid "Threshold alpha level for determining significance"
-msgstr ""
+msgstr "Пороговый альфа-уровень для определения значимости"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:77
 msgid "p-value precision"
-msgstr ""
+msgstr "точность p-значения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:79
 msgid "Number of decimal places with which to display p-values"
-msgstr ""
+msgstr "Количество знаков после запятой, с помощью которых отображаются p-значения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:90
 msgid "Lift percent precision"
-msgstr ""
+msgstr "Точность в процентах подъема"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/controlPanel.ts:92
 msgid "Number of decimal places with which to display lift values"
-msgstr ""
+msgstr "Количество знаков после запятой, с помощью которых отображаются значения подъема"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:26
-msgid ""
-"Table that visualizes paired t-tests, which are used to understand "
-"statistical differences between groups."
-msgstr ""
+msgid "Table that visualizes paired t-tests, which are used to understand statistical differences between groups."
+msgstr "Таблица, визуализирующая парные t-тесты,
+которые используются для понимания статистических различий между группами"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:29
 msgid "Paired t-test Table"
-msgstr ""
+msgstr "Парный t-образный тестовый стол"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:30
 #: superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/index.ts:55
 msgid "Statistical"
-msgstr ""
+msgstr "Статистический"
 
 #: superset-frontend/plugins/legacy-plugin-chart-paired-t-test/src/index.js:30
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/index.ts:55
 #: superset-frontend/plugins/plugin-chart-table/src/index.ts:50
 #: superset-frontend/src/visualizations/TimeTable/index.ts:35
 msgid "Tabular"
-msgstr ""
+msgstr "Табличный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:39
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:67
@@ -5901,15 +5794,15 @@ msgstr "Data Table"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:50
 msgid "Whether to display the interactive data table"
-msgstr ""
+msgstr "Отображать ли интерактивную таблицу данных"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:57
 msgid "Include Series"
-msgstr ""
+msgstr "Включать серию"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:60
 msgid "Include series name as an axis"
-msgstr ""
+msgstr "Включать название серии в качестве оси"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/index.js:25
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:25
@@ -5920,11 +5813,10 @@ msgid "Ranking"
 msgstr "Ранжирование"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/index.js:27
-msgid ""
-"Plots the individual metrics for each row in the data vertically and "
-"links them together as a line. This chart is useful for comparing "
-"multiple metrics across all of the samples or rows in the data."
-msgstr ""
+msgid "Plots the individual metrics for each row in the data vertically and links them together as a line.
+This chart is useful for comparing multiple metrics across all of the samples or rows in the data."
+msgstr "Отображать отдельные показатели для каждой строки данных по вертикали и связывает их вместе в виде строки.
+Эта диаграмма полезна для сравнения нескольких показателей по всем выборкам или строкам в данных."
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/index.js:31
 #: superset-frontend/plugins/plugin-chart-echarts/src/Radar/index.ts:57
@@ -5938,27 +5830,24 @@ msgid "Directional"
 msgstr "Направленные"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:59
-#, fuzzy
 msgid "Time Series Options"
-msgstr "Столбцы Временных Рядов"
+msgstr "Параметр Временных Рядов"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:73
-#, fuzzy
 msgid "Not Time Series"
-msgstr "Изменить параметры шаблона"
+msgstr "Не Временные ряды"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:75
 msgid "Ignore time"
-msgstr ""
+msgstr "Игнорировать время"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:78
-#, fuzzy
 msgid "Time Series"
-msgstr "Столбцы Временных Рядов"
+msgstr "Временные Ряды"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:80
 msgid "Standard time series"
-msgstr ""
+msgstr "Стандартный временной ряд"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:83
 msgid "Aggregate Mean"
@@ -5966,7 +5855,7 @@ msgstr "Среднее значение"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:85
 msgid "Mean of values over specified period"
-msgstr ""
+msgstr "Среднее значение за указанный период"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:88
 msgid "Aggregate Sum"
@@ -5974,90 +5863,80 @@ msgstr "Сумма"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:90
 msgid "Sum of values over specified period"
-msgstr ""
+msgstr "Сумма значений за указанный период"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:93
-#, fuzzy
 msgid "Difference"
 msgstr "Нажмите, чтобы увидеть разницу"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:95
 msgid "Metric change in value from `since` to `until`"
-msgstr ""
+msgstr "Изменение значения показателя с `с тех пор` на `до`"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:100
-#, fuzzy
 msgid "Percent Change"
-msgstr "Изменения не сохранены"
+msgstr "Процентное изменение"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:102
 msgid "Metric percent change in value from `since` to `until`"
-msgstr ""
+msgstr "Показатель процентного изменения значения с `с тех пор` на `до`"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:107
-#, fuzzy
 msgid "Factor"
-msgstr "Октябрь"
+msgstr "Фактор"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:109
 msgid "Metric factor change from `since` to `until`"
-msgstr ""
+msgstr "Изменение коэффициента показателя с `с тех пор` на `до`"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:114
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:234
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:117
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:365
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:163
-#, fuzzy
 msgid "Advanced Analytics"
 msgstr "Расширенный анализ"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:116
 msgid "Use the Advanced Analytics options below"
-msgstr ""
+msgstr "Используйте дополнительные параметры анализа, приведенные ниже"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:125
 msgid "Settings for time series"
-msgstr ""
+msgstr "Настройки для временных рядов"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:155
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:79
-#, fuzzy
 msgid "Date Time Format"
 msgstr "Формат Datetime"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:168
-#, fuzzy
 msgid "Partition Limit"
-msgstr "Partition Diagram"
+msgstr "Предел раздела"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:171
-msgid ""
-"The maximum number of subdivisions of each group; lower values are pruned"
-" first"
-msgstr ""
+msgid "The maximum number of subdivisions of each group; lower values are pruned first"
+msgstr "Максимальное количество подразделений каждой группы; сначала отсекаются меньшие значения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:181
 msgid "Partition Threshold"
-msgstr ""
+msgstr "Порог разделения"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:184
-msgid ""
-"Partitions whose height to parent height proportions are below this value"
-" are pruned"
-msgstr ""
+msgid "Partitions whose height to parent height proportions are below this value are pruned"
+msgstr "Разделы, соотношение высоты к родительской высоте которых ниже этого значения, обрезаются"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:196
 msgid "Log Scale"
-msgstr ""
+msgstr "Логарифмическая шкала"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:199
 msgid "Use a log scale"
-msgstr ""
+msgstr "Исполользуйте логарифмическую шкалу"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:208
 msgid "Equal Date Sizes"
-msgstr ""
+msgstr "Одинаковые размеры дат"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:211
 msgid "Check to force date partitions to have the same height"
@@ -6067,49 +5946,44 @@ msgstr "Убедитесь, что разделы данных должны им
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:92
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:281
 msgid "Rich Tooltip"
-msgstr ""
+msgstr "Богатая всплывающая подсказка"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:225
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:95
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:284
 msgid "The rich tooltip shows a list of all series for that point in time"
-msgstr ""
+msgstr "Расширенная всплывающая подсказка показывает список всех серий на данный момент времени"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:243
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:126
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:373
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:167
-#, fuzzy
 msgid "Rolling Window"
-msgstr "Rolling"
+msgstr "Открывающееся окно"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:249
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:132
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:379
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:173
-#, fuzzy
 msgid "Rolling Function"
-msgstr "Rolling"
+msgstr "Функция прокатки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:282
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:165
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:414
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:208
-#, fuzzy
 msgid "Min Periods"
-msgstr "HIde Periods"
+msgstr "Минимальные периоды"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:295
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:178
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:426
-#, fuzzy
 msgid "Time Comparison"
-msgstr "Столбец с датой"
+msgstr "Сравнение времени"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:303
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:186
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Controls.tsx:434
-#, fuzzy
 msgid "Time Shift"
 msgstr "Временной сдвиг"
 
@@ -6134,9 +6008,8 @@ msgid "Compare the same summarized metric across multiple groups."
 msgstr "Сравните один и тот же обобщенный показатель в нескольких группах."
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/index.js:27
-#, fuzzy
 msgid "Partition Chart"
-msgstr "Partition Diagram"
+msgstr "Диаграмма разделов"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/index.js:28
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:38
@@ -6150,9 +6023,8 @@ msgid "Categorical"
 msgstr "Категории"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:46
-#, fuzzy
 msgid "Pivot Options"
-msgstr "%s параметр(ы)"
+msgstr "Сводные параметры"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:53
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:142
@@ -6161,22 +6033,18 @@ msgstr "Агрегатная функция"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:64
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:165
-msgid ""
-"Aggregate function to apply when pivoting and computing the total rows "
-"and columns"
-msgstr ""
-"Агрегатная функция, применяемая при повороте и вычислении общего "
-"количества строк и столбцов"
+msgid "Aggregate function to apply when pivoting and computing the total rows and columns"
+msgstr "Агрегатная функция, применяемая при повороте и вычислении общего количества строк и столбцов"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:77
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/metrics.tsx:105
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:368
 msgid "Show totals"
-msgstr ""
+msgstr "Показать итоговые данные"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:79
 msgid "Display total row/column"
-msgstr ""
+msgstr "Отобразить общую строку/столбец"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:86
 msgid "Combine Metrics"
@@ -6184,18 +6052,18 @@ msgstr "Комбинировать метрики"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:88
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:215
-msgid ""
-"Display metrics side by side within each column, as opposed to each "
-"column being displayed side by side for each metric."
-msgstr ""
+msgid "Display metrics side by side within each column,
+as opposed to each column being displayed side by side for each metric."
+msgstr "Отображать показатели рядом в каждом столбце,
+в отличие от отбражения каждого столбца рядом для каждого показателя"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:100
 msgid "Transpose Pivot"
-msgstr ""
+msgstr "Транспортировать стержень"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:102
 msgid "Swap Groups and Columns"
-msgstr ""
+msgstr "Поменяйте местами группы и столбцы"
 
 #: superset-frontend/plugins/legacy-plugin-chart-pivot-table/src/controlPanel.ts:132
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberTotal/controlPanel.ts:69
@@ -6228,27 +6096,19 @@ msgstr "Свойства дашборда"
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:105
 #: superset-frontend/src/explore/controlUtils/controlUtils.test.tsx:113
 #: superset-frontend/src/explore/fixtures.tsx:43
-msgid ""
-"Check if the Rose Chart should use segment area instead of segment radius"
-" for proportioning"
-msgstr ""
-"Проверьте, следует ли на диаграмме Розы использовать площадь сегмента "
-"вместо радиуса сегмента для определения пропорций"
+msgid "Check if the Rose Chart should use segment area instead of segment radius for proportioning"
+msgstr "Проверьте, следует ли на диаграмме Розы использовать площадь сегмента вместо радиуса сегмента
+для определения пропорций"
 
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:26
-msgid ""
-"A polar coordinate chart where the circle is broken into wedges of equal "
-"angle, and the value represented by any wedge is illustrated by its area,"
-" rather than its radius or sweep angle."
-msgstr ""
-"Диаграмма полярных координат, на которой окружность разбита на клинья с "
-"равными углами, а значение, представленное любым клином, иллюстрируется "
-"его площадью, а не радиусом или углом развертки."
+msgid "A polar coordinate chart where the circle is broken into wedges of equal angle,
+and the value represented by any wedge is illustrated by its area, rather than its radius or sweep angle."
+msgstr "Диаграмма полярных координат, на которой окружность разбита на клинья с равными углами,
+а значение, представленное любым клином, иллюстрируется его площадью, а не радиусом или углом развертки."
 
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:29
-#, fuzzy
 msgid "Nightingale Rose Chart"
-msgstr "Time Series - Nightingale Rose Chart"
+msgstr "Диаграмма Соловьиной розы "
 
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/index.js:32
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bar/index.js:45
@@ -6271,13 +6131,12 @@ msgstr "Расширенный анализ"
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/Multi/index.js:31
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/LineMulti/index.js:37
 msgid "Multi-Layers"
-msgstr ""
+msgstr "Многослойный"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey-loop/src/controlPanel.ts:43
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/controlPanel.ts:33
-#, fuzzy
 msgid "Source / Target"
-msgstr "Имя источника данных"
+msgstr "Имя источника/целей данных"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey-loop/src/controlPanel.ts:44
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/controlPanel.ts:34
@@ -6285,30 +6144,30 @@ msgid "Choose a source and a target"
 msgstr "Выберите источник и цель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/controlPanel.ts:44
-msgid ""
-"Limiting rows may result in incomplete data and misleading charts. "
-"Consider filtering or grouping source/target names instead."
-msgstr ""
+msgid "Limiting rows may result in incomplete data and misleading charts.
+Consider filtering or grouping source/target names instead."
+msgstr "Ограничение строк может привести к неполным данным и вводящим в заблуждение диаграмм.
+Вместо этого рассмотрите воззможность фильтрации или группировки имен источников/ целей"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:29
-msgid ""
-"Visualizes the flow of different group's values through different stages "
-"of a system. New stages in the pipeline are visualized as nodes or "
-"layers. The thickness of the bars or edges represent the metric being "
-"visualized."
-msgstr ""
+msgid "Visualizes the flow of different group's values through different stages of a system.
+New stages in the pipeline are visualized as nodes or layers.
+The thickness of the bars or edges represent the metric being visualized."
+msgstr "Визуализирует поток ценностей различных групп через различные этапы системы.
+Новые этапы конвейера визуазируются в виде узлов или слоев.
+Толщина полос или ребер представляет визуализируемый показатель."
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:33
 msgid "Demographics"
-msgstr ""
+msgstr "Демография"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:34
 msgid "Survey Responses"
-msgstr ""
+msgstr "Ответы на вопрос"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:36
 msgid "Sankey Diagram"
-msgstr ""
+msgstr "Диаграмма Сэнки"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey/src/index.js:41
 #: superset-frontend/plugins/legacy-plugin-chart-treemap/src/index.js:45
@@ -6321,80 +6180,69 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/index.ts:69
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/index.ts:63
 #: superset-frontend/src/visualizations/TimeTable/index.ts:34
-#, fuzzy
 msgid "Percentages"
-msgstr "Последние"
+msgstr "Проценты"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sankey-loop/src/index.js:27
 msgid "Sankey Diagram with Loops"
-msgstr ""
+msgstr "Диаграмма Сэнки с петлями"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:60
-#, fuzzy
 msgid "Primary Metric"
-msgstr "Показатель"
+msgstr "Первичный показатель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:61
-#, fuzzy
 msgid "The primary metric is used to define the arc segment sizes"
-msgstr ""
-"Показатель, используемый для определения какие временные ряды будут "
-"отображаться при ограничении количества выводимых рядов"
+msgstr "Первичный показатель используется для определения размеров сегмента дуги"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:66
-#, fuzzy
 msgid "Secondary Metric"
-msgstr "Показатель для сортировки"
+msgstr "Вторичный показатель"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:68
-msgid ""
-"[optional] this secondary metric is used to define the color as a ratio "
-"against the primary metric. When omitted, the color is categorical and "
-"based on labels"
-msgstr ""
+msgid "[optional] this secondary metric is used to define the color as a ratio against the primary metric.
+When omitted, the color is categorical and based on labels"
+msgstr "[необязательно] этот вторичный показатель используется для
+определения цвета как соотношения к первичному показателю"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:75
 msgid "When only a primary metric is provided, a categorical color scale is used."
-msgstr ""
+msgstr "Когда предоставляется только первичный показатель, используется категориальная цветовая шкала."
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:85
 msgid "When a secondary metric is provided, a linear color scale is used."
-msgstr ""
+msgstr "Когда предоставляется вторичный показатель, используется линейная цветовая шкала."
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:95
-#, fuzzy
 msgid "Hierarchy"
-msgstr "Поиск"
+msgstr "Иерархия"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/controlPanel.ts:96
-#, fuzzy
 msgid "This defines the level of the hierarchy"
-msgstr "Элемент, который будет отражен на графике"
+msgstr "Это определяет уровень иерархии"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/index.js:28
-msgid ""
-"Uses circles to visualize the flow of data through different stages of a "
-"system. Hover over individual paths in the visualization to understand "
-"the stages a value took. Useful for multi-stage, multi-group visualizing "
-"funnels and pipelines."
-msgstr ""
+msgid "Uses circles to visualize the flow of data through different stages of a system.
+Hover over individual paths in the visualization to understand the stages a value took.
+Useful for multi-stage, multi-group visualizing funnels and pipelines."
+msgstr "Использует круцги для визуализации потолка данных через различные этапы системы.
+Наведите указатель мыши на отдельные пути в визуализации, чтобы понять, какие этапы прошло значение.
+Полезно для многоступенчатой, многогрупповой визуализации воронок и трубопроводов."
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/index.js:32
-#, fuzzy
 msgid "Sunburst Chart"
-msgstr "График Superset"
+msgstr "График Sunburst"
 
 #: superset-frontend/plugins/legacy-plugin-chart-sunburst/src/index.js:33
 #: superset-frontend/plugins/legacy-plugin-chart-treemap/src/index.js:44
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/index.ts:43
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/index.ts:62
 msgid "Multi-Levels"
-msgstr ""
+msgstr "Многоуровневый"
 
 #: superset-frontend/plugins/legacy-plugin-chart-treemap/src/controlPanel.ts:53
-#, fuzzy
 msgid "Ratio"
-msgstr "Продолжительность"
+msgstr "Соотношение"
 
 #: superset-frontend/plugins/legacy-plugin-chart-treemap/src/controlPanel.ts:57
 msgid "Target aspect ratio for treemap tiles."
