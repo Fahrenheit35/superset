@@ -14960,16 +14960,12 @@ msgstr "Загрузить CSV"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:389
 msgid "Delete database"
-msgstr "Выберите базу данных"
+msgstr "Удалить базу данных"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:496
-#, fuzzy, python-format
-msgid "The database %s is linked to %s charts that appear on %s dashboards and
-users have %s SQL Lab tabs using this database open. Are you sure you want to continue?
-Deleting the database will break those objects."
-msgstr "Датасет %s привязан к графикам %s, которые используются в дашбордах %s
-и пользователи имеют %s SQL lab вкладок. Вы уверены, что хотите продолжить?
-Удаление датасета приведёт к неработоспособности этих объектов."
+#, python-format
+msgid "The database %s is linked to %s charts that appear on %s dashboards and\nusers have %s SQL Lab tabs using this database open. Are you sure you want to continue?\nDeleting the database will break those objects."
+msgstr "Датасет %s привязан к графикам %s, которые используются в дашбордах %s\nи пользователи имеют %s SQL lab вкладок. Вы уверены, что хотите продолжить?\nУдаление датасета приведёт к неработоспособности этих объектов."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:510
 msgid "Delete Database?"
