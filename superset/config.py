@@ -178,12 +178,11 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 # Your App secret key. Make sure you override it on superset_config.py.
 # Use a strong complex alphanumeric string and use a tool to help you generate
 # a sufficiently random sequence, ex: openssl rand -base64 42"
-PREVIOUS_SECRET_KEY = CHANGE_ME_SECRET_KEY
-SECRET_KEY = "C5G,C!Oi"
+SECRET_KEY = CHANGE_ME_SECRET_KEY
 # The SQLAlchemy connection string.
-#SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
+SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
-SQLALCHEMY_DATABASE_URI = 'postgresql://superset:superset@localhost/superset'
+#SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
 
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',
@@ -973,7 +972,9 @@ SMTP_USER = "superset"
 SMTP_PORT = 25
 SMTP_PASSWORD = "superset"
 SMTP_MAIL_FROM = "superset@superset.com"
-
+# If True creates a default SSL context with ssl.Purpose.CLIENT_AUTH using the
+# default system root CA certificates.
+SMTP_SSL_SERVER_AUTH = False
 ENABLE_CHUNK_ENCODING = False
 
 # Whether to bump the logging level to ERROR on the flask_appbuilder package
@@ -1310,6 +1311,7 @@ DATASET_HEALTH_CHECK: Optional[Callable[["SqlaTable"], str]] = None
 MENU_HIDE_USER_INFO = False
 
 # Set to False to only allow viewing own recent activity
+# or to disallow users from viewing other users profile page
 ENABLE_BROAD_ACTIVITY_ACCESS = True
 
 # the advanced data type key should correspond to that set in the column metadata

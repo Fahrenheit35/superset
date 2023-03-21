@@ -14,8 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-#x-superset-image: &superset-image apache/superset:${TAG:-latest-dev}
-x-superset-image: &superset-image dnzhirnov/superset:v2_5
+x-superset-image: &superset-image apache/superset:2.0.0
 x-superset-user: &superset-user root
 x-superset-depends-on: &superset-depends-on
   - db
@@ -45,7 +44,7 @@ services:
     container_name: superset_db
     restart: unless-stopped
     ports:
-      - "127.0.0.1:5430:5430"
+      - "127.0.0.1:5432:5432"
     volumes:
       - db_home:/var/lib/postgresql/data
 
