@@ -55,10 +55,7 @@ import {
   extractDataTotalValues,
   extractShowValueIndexes,
 } from '../utils/series';
-import {
-  extractAnnotationLabels,
-  getAnnotationData,
-} from '../utils/annotation';
+import { extractAnnotationLabels } from '../utils/annotation';
 import {
   extractForecastSeriesContext,
   extractForecastSeriesContexts,
@@ -96,12 +93,12 @@ export default function transformProps(
     queriesData,
     datasource,
     theme,
+    annotationData = {},
   } = chartProps;
   const { verboseMap = {} } = datasource;
   const [queryData] = queriesData;
   const { data = [] } = queryData as TimeseriesChartDataResponseResult;
   const dataTypes = getColtypesMapping(queryData);
-  const annotationData = getAnnotationData(chartProps);
 
   const {
     area,
@@ -168,15 +165,12 @@ export default function transformProps(
   });
   const showValueIndexes = extractShowValueIndexes(rawSeries, {
     stack,
-    onlyTotal,
-    isHorizontal,
   });
   const seriesContexts = extractForecastSeriesContexts(
     Object.values(rawSeries).map(series => series.name as string),
   );
   const isAreaExpand = stack === AreaChartExtraControlsValue.Expand;
-  const xAxisDataType = dataTypes?.[xAxisCol] ?? dataTypes?.[xAxisOrig];
-
+  const xAxisDataType = dataTypes?.[xAxisCol];
   const xAxisType = getAxisType(xAxisDataType);
   const series: SeriesOption[] = [];
   const formatter = getNumberFormatter(

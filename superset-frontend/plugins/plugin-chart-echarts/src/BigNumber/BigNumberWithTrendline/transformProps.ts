@@ -125,10 +125,8 @@ export default function transformProps(
       if (compareIndex < sortedData.length) {
         const compareValue = sortedData[compareIndex][1];
         // compare values must both be non-nulls
-        if (bigNumber !== null && compareValue !== null) {
-          percentChange = compareValue
-            ? (bigNumber - compareValue) / Math.abs(compareValue)
-            : 0;
+        if (bigNumber !== null && compareValue !== null && compareValue !== 0) {
+          percentChange = (bigNumber - compareValue) / Math.abs(compareValue);
           formattedSubheader = `${formatPercentChange(
             percentChange,
           )} ${compareSuffix}`;

@@ -17,7 +17,7 @@
  * under the License.
  */
 import React from 'react';
-import { t } from '@superset-ui/core';
+import { t, validateNonEmpty, validateInteger } from '@superset-ui/core';
 import {
   sharedControls,
   ControlPanelConfig,
@@ -81,7 +81,8 @@ const config: ControlPanelConfig = {
             config: {
               type: 'TextControl',
               isInt: true,
-              default: DEFAULT_FORM_DATA.minVal,
+              default: String(DEFAULT_FORM_DATA.minVal),
+              validators: [validateNonEmpty, validateInteger],
               renderTrigger: true,
               label: t('Min'),
               description: t('Minimum value on the gauge axis'),
@@ -93,6 +94,7 @@ const config: ControlPanelConfig = {
               type: 'TextControl',
               isInt: true,
               default: DEFAULT_FORM_DATA.maxVal,
+              validators: [validateNonEmpty, validateInteger],
               renderTrigger: true,
               label: t('Max'),
               description: t('Maximum value on the gauge axis'),

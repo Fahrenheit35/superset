@@ -53,8 +53,8 @@ class AdhocMetric(TypedDict, total=False):
 
 class AdhocColumn(TypedDict, total=False):
     hasCustomLabel: Optional[bool]
-    label: str
-    sqlExpression: str
+    label: Optional[str]
+    sqlExpression: Optional[str]
 
 
 class ResultSetColumnType(TypedDict):

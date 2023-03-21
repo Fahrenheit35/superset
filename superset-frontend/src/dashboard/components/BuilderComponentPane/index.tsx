@@ -41,7 +41,8 @@ export interface BCPProps {
 
 const SUPERSET_HEADER_HEIGHT = 59;
 const SIDEPANE_ADJUST_OFFSET = 4;
-const TOP_PANEL_OFFSET = 210;
+const SIDEPANE_HEADER_HEIGHT = 64; // including margins
+const SIDEPANE_FILTERBAR_HEIGHT = 56;
 
 const BuilderComponentPaneTabs = styled(Tabs)`
   line-height: inherit;
@@ -51,10 +52,20 @@ const BuilderComponentPaneTabs = styled(Tabs)`
 const DashboardBuilderSidepane = styled.div<{
   topOffset: number;
 }>`
-  height: calc(100% - ${TOP_PANEL_OFFSET}px);
+  height: 100%;
   position: fixed;
   right: 0;
   top: 0;
+
+  .ReactVirtualized__List {
+    padding-bottom: ${({ topOffset }) =>
+      `${
+        SIDEPANE_HEADER_HEIGHT +
+        SIDEPANE_FILTERBAR_HEIGHT +
+        SIDEPANE_ADJUST_OFFSET +
+        topOffset
+      }px`};
+  }
 `;
 
 const BuilderComponentPane: React.FC<BCPProps> = ({

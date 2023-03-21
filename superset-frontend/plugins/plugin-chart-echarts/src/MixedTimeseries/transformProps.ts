@@ -47,13 +47,8 @@ import {
   getAxisType,
   getColtypesMapping,
   getLegendProps,
-  extractDataTotalValues,
-  extractShowValueIndexes,
 } from '../utils/series';
-import {
-  extractAnnotationLabels,
-  getAnnotationData,
-} from '../utils/annotation';
+import { extractAnnotationLabels } from '../utils/annotation';
 import {
   extractForecastSeriesContext,
   extractForecastValuesFromTooltipParams,
@@ -86,11 +81,11 @@ export default function transformProps(
     filterState,
     datasource,
     theme,
+    annotationData = {},
   } = chartProps;
   const { verboseMap = {} } = datasource;
   const data1 = (queriesData[0].data || []) as TimeseriesDataRecord[];
   const data2 = (queriesData[1].data || []) as TimeseriesDataRecord[];
-  const annotationData = getAnnotationData(chartProps);
 
   const {
     area,
@@ -141,7 +136,6 @@ export default function transformProps(
     yAxisTitlePosition,
     sliceId,
     timeGrainSqla,
-    percentageThreshold,
   }: EchartsMixedTimeseriesFormData = { ...DEFAULT_FORM_DATA, ...formData };
 
   const colorScale = CategoricalColorNamespace.getScale(colorScheme as string);
@@ -161,7 +155,7 @@ export default function transformProps(
   });
 
   const dataTypes = getColtypesMapping(queriesData[0]);
-  const xAxisDataType = dataTypes?.[xAxisCol] ?? dataTypes?.[xAxisOrig];
+  const xAxisDataType = dataTypes?.[xAxisCol];
   const xAxisType = getAxisType(xAxisDataType);
   const series: SeriesOption[] = [];
   const formatter = getNumberFormatter(contributionMode ? ',.0%' : yAxisFormat);
@@ -187,28 +181,7 @@ export default function transformProps(
   rawSeriesB.forEach(seriesOption =>
     mapSeriesIdToAxis(seriesOption, yAxisIndexB),
   );
-  const showValueIndexesA = extractShowValueIndexes(rawSeriesA, {
-    stack,
-  });
-  const showValueIndexesB = extractShowValueIndexes(rawSeriesB, {
-    stack,
-  });
-  const { totalStackedValues, thresholdValues } = extractDataTotalValues(
-    rebasedDataA,
-    {
-      stack,
-      percentageThreshold,
-      xAxisCol,
-    },
-  );
-  const {
-    totalStackedValues: totalStackedValuesB,
-    thresholdValues: thresholdValuesB,
-  } = extractDataTotalValues(rebasedDataB, {
-    stack: Boolean(stackB),
-    percentageThreshold,
-    xAxisCol,
-  });
+
   rawSeriesA.forEach(entry => {
     const transformedSeries = transformSeries(entry, colorScale, {
       area,
@@ -222,10 +195,6 @@ export default function transformProps(
       filterState,
       seriesKey: entry.name,
       sliceId,
-      formatter,
-      showValueIndexes: showValueIndexesA,
-      totalStackedValues,
-      thresholdValues,
     });
     if (transformedSeries) series.push(transformedSeries);
   });
@@ -245,10 +214,6 @@ export default function transformProps(
         ? `${entry.name} (1)`
         : entry.name,
       sliceId,
-      formatter: formatterSecondary,
-      showValueIndexes: showValueIndexesB,
-      totalStackedValues: totalStackedValuesB,
-      thresholdValues: thresholdValuesB,
     });
     if (transformedSeries) series.push(transformedSeries);
   });

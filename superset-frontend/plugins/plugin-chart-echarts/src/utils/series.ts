@@ -77,8 +77,6 @@ export function extractShowValueIndexes(
   series: SeriesOption[],
   opts: {
     stack: StackType;
-    onlyTotal?: boolean;
-    isHorizontal?: boolean;
   },
 ): number[] {
   const showValueIndexes: number[] = [];
@@ -86,19 +84,8 @@ export function extractShowValueIndexes(
     series.forEach((entry, seriesIndex) => {
       const { data = [] } = entry;
       (data as [any, number][]).forEach((datum, dataIndex) => {
-        if (!opts.onlyTotal && datum[opts.isHorizontal ? 0 : 1] !== null) {
+        if (datum[1] !== null) {
           showValueIndexes[dataIndex] = seriesIndex;
-        }
-        if (opts.onlyTotal) {
-          if (datum[opts.isHorizontal ? 0 : 1] > 0) {
-            showValueIndexes[dataIndex] = seriesIndex;
-          }
-          if (
-            !showValueIndexes[dataIndex] &&
-            datum[opts.isHorizontal ? 0 : 1] !== null
-          ) {
-            showValueIndexes[dataIndex] = seriesIndex;
-          }
         }
       });
     });

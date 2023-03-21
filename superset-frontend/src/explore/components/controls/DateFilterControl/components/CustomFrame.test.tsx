@@ -17,9 +17,6 @@
  * under the License.
  */
 import React from 'react';
-import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
 import { render, screen } from 'spec/helpers/testing-library';
 import userEvent from '@testing-library/user-event';
 import { CustomFrame } from '.';
@@ -32,95 +29,24 @@ const specificValue = '2021-03-16T00:00:00 : 2021-03-17T00:00:00';
 const relativeNowValue = `DATEADD(DATETIME("now"), -7, day) : DATEADD(DATETIME("now"), 7, day)`;
 const relativeTodayValue = `DATEADD(DATETIME("today"), -7, day) : DATEADD(DATETIME("today"), 7, day)`;
 
-const mockStore = configureStore([thunk]);
-const store = mockStore({
-  common: { locale: 'en' },
-});
-
-// case when common.locale is not populated
-const emptyStore = mockStore({});
-
-// case when common.locale is populated with invalid locale
-const invalidStore = mockStore({ common: { locale: 'invalid_locale' } });
-
 test('renders with default props', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={emptyValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={emptyValue} />);
   expect(screen.getByText('Configure custom time range')).toBeInTheDocument();
   expect(screen.getByText('Relative Date/Time')).toBeInTheDocument();
   expect(screen.getByRole('spinbutton')).toBeInTheDocument();
   expect(screen.getByText('Days Before')).toBeInTheDocument();
   expect(screen.getByText('Specific Date/Time')).toBeInTheDocument();
   expect(screen.getByRole('img', { name: 'calendar' })).toBeInTheDocument();
-});
-
-test('renders with empty store', () => {
-  render(
-    <Provider store={emptyStore}>
-      <CustomFrame onChange={jest.fn()} value={emptyValue} />
-    </Provider>,
-  );
-  expect(screen.getByText('Configure custom time range')).toBeInTheDocument();
-  expect(screen.getByText('Relative Date/Time')).toBeInTheDocument();
-  expect(screen.getByRole('spinbutton')).toBeInTheDocument();
-  expect(screen.getByText('Days Before')).toBeInTheDocument();
-  expect(screen.getByText('Specific Date/Time')).toBeInTheDocument();
-  expect(screen.getByRole('img', { name: 'calendar' })).toBeInTheDocument();
-});
-
-test('renders since and until with specific date/time with default locale', () => {
-  render(
-    <Provider store={emptyStore}>
-      <CustomFrame onChange={jest.fn()} value={specificValue} />
-    </Provider>,
-  );
-  expect(screen.getAllByText('Specific Date/Time').length).toBe(2);
-  expect(screen.getAllByRole('img', { name: 'calendar' }).length).toBe(2);
-});
-
-test('renders with invalid locale', () => {
-  render(
-    <Provider store={invalidStore}>
-      <CustomFrame onChange={jest.fn()} value={emptyValue} />
-    </Provider>,
-  );
-  expect(screen.getByText('Configure custom time range')).toBeInTheDocument();
-  expect(screen.getByText('Relative Date/Time')).toBeInTheDocument();
-  expect(screen.getByRole('spinbutton')).toBeInTheDocument();
-  expect(screen.getByText('Days Before')).toBeInTheDocument();
-  expect(screen.getByText('Specific Date/Time')).toBeInTheDocument();
-  expect(screen.getByRole('img', { name: 'calendar' })).toBeInTheDocument();
-});
-
-test('renders since and until with specific date/time with invalid locale', () => {
-  render(
-    <Provider store={invalidStore}>
-      <CustomFrame onChange={jest.fn()} value={specificValue} />
-    </Provider>,
-  );
-  expect(screen.getAllByText('Specific Date/Time').length).toBe(2);
-  expect(screen.getAllByRole('img', { name: 'calendar' }).length).toBe(2);
 });
 
 test('renders since and until with specific date/time', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={specificValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={specificValue} />);
   expect(screen.getAllByText('Specific Date/Time').length).toBe(2);
   expect(screen.getAllByRole('img', { name: 'calendar' }).length).toBe(2);
 });
 
 test('renders since and until with relative date/time', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={relativeNowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={relativeNowValue} />);
   expect(screen.getAllByText('Relative Date/Time').length).toBe(2);
   expect(screen.getAllByRole('spinbutton').length).toBe(2);
   expect(screen.getByText('Days Before')).toBeInTheDocument();
@@ -128,29 +54,17 @@ test('renders since and until with relative date/time', () => {
 });
 
 test('renders since and until with Now option', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={nowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={nowValue} />);
   expect(screen.getAllByText('Now').length).toBe(2);
 });
 
 test('renders since and until with Midnight option', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={todayValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={todayValue} />);
   expect(screen.getAllByText('Midnight').length).toBe(2);
 });
 
 test('renders anchor with now option', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={relativeNowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={relativeNowValue} />);
   expect(screen.getByText('Anchor to')).toBeInTheDocument();
   expect(screen.getByRole('radio', { name: 'NOW' })).toBeInTheDocument();
   expect(screen.getByRole('radio', { name: 'Date/Time' })).toBeInTheDocument();
@@ -158,11 +72,7 @@ test('renders anchor with now option', () => {
 });
 
 test('renders anchor with date/time option', () => {
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={jest.fn()} value={relativeTodayValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={jest.fn()} value={relativeTodayValue} />);
   expect(screen.getByText('Anchor to')).toBeInTheDocument();
   expect(screen.getByRole('radio', { name: 'NOW' })).toBeInTheDocument();
   expect(screen.getByRole('radio', { name: 'Date/Time' })).toBeInTheDocument();
@@ -171,33 +81,21 @@ test('renders anchor with date/time option', () => {
 
 test('triggers onChange when the anchor changes', () => {
   const onChange = jest.fn();
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={relativeNowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={onChange} value={relativeNowValue} />);
   userEvent.click(screen.getByRole('radio', { name: 'Date/Time' }));
   expect(onChange).toHaveBeenCalled();
 });
 
 test('triggers onChange when the value changes', () => {
   const onChange = jest.fn();
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={emptyValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={onChange} value={emptyValue} />);
   userEvent.click(screen.getByRole('img', { name: 'up' }));
   expect(onChange).toHaveBeenCalled();
 });
 
 test('triggers onChange when the mode changes', () => {
   const onChange = jest.fn();
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={todayNowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={onChange} value={todayNowValue} />);
   userEvent.click(screen.getByTitle('Midnight'));
   userEvent.click(screen.getByTitle('Relative Date/Time'));
   userEvent.click(screen.getAllByTitle('Now')[1]);
@@ -207,11 +105,7 @@ test('triggers onChange when the mode changes', () => {
 
 test('triggers onChange when the grain changes', async () => {
   const onChange = jest.fn();
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={relativeNowValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={onChange} value={relativeNowValue} />);
   userEvent.click(screen.getByText('Days Before'));
   userEvent.click(screen.getByText('Weeks Before'));
   userEvent.click(screen.getByText('Days After'));
@@ -221,36 +115,11 @@ test('triggers onChange when the grain changes', async () => {
 
 test('triggers onChange when the date changes', async () => {
   const onChange = jest.fn();
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={specificValue} />
-    </Provider>,
-  );
+  render(<CustomFrame onChange={onChange} value={specificValue} />);
   const inputs = screen.getAllByPlaceholderText('Select date');
   userEvent.click(inputs[0]);
   userEvent.click(screen.getAllByText('Now')[0]);
   userEvent.click(inputs[1]);
   userEvent.click(screen.getAllByText('Now')[1]);
   expect(onChange).toHaveBeenCalledTimes(2);
-});
-
-test('should translate Date Picker', () => {
-  const onChange = jest.fn();
-  const store = mockStore({
-    common: { locale: 'fr' },
-  });
-  render(
-    <Provider store={store}>
-      <CustomFrame onChange={onChange} value={specificValue} />
-    </Provider>,
-  );
-  userEvent.click(screen.getAllByRole('img', { name: 'calendar' })[0]);
-  expect(screen.getByText('2021')).toBeInTheDocument();
-  expect(screen.getByText('lu')).toBeInTheDocument();
-  expect(screen.getByText('ma')).toBeInTheDocument();
-  expect(screen.getByText('me')).toBeInTheDocument();
-  expect(screen.getByText('je')).toBeInTheDocument();
-  expect(screen.getByText('ve')).toBeInTheDocument();
-  expect(screen.getByText('sa')).toBeInTheDocument();
-  expect(screen.getByText('di')).toBeInTheDocument();
 });
