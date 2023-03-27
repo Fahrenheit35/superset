@@ -388,6 +388,45 @@ class ChartDataRestApi(ChartRestApi):
                 mimetype="application/zip",
             )
 
+        if result_format == ChartDataResultFormat.EXCEL:
+            if isinstance(result["queries"][0]["data"], io.BytesIO):
+                if len(result["queries"]) == 1:
+                    # return single query results csv format
+                    data = result["queries"][0]["data"]
+                    filename = datetime.now().strftime("%Y%m%d_%H%M%S.xlsx")
+                    return send_file(
+                        data,
+                        mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        as_attachment=True,
+                        attachment_filename=filename,
+                    )
+            else:
+                buf = BytesIO()
+                df = pd.DataFrame.from_dict(result["queries"][0]["data"])
+                include_index = not isinstance(df.index, pd.RangeIndex)
+                #raise Exception(f"The value is {buf}")
+                df.to_excel(buf, index=include_index)
+                filename = datetime.now().strftime("%Y%m%d_%H%M%S.xlsx")
+                buf.seek(0)
+                return send_file(
+                    buf,
+                    mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    as_attachment=True,
+                    attachment_filename=filename,
+                )
+            # return the first result
+            encoding = current_app.config["EXCEL_EXPORT"].get("encoding", "utf-8")
+            files = {
+                f"query_{idx + 1}.xlsx": result["data"].encode(encoding)
+                for idx, result in enumerate(result["queries"])
+            }
+            return Response(
+                create_zip(files),
+                headers=generate_download_headers("zip"),
+                mimetype="application/zip",
+            )
+
+
         if result_format == ChartDataResultFormat.JSON:
             response_data = simplejson.dumps(
                 {"result": result["queries"]},

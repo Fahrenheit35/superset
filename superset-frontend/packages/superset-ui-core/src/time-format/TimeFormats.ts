@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import { TimeLocaleDefinition, timeFormatLocale } from 'd3-time-format';
+import { makeSingleton } from '../utils';
 
 export const LOCAL_PREFIX = 'local!';
 
@@ -35,4 +37,27 @@ const TimeFormats = {
   US_DATE,
 };
 
+export class LocaleDef {
+  LOCAL_DEF: TimeLocaleDefinition;
+
+  getLocaleDef() {
+    return this.LOCAL_DEF;
+  }
+
+  setLocaleDef(localeDef: TimeLocaleDefinition) {
+    console.log(localeDef);
+    timeFormatLocale(localeDef);
+    this.LOCAL_DEF = localeDef;
+  }
+}
+
+const getD3LocaleDefInstance = makeSingleton(LocaleDef);
+
+export function getLocaleDef() {
+  return getD3LocaleDefInstance().getLocaleDef();
+}
+
+export function setLocaleDef(localeDef: TimeLocaleDefinition) {
+  return getD3LocaleDefInstance().setLocaleDef(localeDef);
+}
 export default TimeFormats;

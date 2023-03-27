@@ -17,6 +17,7 @@
 # pylint: disable=too-many-lines, invalid-name
 from __future__ import annotations
 
+import io
 import logging
 import re
 from contextlib import closing
@@ -27,7 +28,7 @@ from urllib import parse
 import backoff
 import pandas as pd
 import simplejson as json
-from flask import abort, flash, g, redirect, render_template, request, Response
+from flask import abort, flash, g, redirect, render_template, request, Response, send_file
 from flask_appbuilder import expose
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder.security.decorators import (
@@ -143,6 +144,7 @@ from superset.views.base import (
     BaseSupersetView,
     common_bootstrap_payload,
     CsvResponse,
+    ExcelResponse,
     data_payload_response,
     deprecated,
     generate_download_headers,
@@ -485,6 +487,11 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
         if response_type == ChartDataResultFormat.CSV:
             return CsvResponse(
                 viz_obj.get_csv(), headers=generate_download_headers("csv")
+            )
+
+        if response_type == ChartDataResultFormat.EXCEL:
+            return ExcelResponse(
+                viz_obj.get_excel(), headers=generate_download_headers("xlsx")
             )
 
         if response_type == ChartDataResultType.QUERY:
@@ -2457,6 +2464,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         csv_data = csv.df_to_escaped_csv(df, index=False, **config["CSV_EXPORT"])
         quoted_csv_name = parse.quote(query.name)
+
         response = CsvResponse(
             csv_data, headers=generate_download_headers("csv", quoted_csv_name)
         )
@@ -2474,6 +2482,84 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             "CSV exported: %s", event_rep, extra={"superset_event": event_info}
         )
         return response
+
+    @expose("/excel/<client_id>")
+    def excel(  # pylint: disable=no-self-use,too-many-locals
+        self, client_id: str
+    ) -> FlaskResponse:
+        """Download the query results as csv."""
+        logger.info("Exporting Excel file [%s]", client_id)
+        query = db.session.query(Query).filter_by(client_id=client_id).one()
+
+        try:
+            query.raise_for_access()
+        except SupersetSecurityException as ex:
+            flash(ex.error.message)
+            return redirect("/")
+
+        blob = None
+        if results_backend and query.results_key:
+            logger.info("Fetching Excel from results backend [%s]", query.results_key)
+            blob = results_backend.get(query.results_key)
+        if blob:
+            logger.info("Decompressing")
+            payload = utils.zlib_decompress(
+                blob, decode=not results_backend_use_msgpack
+            )
+            obj = _deserialize_results_payload(
+                payload, query, cast(bool, results_backend_use_msgpack)
+            )
+            columns = [c["name"] for c in obj["columns"]]
+            df = pd.DataFrame.from_records(obj["data"], columns=columns)
+            logger.info("Using pandas to convert to Excel")
+        else:
+            logger.info("Running a query to turn into Excel")
+            if query.select_sql:
+                sql = query.select_sql
+                limit = None
+            else:
+                sql = query.executed_sql
+                limit = ParsedQuery(sql).limit
+            if limit is not None and query.limiting_factor in {
+                LimitingFactor.QUERY,
+                LimitingFactor.DROPDOWN,
+                LimitingFactor.QUERY_AND_DROPDOWN,
+            }:
+                # remove extra row from `increased_limit`
+                limit -= 1
+            df = query.database.get_df(sql, query.schema)[:limit]
+
+        #csv_data = csv.df_to_escaped_csv(df, index=False, **config["CSV_EXPORT"])
+        toWrite = io.BytesIO()
+        quoted_excel_name = parse.quote(query.name) + '.xlsx'
+        headers = generate_download_headers("xlsx", quoted_excel_name)
+        df.to_excel(toWrite)
+        toWrite.seek(0)
+
+        event_info = {
+            "event_type": "data_export",
+            "client_id": client_id,
+            "row_count": len(df.index),
+            "database": query.database.name,
+            "schema": query.schema,
+            "sql": query.sql,
+            "exported_format": "xlsx",
+        }
+        event_rep = repr(event_info)
+        logger.debug(
+            "Excel exported: %s", event_rep, extra={"superset_event": event_info}
+        )
+        return send_file(
+            toWrite,
+            mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            as_attachment=True,
+            attachment_filename=quoted_excel_name,
+        )
+        #response = ExcelResponse(
+        #    headers=headers
+        #)
+        #return response
+
 
     @api
     @handle_api_exception

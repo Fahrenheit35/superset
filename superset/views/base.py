@@ -424,6 +424,7 @@ def cached_common_bootstrap_data(user: User) -> Dict[str, Any]:
     bootstrap_data = {
         "conf": frontend_config,
         "locale": locale,
+        "time_locale": conf.get("LANGUAGES").get(locale).get("time_locale"),
         "language_pack": get_language_pack(locale),
         "feature_flags": get_feature_flags(),
         "extra_sequential_color_schemes": conf["EXTRA_SEQUENTIAL_COLOR_SCHEMES"],
@@ -702,6 +703,15 @@ class XlsxResponse(Response):
     default_mimetype = (
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
+
+
+class ExcelResponse(Response):  # pylint: disable=too-many-ancestors
+    """
+       Override Response to take into account xlsx encoding from config.py
+    """
+
+    charset = conf["EXCEL_EXPORT"].get("encoding", "utf-8")
+    default_mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 
 def bind_field(

@@ -155,7 +155,28 @@ export const useExploreAdditionalActionsMenu = (
         : null,
     [canDownloadCSV, latestQueryFormData],
   );
-
+  const exportExcel = useCallback(
+    () =>
+      canDownloadCSV
+        ? exportChart({
+            formData: latestQueryFormData,
+            resultType: 'full',
+            resultFormat: 'xlsx',
+          })
+        : null,
+    [canDownloadCSV, latestQueryFormData],
+  );
+  const exportExcelPivoted = useCallback(
+    () =>
+      canDownloadCSV
+        ? exportChart({
+            formData: latestQueryFormData,
+            resultType: 'post_processed',
+            resultFormat: 'xlsx',
+          })
+        : null,
+    [canDownloadCSV, latestQueryFormData],
+  );
   const exportJson = useCallback(
     () =>
       exportChart({
@@ -166,15 +187,15 @@ export const useExploreAdditionalActionsMenu = (
     [latestQueryFormData],
   );
 
-  const exportExcel = useCallback(
-    () =>
-      exportChart({
-        formData: latestQueryFormData,
-        resultType: 'results',
-        resultFormat: 'xlsx',
-      }),
-    [latestQueryFormData],
-  );
+  //   const exportExcel = useCallback(
+  //     () =>
+  //       exportChart({
+  //         formData: latestQueryFormData,
+  //         resultType: 'results',
+  //         resultFormat: 'xlsx',
+  //       }),
+  //     [latestQueryFormData],
+  //   );
 
   const copyLink = useCallback(async () => {
     try {
@@ -202,6 +223,16 @@ export const useExploreAdditionalActionsMenu = (
           break;
         case MENU_KEYS.EXPORT_TO_CSV_PIVOTED:
           exportCSVPivoted();
+          setIsDropdownVisible(false);
+          setOpenSubmenus([]);
+          break;
+        case MENU_KEYS.EXPORT_TO_EXCEL:
+          exportExcel();
+          setIsDropdownVisible(false);
+          setOpenSubmenus([]);
+          break;
+        case MENU_KEYS.EXPORT_TO_EXCEL_PIVOTED:
+          exportExcelPivoted();
           setIsDropdownVisible(false);
           setOpenSubmenus([]);
           break;
@@ -255,6 +286,8 @@ export const useExploreAdditionalActionsMenu = (
       copyLink,
       exportCSV,
       exportCSVPivoted,
+      exportExcel,
+      exportExcelPivoted,
       exportJson,
       latestQueryFormData,
       onOpenInEditor,
@@ -305,6 +338,20 @@ export const useExploreAdditionalActionsMenu = (
                 disabled={!canDownloadCSV}
               >
                 {t('Export to pivoted .CSV')}
+              </Menu.Item>
+              <Menu.Item
+                key={MENU_KEYS.EXPORT_TO_EXCEL}
+                icon={<Icons.FileOutlined css={iconReset} />}
+                disabled={!canDownloadCSV}
+              >
+                {t('Export to .XLSX')}
+              </Menu.Item>
+              <Menu.Item
+                key={MENU_KEYS.EXPORT_TO_EXCEL_PIVOTED}
+                icon={<Icons.FileOutlined css={iconReset} />}
+                disabled={!canDownloadCSV}
+              >
+                {t('Export to pivoted .XLSX')}
               </Menu.Item>
             </>
           ) : (

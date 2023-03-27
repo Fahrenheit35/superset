@@ -22,9 +22,12 @@ import {
   getNumberFormatterRegistry,
   NumberFormats,
   getTimeFormatterRegistry,
-  smartDateFormatter,
-  smartDateVerboseFormatter,
+  // smartDateFormatter,
+  getSmartDateFormatter,
+  getSmartDateVerboseFormatter,
+  setLocaleDef,
 } from '@superset-ui/core';
+import d3Locales from '../assets/d3TimeLocales';
 
 export default function setupFormatters() {
   getNumberFormatterRegistry()
@@ -67,9 +70,14 @@ export default function setupFormatters() {
       'DURATION_SUB',
       createDurationFormatter({ formatSubMilliseconds: true }),
     );
+}
+export function setupTimeFormatters(timeLocaleKey: string) {
+  setLocaleDef(d3Locales[timeLocaleKey]);
 
   getTimeFormatterRegistry()
-    .registerValue('smart_date', smartDateFormatter)
-    .registerValue('smart_date_verbose', smartDateVerboseFormatter)
+    // .registerValue('smart_date', smartDateFormatter)
+    // .registerValue('smart_date_verbose', smartDateVerboseFormatter)
+    .registerValue('smart_date', getSmartDateFormatter())
+    .registerValue('smart_date_verbose', getSmartDateVerboseFormatter())
     .setDefaultKey('smart_date');
 }

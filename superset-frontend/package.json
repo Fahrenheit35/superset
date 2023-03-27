@@ -23,9 +23,7 @@
     "url": "git+https://github.com/apache/superset.git"
   },
   "license": "Apache-2.0",
-  "author": {
-    "name": "Apache"
-  },
+  "author": "Apache",
   "directories": {
     "doc": "docs",
     "test": "spec"
@@ -346,6 +344,5 @@
     "node": "^16.9.1",
     "npm": "^7.5.4 || ^8.1.2"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "superset@0.0.0-dev"
+  "main": ".eslintrc.js"
 }
