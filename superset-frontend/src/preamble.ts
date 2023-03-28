@@ -24,7 +24,9 @@ import { configure, makeApi, supersetTheme } from '@superset-ui/core';
 import { merge } from 'lodash';
 import setupClient from './setup/setupClient';
 import setupColors from './setup/setupColors';
-import setupFormatters from './setup/setupFormatters';
+import setupExtensions from './setup/setupExtensions';
+import { setupFormatters, setupTimeFormatters } from './setup/setupFormatters';
+//import setupFormatters from './setup/setupFormatters';
 import setupDashboardComponents from './setup/setupDashboardComponents';
 import { User } from './types/bootstrapTypes';
 import { initFeatureFlags } from './featureFlags';
@@ -33,7 +35,7 @@ import getBootstrapData from './utils/getBootstrapData';
 if (process.env.WEBPACK_MODE === 'development') {
   setHotLoaderConfig({ logLevel: 'debug', trackTailUpdates: false });
 }
-
+setupExtensions();
 // eslint-disable-next-line import/no-mutable-exports
 const bootstrapData = getBootstrapData();
 
@@ -41,6 +43,7 @@ const bootstrapData = getBootstrapData();
 if (typeof window !== 'undefined') {
   configure({ languagePack: bootstrapData.common.language_pack });
   moment.locale(bootstrapData.common.locale);
+  setupTimeFormatters(bootstrapData.common.time_locale);
 } else {
   configure();
 }
@@ -57,7 +60,7 @@ setupColors(
 );
 
 // Setup number formatters
-setupFormatters();
+//setupFormatters();
 
 setupDashboardComponents();
 

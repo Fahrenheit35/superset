@@ -19,7 +19,7 @@
 
 // import { string } from 'prop-types';
 import createMultiFormatter from '../factories/createMultiFormatter';
-// import { getLocaleDef } from '../TimeFormats';
+import { getLocaleDef } from '../TimeFormats';
 
 const smartDateFormatter = createMultiFormatter({
   id: 'smart_date',

@@ -379,7 +379,10 @@ def apply_post_process(
             query["data"] = buf.getvalue()
         elif query["result_format"] == ChartDataResultFormat.EXCEL:
             buf = BytesIO()
+            processed_df = processed_df.replace(0, None)
+            processed_df.dropna(how='all', inplace=True)
             processed_df.to_excel(buf)
+
             buf.seek(0)
             query["data"] = buf
 
