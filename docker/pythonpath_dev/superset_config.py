@@ -107,7 +107,18 @@ WEBDRIVER_BASEURL = "http://superset:8088/"
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
-
+LANGUAGES = {
+    "en": {"flag": "us", "name": "English", "locale": "en", "humanize_locale": "en", "time_locale": "en-US"},
+    "it": {"flag": "it", "name": "Italian", "locale": "it", "humanize_locale": "en", "time_locale": "it-IT"},
+    "fr": {"flag": "fr", "name": "French", "locale": "fr", "humanize_locale": "fr_FR", "time_locale": "fr-FR"},
+    "zh": {"flag": "cn", "name": "Chinese", "locale": "zh-cn", "humanize_locale": "zh_CN", "time_locale": "zh-CN"},
+    "ja": {"flag": "jp", "name": "Japanese", "locale": "ja", "humanize_locale": "en", "time_locale": "ja-JP"},
+    "de": {"flag": "de", "name": "German", "locale": "de", "humanize_locale": "de_DE", "time_locale": "de-DE"},
+    "pt": {"flag": "pt", "name": "Portuguese", "locale": "pt", "humanize_locale": "en", "time_locale": "en-US"},
+    "pt_BR": {"flag": "br", "name": "Brazilian Portuguese", "locale": "pt-br", "humanize_locale": "pt_BR", "time_locale": "pt-BR"},
+    "ru": {"flag": "ru", "name": "Russian", "locale": "ru", "humanize_locale": "ru_RU", "time_locale": "ru-RU"},
+    "ko": {"flag": "kr", "name": "Korean", "locale": "ko", "humanize_locale": "ko_KR", "time_locale": "ko-KR"},
+}
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden

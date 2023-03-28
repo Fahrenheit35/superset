@@ -1,4 +1,4 @@
-getLocaleDef/*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -17,7 +17,6 @@ getLocaleDef/*
  * under the License.
  */
 
-// import { utcFormat, timeFormat } from 'd3-time-format';
 import { utcFormat, timeFormat, timeFormatLocale } from 'd3-time-format';
 import { utcUtils, localTimeUtils } from '../utils/d3Time';
 import TimeFormatter from '../TimeFormatter';

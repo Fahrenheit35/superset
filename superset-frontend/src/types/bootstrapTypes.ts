@@ -144,6 +144,7 @@ export interface CommonBootstrapData {
   flash_messages: FlashMessage[];
   conf: JsonObject;
   locale: Locale;
+  time_locale: Locale;
   feature_flags: FeatureFlagMap;
   language_pack: LanguagePack;
   extra_categorical_color_schemes: ColorSchemeConfig[];

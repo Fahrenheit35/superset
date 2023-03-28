@@ -25,8 +25,8 @@ import { merge } from 'lodash';
 import setupClient from './setup/setupClient';
 import setupColors from './setup/setupColors';
 import setupExtensions from './setup/setupExtensions';
-import { setupFormatters, setupTimeFormatters } from './setup/setupFormatters';
-//import setupFormatters from './setup/setupFormatters';
+import { setupTimeFormatters } from './setup/setupFormatters';
+// import setupFormatters from './setup/setupFormatters';
 import setupDashboardComponents from './setup/setupDashboardComponents';
 import { User } from './types/bootstrapTypes';
 import { initFeatureFlags } from './featureFlags';
@@ -60,7 +60,7 @@ setupColors(
 );
 
 // Setup number formatters
-//setupFormatters();
+// setupFormatters();
 
 setupDashboardComponents();
 

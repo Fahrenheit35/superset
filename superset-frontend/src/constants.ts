@@ -150,6 +150,7 @@ export const DEFAULT_COMMON_BOOTSTRAP_DATA: CommonBootstrapData = {
   flash_messages: [],
   conf: {},
   locale: 'en',
+  time_locale: 'en',
   feature_flags: {},
   language_pack: {
     domain: '',

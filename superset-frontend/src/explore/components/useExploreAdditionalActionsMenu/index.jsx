@@ -40,6 +40,8 @@ const MENU_KEYS = {
   DOWNLOAD_SUBMENU: 'download_submenu',
   EXPORT_TO_CSV: 'export_to_csv',
   EXPORT_TO_CSV_PIVOTED: 'export_to_csv_pivoted',
+  EXPORT_TO_EXCEL: 'export_to_excel',
+  EXPORT_TO_EXCEL_PIVOTED: 'export_to_excel_pivoted',
   EXPORT_TO_JSON: 'export_to_json',
   EXPORT_TO_XLSX: 'export_to_xlsx',
   DOWNLOAD_AS_IMAGE: 'download_as_image',
@@ -161,7 +163,7 @@ export const useExploreAdditionalActionsMenu = (
         ? exportChart({
             formData: latestQueryFormData,
             resultType: 'full',
-            resultFormat: 'xlsx',
+            resultFormat: 'excel',
           })
         : null,
     [canDownloadCSV, latestQueryFormData],
@@ -172,7 +174,7 @@ export const useExploreAdditionalActionsMenu = (
         ? exportChart({
             formData: latestQueryFormData,
             resultType: 'post_processed',
-            resultFormat: 'xlsx',
+            resultFormat: 'excel',
           })
         : null,
     [canDownloadCSV, latestQueryFormData],
