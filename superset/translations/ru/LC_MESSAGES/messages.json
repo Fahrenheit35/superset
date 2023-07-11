@@ -1463,7 +1463,8 @@
       ],
       "Rolling window": ["Вращающееся окно"],
       "Rolling function": ["Функция прокатки"],
-      "None": ["Никто"],
+      "None": ["Пусто"],
+      "Series": ["Ряд"],
       "Defines a rolling window function to apply, works along with the [Periods] text box": [
         "Одна из функций (Rolling) библиотеки Pandas, которая определяет способ агрегации данных"
       ],

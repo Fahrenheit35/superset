@@ -3928,7 +3928,11 @@ msgstr "Функция прокатки"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterCard/ScopeRow.tsx:77
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:120
 msgid "None"
-msgstr "Никто"
+msgstr "Пусто"
+
+#: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/customControls.tsx:51
+msgid "Series"
+msgstr "Ряд"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/advancedAnalytics.tsx:44
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:258
